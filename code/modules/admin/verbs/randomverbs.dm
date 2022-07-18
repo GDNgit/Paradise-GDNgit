@@ -465,9 +465,8 @@ Traitors and the like can also be revived with the previous role mostly intact.
 				new_character.loc = get_turf(synd_spawn)
 			call(/datum/game_mode/proc/equip_syndicate)(new_character)
 
-		if("Death Commando")//Leaves them at late-join spawn.
-			new_character.equip_death_commando()
-			new_character.internal = new_character.s_store
+		if("Deathsquad Commando")//Leaves them at late-join spawn.
+			new_character.equip_deathsquad_commando()
 			new_character.update_action_buttons_icon()
 		else//They may also be a cyborg or AI.
 			switch(new_character.mind.assigned_role)
@@ -1071,8 +1070,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		if(istype(H.loc, /obj/machinery/cryopod))
 			msg += "<TD><A href='?_src_=holder;cryossd=[H.UID()];cryoafk=1'>De-Spawn</A></TD>"
 		else
-			var/area/A = get_area(H)
-			msg += "<TD><A href='?_src_=holder;cryossd=[H.UID()];cryoafk=1;fast_despawn=[A.fast_despawn]'>Cryo</A></TD>"
+			msg += "<TD><A href='?_src_=holder;cryossd=[H.UID()];cryoafk=1'>Cryo</A></TD>"
 		msg += "</TR>"
 	msg += "</TABLE></BODY></HTML>"
 	src << browse(msg, "window=Player_ssd_afk_check;size=600x300")
