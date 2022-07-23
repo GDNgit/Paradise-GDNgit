@@ -65,6 +65,7 @@ GLOBAL_LIST_INIT(summoned_magic, list(
 	/obj/item/gun/magic/staff/healing,
 	/obj/item/gun/magic/staff/door,
 	/obj/item/scrying,
+	/obj/item/voodoo,
 	/obj/item/clothing/suit/space/hardsuit/shielded/wizard,
 	/obj/item/immortality_talisman,
 	/obj/item/melee/ghost_sword))
@@ -89,7 +90,8 @@ GLOBAL_LIST_INIT(summoned_magic_objectives, list(
 	/obj/item/necromantic_stone,
 	/obj/item/scrying,
 	/obj/item/spellbook,
-	/obj/item/storage/belt/wands/full))
+	/obj/item/storage/belt/wands/full,
+	/obj/item/voodoo))
 
 // If true, it's the probability of triggering "survivor" antag.
 GLOBAL_VAR_INIT(summon_guns_triggered, FALSE)
