@@ -114,6 +114,12 @@
 	icon = 'icons/mob/animal.dmi'
 	icon_state = "m_bunny"
 
+/obj/item/holder/bread
+	name = "bread"
+	desc = "Looks half baked."
+	icon = 'icons/obj/food/food.dmi'
+	icon_state = "bread"
+
 /obj/item/holder/chicken
 	name = "chicken"
 	desc = "Hopefully the eggs are good this season."
