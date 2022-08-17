@@ -1,6 +1,6 @@
 /obj/item/gun/syringe
 	name = "syringe gun"
-	desc = "A spring loaded rifle designed to fit syringes, used to incapacitate unruly patients from a distance."
+	desc = "A spring loaded rifle designed to fit syringes, used to incapacitate unruly patients from a distance. Not compatible with DNA-Injectors."
 	icon_state = "syringegun"
 	item_state = "syringegun"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -75,10 +75,14 @@
 			A.loc = src
 			process_chamber() // Chamber the syringe if none is already
 			return TRUE
+	else if(istype(A, /obj/item/dnainjector))
+		to_chat(user, "<span class='notice'>This special type of syringe does not fit in [src]!</span>")
 		else
 			to_chat(user, "<span class='notice'>[src] cannot hold more syringes.</span>")
 	else
+		to_chat(user, "<span class='notice'>This item does not fit in [src].</span>")
 		return ..()
+
 /obj/item/gun/syringe/rapidsyringe_old
 	name = "rapid syringe gun"
 	desc = "A modification of the syringe gun design, using a rotating cylinder to store up to six syringes."

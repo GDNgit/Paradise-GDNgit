@@ -1,6 +1,6 @@
 /obj/item/dnainjector
 	name = "DNA-Injector"
-	desc = "This injects the person with DNA."
+	desc = "This injects the person with DNA. Although it looks similar to a syringe, they're more closely related to the Polystyrene family."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "dnainjector"
 	item_state = "dnainjector"
