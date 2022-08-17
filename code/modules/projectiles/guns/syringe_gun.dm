@@ -1,6 +1,6 @@
 /obj/item/gun/syringe
 	name = "syringe gun"
-	desc = "A spring loaded rifle designed to fit syringes, used to incapacitate unruly patients from a distance. Not compatible with DNA-Injectors."
+	desc = "A spring loaded rifle designed to fit syringes, used to incapacitate unruly patients from a distance."
 	icon_state = "syringegun"
 	item_state = "syringegun"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -77,9 +77,6 @@
 			return TRUE
 		else
 			to_chat(user, "<span class='notice'>[src] cannot hold more syringes.</span>")
-	else if(istype(A, /obj/item/dnainjector))
-		to_chat(user, "<span class='notice'>[src] is incompatible with DNA-Injectors.</span>")
-		return
 	else
 		return ..()
 /obj/item/gun/syringe/rapidsyringe_old
