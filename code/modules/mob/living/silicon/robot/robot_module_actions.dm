@@ -26,8 +26,8 @@
 	button_icon_state = "thermal"
 
 // ayylmao
-/datum/action/innate/robot_sight/thermal/alien
-	icon_icon = 'icons/mob/alien.dmi'
+/datum/action/innate/robot_sight/thermal/xenomorph
+	icon_icon = 'icons/mob/xenomorph.dmi'
 	button_icon_state = "borg-extra-vision"
 
 /datum/action/innate/robot_sight/meson

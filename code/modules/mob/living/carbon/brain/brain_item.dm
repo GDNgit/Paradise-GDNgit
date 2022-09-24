@@ -23,8 +23,8 @@
 	desc = "We barely understand the brains of terrestial animals. Who knows what we may find in the brain of such an advanced species?"
 	icon_state = "brain-x"
 	origin_tech = "biotech=6"
-	mmi_icon = 'icons/mob/alien.dmi'
-	mmi_icon_state = "AlienMMI"
+	mmi_icon = 'icons/mob/xenomorph.dmi'
+	mmi_icon_state = "XenomorphMMI"
 
 /obj/item/organ/internal/brain/Destroy()
 	QDEL_NULL(brainmob)
@@ -114,7 +114,7 @@
 	icon = 'icons/mob/slimes.dmi'
 	icon_state = "green slime extract"
 	mmi_icon_state = "slime_mmi"
-//	parent_organ = "chest" Hello I am from the ministry of rubber forehead aliens how are you
+//	parent_organ = "chest" Hello I am from the ministry of rubber forehead xenomorphs how are you
 
 /obj/item/organ/internal/brain/golem
 	name = "Runic mind"

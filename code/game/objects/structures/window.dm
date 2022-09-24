@@ -162,7 +162,7 @@
 							"You hear a knocking sound.")
 		add_fingerprint(user)
 
-/obj/structure/window/attack_generic(mob/user, damage_amount = 0, damage_type = BRUTE, damage_flag = 0, sound_effect = 1)	//used by attack_alien, attack_animal, and attack_slime
+/obj/structure/window/attack_generic(mob/user, damage_amount = 0, damage_type = BRUTE, damage_flag = 0, sound_effect = 1)	//used by attack_xenomorph, attack_animal, and attack_slime
 	if(!can_be_reached(user))
 		return
 	..()

@@ -5,7 +5,7 @@ GLOBAL_LIST_INIT(antag_roles, list(
 	ROLE_CHANGELING,
 	ROLE_WIZARD,
 	ROLE_REV,
-	ROLE_ALIEN,
+	ROLE_XENOMORPH, //Mind you most of these including this do J A C K
 	ROLE_CULTIST,
 	ROLE_BLOB,
 	ROLE_NINJA,

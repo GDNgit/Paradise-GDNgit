@@ -1,10 +1,10 @@
-/mob/living/simple_animal/hostile/alien
-	name = "alien hunter"
+/mob/living/simple_animal/hostile/xenomorph
+	name = "xenomorph hunter"
 	desc = "Hiss!"
-	icon = 'icons/mob/alien.dmi'
-	icon_state = "alienh_running"
-	icon_living = "alienh_running"
-	icon_dead = "alienh_dead"
+	icon = 'icons/mob/xenomorph.dmi'
+	icon_state = "xenomorphh_running"
+	icon_living = "xenomorphh_running"
+	icon_dead = "xenomorphh_dead"
 	icon_gib = "syndicate_gib"
 	gender = FEMALE
 	response_help = "pokes"
@@ -20,13 +20,13 @@
 	melee_damage_upper = 25
 	attacktext = "slashes"
 	speak_emote = list("hisses")
-	bubble_icon = "alien"
+	bubble_icon = "xenomorph"
 	a_intent = INTENT_HARM
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 15
 	heat_damage_per_tick = 20
-	faction = list("alien")
+	faction = list("xenomorph")
 	status_flags = CANPUSH
 	minbodytemp = 0
 	see_in_dark = 8
@@ -36,27 +36,27 @@
 	deathmessage = "lets out a waning guttural screech, green blood bubbling from its maw..."
 	footstep_type = FOOTSTEP_MOB_CLAW
 
-/mob/living/simple_animal/hostile/alien/xenobio
+/mob/living/simple_animal/hostile/xenomorph/xenobio
 	maxHealth = 60
 	health = 60
 	gold_core_spawnable = HOSTILE_SPAWN
 
-/mob/living/simple_animal/hostile/alien/drone
-	name = "alien drone"
-	icon_state = "aliend_running"
-	icon_living = "aliend_running"
-	icon_dead = "aliend_dead"
+/mob/living/simple_animal/hostile/xenomorph/drone
+	name = "xenomorph drone"
+	icon_state = "xenomorphd_running"
+	icon_living = "xenomorphd_running"
+	icon_dead = "xenomorphd_dead"
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 	var/plant_cooldown = 30
 	var/plants_off = 0
 
-/mob/living/simple_animal/hostile/alien/drone/xenobio
+/mob/living/simple_animal/hostile/xenomorph/drone/xenobio
 	maxHealth = 60
 	health = 60
 	gold_core_spawnable = HOSTILE_SPAWN
 
-/mob/living/simple_animal/hostile/alien/drone/handle_automated_action()
+/mob/living/simple_animal/hostile/xenomorph/drone/handle_automated_action()
 	if(!..()) //AIStatus is off
 		return
 	plant_cooldown--
@@ -65,11 +65,11 @@
 			plant_cooldown = initial(plant_cooldown)
 			SpreadPlants()
 
-/mob/living/simple_animal/hostile/alien/sentinel
-	name = "alien sentinel"
-	icon_state = "aliens_running"
-	icon_living = "aliens_running"
-	icon_dead = "aliens_dead"
+/mob/living/simple_animal/hostile/xenomorph/sentinel
+	name = "xenomorph sentinel"
+	icon_state = "xenomorphs_running"
+	icon_living = "xenomorphs_running"
+	icon_dead = "xenomorphs_dead"
 	health = 150
 	maxHealth = 150
 	melee_damage_lower = 15
@@ -81,16 +81,16 @@
 	projectilesound = 'sound/weapons/pierce.ogg'
 
 
-/mob/living/simple_animal/hostile/alien/sentinel/xenobio
+/mob/living/simple_animal/hostile/xenomorph/sentinel/xenobio
 	health = 75
 	maxHealth = 75
 	gold_core_spawnable = HOSTILE_SPAWN
 
-/mob/living/simple_animal/hostile/alien/queen
-	name = "alien queen"
-	icon_state = "alienq_running"
-	icon_living = "alienq_running"
-	icon_dead = "alienq_dead"
+/mob/living/simple_animal/hostile/xenomorph/queen
+	name = "xenomorph queen"
+	icon_state = "xenomorphq_running"
+	icon_living = "xenomorphq_running"
+	icon_dead = "xenomorphq_dead"
 	health = 250
 	maxHealth = 250
 	melee_damage_lower = 15
@@ -108,12 +108,12 @@
 	var/egg_cooldown = 30
 	var/plant_cooldown = 30
 
-/mob/living/simple_animal/hostile/alien/queen/xenobio
+/mob/living/simple_animal/hostile/xenomorph/queen/xenobio
 	health = 100
 	maxHealth = 100
 	gold_core_spawnable = HOSTILE_SPAWN
 
-/mob/living/simple_animal/hostile/alien/queen/handle_automated_action()
+/mob/living/simple_animal/hostile/xenomorph/queen/handle_automated_action()
 	if(!..())
 		return
 	egg_cooldown--
@@ -126,29 +126,29 @@
 			egg_cooldown = initial(egg_cooldown)
 			LayEggs()
 
-/mob/living/simple_animal/hostile/alien/proc/SpreadPlants()
+/mob/living/simple_animal/hostile/xenomorph/proc/SpreadPlants()
 	if(!isturf(loc) || isspaceturf(loc))
 		return
-	if(locate(/obj/structure/alien/weeds/node) in get_turf(src))
+	if(locate(/obj/structure/xenomorph/weeds/node) in get_turf(src))
 		return
-	visible_message("<span class='alertalien'>[src] has planted some alien weeds!</span>")
-	new /obj/structure/alien/weeds/node(loc)
+	visible_message("<span class='alertxenomorph'>[src] has planted some xenomorph weeds!</span>")
+	new /obj/structure/xenomorph/weeds/node(loc)
 
-/mob/living/simple_animal/hostile/alien/proc/LayEggs()
+/mob/living/simple_animal/hostile/xenomorph/proc/LayEggs()
 	if(!isturf(loc) || isspaceturf(loc))
 		return
-	if(locate(/obj/structure/alien/egg) in get_turf(src))
+	if(locate(/obj/structure/xenomorph/egg) in get_turf(src))
 		return
-	visible_message("<span class='alertalien'>[src] has laid an egg!</span>")
-	new /obj/structure/alien/egg(loc)
+	visible_message("<span class='alertxenomorph'>[src] has laid an egg!</span>")
+	new /obj/structure/xenomorph/egg(loc)
 
-/mob/living/simple_animal/hostile/alien/queen/large
-	name = "alien empress"
-	icon = 'icons/mob/alienlarge.dmi'
+/mob/living/simple_animal/hostile/xenomorph/queen/large
+	name = "xenomorph empress"
+	icon = 'icons/mob/xenomorphlarge.dmi'
 	icon_state = "queen_s"
 	icon_living = "queen_s"
 	icon_dead = "queen_dead"
-	bubble_icon = "alienroyal"
+	bubble_icon = "xenomorphroyal"
 	move_to_delay = 4
 	maxHealth = 400
 	health = 400
@@ -160,7 +160,7 @@
 	damage = 30
 	icon_state = "toxin"
 
-/mob/living/simple_animal/hostile/alien/maid
+/mob/living/simple_animal/hostile/xenomorph/maid
 	name = "lusty xenomorph maid"
 	melee_damage_lower = 0
 	melee_damage_upper = 0
@@ -173,7 +173,7 @@
 	icon_living = "maid"
 	icon_dead = "maid_dead"
 
-/mob/living/simple_animal/hostile/alien/maid/AttackingTarget()
+/mob/living/simple_animal/hostile/xenomorph/maid/AttackingTarget()
 	if(ismovable(target))
 		if(istype(target, /obj/effect/decal/cleanable))
 			visible_message("<span class='notice'>\The [src] cleans up \the [target].</span>")

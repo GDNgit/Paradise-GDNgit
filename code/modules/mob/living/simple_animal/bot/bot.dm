@@ -269,7 +269,7 @@
 			return
 	return 1 //Successful completion. Used to prevent child process() continuing if this one is ended early.
 
-/mob/living/simple_animal/bot/attack_alien(mob/living/carbon/alien/user)
+/mob/living/simple_animal/bot/attack_xenomorph(mob/living/carbon/xenomorph/user)
 	user.changeNext_move(CLICK_CD_MELEE)
 	user.do_attack_animation(src)
 	apply_damage(rand(15,30), BRUTE)

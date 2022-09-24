@@ -84,7 +84,8 @@
 		gets_drilled()
 	..()
 
-/turf/simulated/mineral/attack_alien(mob/living/carbon/alien/M)
+//Did you know xenos can mine? Now you know. I'm sorry this is the case.
+/turf/simulated/mineral/attack_xenomorph(mob/living/carbon/xenomorph/M)
 	to_chat(M, "<span class='notice'>You start digging into the rock...</span>")
 	playsound(src, 'sound/effects/break_stone.ogg', 50, TRUE)
 	if(do_after(M, 40, target = src))

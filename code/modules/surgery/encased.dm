@@ -1,4 +1,4 @@
-//Procedures in this file: Generic ribcage opening steps, Removing alien embryo, Fixing internal organs.
+//Procedures in this file: Generic ribcage opening steps, Removing xenomorph embryo, Fixing internal organs.
 //////////////////////////////////////////////////////////////////
 //				GENERIC	RIBCAGE SURGERY							//
 //////////////////////////////////////////////////////////////////

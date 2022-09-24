@@ -689,8 +689,8 @@
 			B.remove(C)
 			qdel(B)
 
-/obj/machinery/atmospherics/supermatter_crystal/attack_alien(mob/user)
-	dust_mob(user, cause = "alien attack")
+/obj/machinery/atmospherics/supermatter_crystal/attack_xenomorph(mob/user)
+	dust_mob(user, cause = "xenomorph attack")
 
 /obj/machinery/atmospherics/supermatter_crystal/attack_animal(mob/living/simple_animal/S)
 	var/murder

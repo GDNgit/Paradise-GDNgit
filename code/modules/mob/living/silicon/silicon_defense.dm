@@ -1,7 +1,8 @@
 /mob/living/silicon/grabbedby(mob/living/user)
 	return
 
-/mob/living/silicon/attack_alien(mob/living/carbon/alien/humanoid/M)
+//Will need to move this to a less shit proc
+/mob/living/silicon/attack_xenomorph(mob/living/carbon/xenomorph/humanoid/M)
 	if(..()) //if harm or disarm intent
 		var/damage = 20
 		if(prob(90))
@@ -9,7 +10,7 @@
 			visible_message("<span class='danger'>[M] has slashed at [src]!</span>", "<span class='userdanger'>[M] has slashed at [src]!</span>")
 			if(prob(8))
 				flash_eyes(affect_silicon = 1)
-			add_attack_logs(M, src, "Alien attacked")
+			add_attack_logs(M, src, "Xenomorph attacked")
 			adjustBruteLoss(damage)
 			updatehealth()
 		else
@@ -37,7 +38,7 @@
 				adjustStaminaLoss(damage)
 		updatehealth()
 
-/mob/living/silicon/attack_larva(mob/living/carbon/alien/larva/L)
+/mob/living/silicon/attack_larva(mob/living/carbon/xenomorph/larva/L)
 	if(L.a_intent == INTENT_HELP)
 		visible_message("<span class='notice'>[L.name] rubs its head against [src].</span>")
 

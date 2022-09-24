@@ -347,9 +347,9 @@
 		"Vox" = 'icons/mob/clothing/species/vox/head.dmi'
 		)
 
-/obj/item/clothing/head/xenos
-	name = "xeno helmet"
-	desc = "A helmet made out of chitinous alien hide."
+/obj/item/clothing/head/xenomorph
+	name = "xenomorph helmet"
+	desc = "A helmet made out of chitinous xenomorph hide."
 	icon_state = "xenos"
 	item_state = "xenos_helm"
 	flags = BLOCKHAIR

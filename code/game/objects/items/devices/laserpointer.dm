@@ -94,7 +94,7 @@
 	var/outmsg
 	var/turf/targloc = get_turf(target)
 
-	//human/alien mobs
+	//human/xenomorph mobs
 	if(iscarbon(target))
 		var/mob/living/carbon/C = target
 		if(user.zone_selected == "eyes")

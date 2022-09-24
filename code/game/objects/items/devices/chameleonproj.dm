@@ -131,7 +131,7 @@
 /obj/effect/dummy/chameleon/attack_slime()
 	master.disrupt()
 
-/obj/effect/dummy/chameleon/attack_alien()
+/obj/effect/dummy/chameleon/attack_xenomorph()
 	master.disrupt()
 
 /obj/effect/dummy/chameleon/ex_act(severity) //no longer bomb-proof

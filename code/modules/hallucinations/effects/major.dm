@@ -333,12 +333,12 @@
 /**
   * # Hallucination - Xeno Pounce
   *
-  * An imaginary alien hunter pounces towards the target.
+  * An imaginary xenomorph hunter pounces towards the target.
   */
 /obj/effect/hallucination/xeno_pounce
 	duration = 15 SECONDS
 	// Settings
-	/// Maximum number of times the alien will pounce.
+	/// Maximum number of times the xenomorph will pounce.
 	var/num_pounces = 3
 	/// How often to pounce in deciseconds.
 	var/pounce_interval = 5 SECONDS
@@ -370,13 +370,13 @@
 		addtimer(CALLBACK(src, .proc/do_pounce), pounce_interval)
 
 /obj/effect/hallucination/xeno_pouncer
-	hallucination_icon = 'icons/mob/alien.dmi'
-	hallucination_icon_state = "alienh_pounce"
+	hallucination_icon = 'icons/mob/xenomorph.dmi'
+	hallucination_icon_state = "xenomorphh_pounce"
 	hallucination_override = TRUE
 
 /obj/effect/hallucination/xeno_pouncer/Initialize(mapload, mob/living/carbon/target)
 	. = ..()
-	name = "\proper alien hunter ([rand(100, 999)])"
+	name = "\proper xenomorph hunter ([rand(100, 999)])"
 
 /obj/effect/hallucination/xeno_pouncer/throw_impact(A)
 	if(A == target)
@@ -396,8 +396,8 @@
   */
 /obj/effect/hallucination/xeno_pouncer/proc/leap_to(dest)
 	if(images && images[1])
-		images[1].icon = 'icons/mob/alienleap.dmi'
-		images[1].icon_state = "alienh_leap"
+		images[1].icon = 'icons/mob/xenomorphleap.dmi'
+		images[1].icon_state = "xenomorphh_leap"
 	dir = get_dir(get_turf(src), dest)
 	throw_at(dest, 7, 1, spin = FALSE, diagonals_first = TRUE, callback = CALLBACK(src, .proc/reset_icon))
 
@@ -406,5 +406,5 @@
   */
 /obj/effect/hallucination/xeno_pouncer/proc/reset_icon()
 	if(images && images[1])
-		images[1].icon = 'icons/mob/alien.dmi'
-		images[1].icon_state = "alienh_pounce"
+		images[1].icon = 'icons/mob/xenomorph.dmi'
+		images[1].icon_state = "xenomorphh_pounce"

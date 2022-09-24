@@ -298,9 +298,9 @@
 	s.start()
 	..()
 
-/mob/living/simple_animal/bot/honkbot/attack_alien(mob/living/carbon/alien/user as mob)
+/mob/living/simple_animal/bot/honkbot/attack_xenomorph(mob/living/carbon/xenomorph/user as mob)
 	..()
-	if(!isalien(target))
+	if(!isxenomorph(target))
 		target = user
 		mode = BOT_HUNT
 

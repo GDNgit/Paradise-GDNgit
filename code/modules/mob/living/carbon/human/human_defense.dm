@@ -606,7 +606,7 @@ emp_act
 		var/mob/living/carbon/human/H = user
 		dna.species.spec_attack_hand(H, src)
 
-/mob/living/carbon/human/attack_larva(mob/living/carbon/alien/larva/L)
+/mob/living/carbon/human/attack_larva(mob/living/carbon/xenomorph/larva/L)
 	if(..()) //successful larva bite.
 		var/damage = rand(1, 3)
 		if(stat != DEAD)
@@ -616,7 +616,7 @@ emp_act
 			apply_damage(damage, BRUTE, affecting, armor_block)
 			updatehealth("larva attack")
 
-/mob/living/carbon/human/attack_alien(mob/living/carbon/alien/humanoid/M)
+/mob/living/carbon/human/attack_xenomorph(mob/living/carbon/xenomorph/humanoid/M)
 	if(check_shields(M, 0, M.name))
 		visible_message("<span class='danger'>[M] attempted to touch [src]!</span>")
 		return 0
@@ -632,9 +632,9 @@ emp_act
 			visible_message("<span class='danger'>[M] has slashed at [src]!</span>", \
  				"<span class='userdanger'>[M] has slashed at [src]!</span>")
 
-			apply_damage(M.alien_slash_damage, BRUTE, affecting, armor_block)
-			add_attack_logs(M, src, "Alien attacked")
-			updatehealth("alien attack")
+			apply_damage(M.xenomorph_slash_damage, BRUTE, affecting, armor_block)
+			add_attack_logs(M, src, "Xenomorph attacked")
+			updatehealth("xenomorph attack")
 
 		if(M.a_intent == INTENT_DISARM) //If not absorbed, always drop item in hand, if no item, get stun instead.
 			if(absorb_stun(0))
@@ -650,8 +650,8 @@ emp_act
 				var/obj/item/organ/external/affecting = get_organ(ran_zone(M.zone_selected))
 				playsound(loc, 'sound/weapons/pierce.ogg', 25, 1, -1)
 				apply_effect(10 SECONDS, KNOCKDOWN, run_armor_check(affecting, MELEE))
-				adjustStaminaLoss(M.alien_disarm_damage)
-				add_attack_logs(M, src, "Alien tackled")
+				adjustStaminaLoss(M.xenomorph_disarm_damage)
+				add_attack_logs(M, src, "Xenomorph tackled")
 				visible_message("<span class='danger'>[M] has tackled down [src]!</span>")
 
 /mob/living/carbon/human/attack_animal(mob/living/simple_animal/M)

@@ -148,7 +148,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_GOTTAGOFAST		"gottagofast"
 #define TRAIT_GOTTAGONOTSOFAST	"gottagonotsofast"
 #define TRAIT_FAKEDEATH			"fakedeath" //Makes the owner appear as dead to most forms of medical examination
-#define TRAIT_XENO_HOST			"xeno_host"	//Tracks whether we're gonna be a baby alien's mummy.
+#define TRAIT_XENO_HOST			"xeno_host"	//Tracks whether we're gonna be a baby xenomorph's mummy.
 #define TRAIT_SHOCKIMMUNE		"shock_immunity"
 #define TRAIT_TESLA_SHOCKIMMUNE	"tesla_shock_immunity"
 #define TRAIT_TELEKINESIS 		"telekinesis"

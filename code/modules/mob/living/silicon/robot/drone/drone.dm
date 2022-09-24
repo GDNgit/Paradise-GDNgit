@@ -98,7 +98,7 @@
 	scanner.Grant(src)
 	update_icons()
 
-/mob/living/silicon/robot/drone/init(alien = FALSE, mob/living/silicon/ai/ai_to_sync_to = null)
+/mob/living/silicon/robot/drone/init(xenomorph = FALSE, mob/living/silicon/ai/ai_to_sync_to = null)
 	laws = new /datum/ai_laws/drone()
 	connected_ai = null
 

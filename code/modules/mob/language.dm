@@ -483,7 +483,7 @@
 	speech_verb = "chitters"
 	ask_verb = "chitters"
 	exclaim_verbs = list("buzzes")
-	colour = "alien"
+	colour = "xenomorph"
 	key = "y"
 	flags = RESTRICTED | HIVEMIND | NOBABEL
 	follow = TRUE
@@ -497,9 +497,9 @@
 
 	return FALSE
 
-/datum/language/xenocommon
+/datum/language/xenomorphcommon
 	name = "Xenomorph"
-	colour = "alien"
+	colour = "xenomorph"
 	desc = "The common tongue of the xenomorphs."
 	speech_verb = "hisses"
 	ask_verb = "hisses"
@@ -508,7 +508,7 @@
 	flags = RESTRICTED
 	syllables = list("sss","sSs","SSS")
 
-/datum/language/xenos
+/datum/language/xenomorph
 	name = "Hivemind"
 	desc = "Xenomorphs have the strange ability to commune over a psychic hivemind."
 	speech_verb = "hisses"

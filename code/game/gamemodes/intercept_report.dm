@@ -206,7 +206,7 @@
 	/*
 	var/changeling_name
 	var/changeling_job
-	var/prob_right_dude = rand(prob_correct_person_lower, prob_correct_person_higher)
+	var/prob_right_dude = rand(prob_correct_person_lower, prob_correct_person_higher) //This should be removed, it's not used anywhere
 	var/prob_right_job = rand(prob_correct_job_lower, prob_correct_job_higher)
 	if(prob(prob_right_job))
 		if(correct_person)

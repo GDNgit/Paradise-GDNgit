@@ -312,9 +312,9 @@ h1.alert, h2.alert			{color: #000000;}
 .boldannounce				{color: #ff0000;	font-weight: bold;}
 .greenannounce				{color: #00ff00;	font-weight: bold;}
 
-.alien					{color: #543354;}
-.noticealien				{color: #00c000;}
-.alertalien				{color: #00c000; font-weight: bold;}
+.xenomorph					{color: #543354;}
+.noticexenomorph				{color: #00c000;}
+.alertxenomorph				{color: #00c000; font-weight: bold;}
 .terrorspider				{color: #320E32;}
 .dantalion				{color: #6A2148;}
 

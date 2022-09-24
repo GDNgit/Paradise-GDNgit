@@ -50,7 +50,7 @@
 /turf/simulated/floor/plating,
 /area/centcom)
 "o" = (
-/obj/structure/alien/resin/wall,
+/obj/structure/xenomorph/resin/wall,
 /turf/simulated/floor/snow,
 /area/centcom)
 "p" = (
@@ -71,7 +71,7 @@
 /turf/simulated/floor/plating,
 /area/centcom)
 "u" = (
-/obj/structure/alien/resin/membrane,
+/obj/structure/xenomorph/resin/membrane,
 /turf/simulated/floor/snow,
 /area/centcom)
 "v" = (

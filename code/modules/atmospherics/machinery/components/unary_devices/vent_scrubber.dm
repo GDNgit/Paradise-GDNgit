@@ -376,7 +376,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/can_crawl_through()
 	return !welded
 
-/obj/machinery/atmospherics/unary/vent_scrubber/attack_alien(mob/user)
+/obj/machinery/atmospherics/unary/vent_scrubber/attack_xenomorph(mob/user)
 	if(!welded || !(do_after(user, 20, target = src)))
 		return
 	user.visible_message("<span class='warning'>[user] furiously claws at [src]!</span>", "<span class='notice'>You manage to clear away the stuff blocking the scrubber.</span>", "<span class='italics'>You hear loud scraping noises.</span>")

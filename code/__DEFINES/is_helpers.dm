@@ -74,15 +74,15 @@ GLOBAL_LIST_INIT(glass_sheet_types, typecacheof(list(
 #define ishuman(A) (istype(A, /mob/living/carbon/human))
 
 //more carbon mobs
-#define isalien(A) (istype(A, /mob/living/carbon/alien))
+#define isxenomorph(A) (istype(A, /mob/living/carbon/xenomorph))
 
-#define islarva(A) (istype(A, /mob/living/carbon/alien/larva))
+#define islarva(A) (istype(A, /mob/living/carbon/xenomorph/larva))
 
-#define isalienadult(A) (istype(A, /mob/living/carbon/alien/humanoid))
+#define isxenomorphadult(A) (istype(A, /mob/living/carbon/xenomorph/humanoid))
 
-#define isalienhunter(A) (istype(A, /mob/living/carbon/alien/humanoid/hunter))
+#define isxenomorphhunter(A) (istype(A, /mob/living/carbon/xenomorph/humanoid/hunter))
 
-#define isaliensentinel(A) (istype(A, /mob/living/carbon/alien/humanoid/sentinel))
+#define isxenomorphsentinel(A) (istype(A, /mob/living/carbon/xenomorph/humanoid/sentinel))
 
 #define isslime(A)		(istype((A), /mob/living/simple_animal/slime))
 

@@ -891,10 +891,10 @@
 	w_class = WEIGHT_CLASS_TINY
 	pixel_z = 5
 
-/obj/item/toy/character/alien
+/obj/item/toy/character/xenomorph
 	name = "Xenomorph Miniature"
 	desc = "A miniature xenomorph. Scary!"
-	icon_state = "aliencharacter"
+	icon_state = "xenomorphcharacter"
 /obj/item/toy/character/cleric
 	name = "Cleric Miniature"
 	desc = "A wee little cleric, with his wee little staff."
@@ -924,7 +924,7 @@
 	desc = "The nerd's best friends."
 	icon_state = "box"
 /obj/item/storage/box/characters/populate_contents()
-	new /obj/item/toy/character/alien(src)
+	new /obj/item/toy/character/xenomorph(src)
 	new /obj/item/toy/character/cleric(src)
 	new /obj/item/toy/character/warrior(src)
 	new /obj/item/toy/character/thief(src)
@@ -1399,7 +1399,7 @@
 	name = "\improper Xenomorph action figure"
 	desc = "MEGA presents the new Xenos Isolated action figure! Comes complete with realistic sounds! Pull back string to use."
 	icon_state = "toy_xeno"
-	bubble_icon = "alien"
+	bubble_icon = "xenomorph"
 	cooldown_time = 5 SECONDS
 
 

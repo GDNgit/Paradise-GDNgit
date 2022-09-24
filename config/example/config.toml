@@ -562,7 +562,7 @@ human_delay = 1.5
 # Move delay for cyborgs
 robot_delay = 2.5
 # Move delay for xenomorphs
-alien_delay = 1.5
+xenomorph_delay = 1.5
 # Move delay for slimes (xenobio, not slimepeople)
 slime_delay = 1.5
 # Move delay for other simple animals

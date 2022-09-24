@@ -468,9 +468,9 @@
 	A.xo = U.x - T.x
 	A.fire()
 
-/mob/living/simple_animal/bot/ed209/attack_alien(mob/living/carbon/alien/user)
+/mob/living/simple_animal/bot/ed209/attack_xenomorph(mob/living/carbon/xenomorph/user)
 	..()
-	if(!isalien(target))
+	if(!isxenomorph(target))
 		target = user
 		mode = BOT_HUNT
 

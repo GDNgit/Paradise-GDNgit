@@ -48,7 +48,7 @@
 /mob/living/simple_animal/hostile/headslug/AttackingTarget()
 	. = ..()
 	if(. && !egg_lain && iscarbon(target) && !issmall(target))
-		// Changeling egg can survive in aliens!
+		// Changeling egg can survive in xenomorphs!
 		var/mob/living/carbon/C = target
 		if(C.stat == DEAD)
 			if(HAS_TRAIT(C, TRAIT_XENO_HOST))

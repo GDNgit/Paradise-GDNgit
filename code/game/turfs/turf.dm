@@ -472,8 +472,8 @@
 /turf/acid_act(acidpwr, acid_volume)
 	. = TRUE
 	var/acid_type = /obj/effect/acid
-	if(acidpwr >= 200) //alien acid power
-		acid_type = /obj/effect/acid/alien
+	if(acidpwr >= 200) //xenomorph acid power
+		acid_type = /obj/effect/acid/xenomorph
 	var/has_acid_effect = FALSE
 	for(var/obj/O in src)
 		if(intact && O.level == 1) //hidden under the floor

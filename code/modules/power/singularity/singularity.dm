@@ -62,7 +62,7 @@
 	consume(user)
 	return 1
 
-/obj/singularity/attack_alien(mob/user)
+/obj/singularity/attack_xenomorph(mob/user)
 	consume(user)
 
 /obj/singularity/attack_animal(mob/user)

@@ -388,17 +388,17 @@
 			qdel(src)
 
 /obj/item/grab/proc/checkvalid(mob/attacker, mob/prey) //does all the checking for the attack proc to see if a mob can eat another with the grab
-	if(isalien(attacker) && iscarbon(prey)) //Xenomorphs eating carbon mobs
-		return 1
+	if(isxenomorph(attacker) && iscarbon(prey)) //Xenomorphs eating carbon mobs
+		return TRUE
 
 	var/mob/living/carbon/human/H = attacker
 	if(ishuman(H) && is_type_in_list(prey,  H.dna.species.allowed_consumed_mobs)) //species eating of other mobs
-		return 1
+		return TRUE
 
-	return 0
+	return FALSE
 
 /obj/item/grab/proc/checktime(mob/attacker, mob/prey) //Returns the time the attacker has to wait before they eat the prey
-	if(isalien(attacker))
+	if(isaxenomorph(attacker))
 		return EAT_TIME_XENO //xenos get a speed boost
 
 	if(istype(prey,/mob/living/simple_animal)) //simple animals get eaten at xeno-eating-speed regardless

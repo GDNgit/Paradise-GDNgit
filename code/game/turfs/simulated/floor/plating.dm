@@ -353,7 +353,7 @@
 		M.visible_message("<span class='danger'>\The [M] [M.attacktext] [src]!</span>")
 		smash(src)
 
-/turf/simulated/floor/plating/metalfoam/attack_alien(mob/living/carbon/alien/humanoid/M)
+/turf/simulated/floor/plating/metalfoam/attack_xenomorph(mob/living/carbon/xenomorph/humanoid/M)
 	M.visible_message("<span class='danger'>[M] tears apart \the [src]!</span>")
 	smash(src)
 

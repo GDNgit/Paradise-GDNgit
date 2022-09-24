@@ -187,7 +187,7 @@
 	death(gibbed = FALSE, cleanWipe = TRUE)
 
 
-/mob/living/carbon/alien/humanoid/verb/suicide()
+/mob/living/carbon/xenomorph/humanoid/verb/suicide()
 	set hidden = 1
 
 	if(stat == 2)

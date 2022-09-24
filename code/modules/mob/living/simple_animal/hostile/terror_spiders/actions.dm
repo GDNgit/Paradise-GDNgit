@@ -305,7 +305,7 @@
 	if(!valid_target)
 		to_chat(src, "<span class='warning'>No welded vent or scrubber nearby!</span>")
 		return
-	playsound(get_turf(src), 'sound/machines/airlock_alien_prying.ogg', 50, 0)
+	playsound(get_turf(src), 'sound/machines/airlock_xenomorph_prying.ogg', 50, 0)
 	if(do_after(src, 40, target = loc))
 		for(var/obj/machinery/atmospherics/unary/vent_pump/P in range(1, get_turf(src)))
 			if(P.welded)

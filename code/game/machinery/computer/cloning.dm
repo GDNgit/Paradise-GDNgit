@@ -324,7 +324,7 @@
 	if(scan_brain && !can_brainscan())
 		return
 	if(isnull(subject) || (!(ishuman(subject))) || (!subject.dna))
-		if(isalien(subject))
+		if(isxenomorph(subject))
 			set_scan_temp("Xenomorphs are not scannable.", "bad")
 			SStgui.update_uis(src)
 			return

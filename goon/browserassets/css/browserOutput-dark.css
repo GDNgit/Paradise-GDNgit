@@ -314,9 +314,9 @@ h1.alert, h2.alert			{color: #FFF;}
 .boldannounce			{color: #c51e1e;font-weight: bold;}
 .greenannounce			{color: #059223;font-weight: bold;}
 
-.alien				{color: #C433C4;}
-.noticealien			{color: #00c000;}
-.alertalien				{color: #00c000; font-weight: bold;}
+.xenomorph				{color: #C433C4;}
+.noticexenomorph			{color: #00c000;}
+.alertxenomorph				{color: #00c000; font-weight: bold;}
 .terrorspider			{color: #CF52FA;}
 .dantalion				{color: #8b2c5e;}
 

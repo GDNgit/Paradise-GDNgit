@@ -73,7 +73,7 @@
 	plants = list()
 	dna = list()
 
-GLOBAL_LIST_INIT(non_simple_animals, typecacheof(list(/mob/living/carbon/human/monkey,/mob/living/carbon/alien)))
+GLOBAL_LIST_INIT(non_simple_animals, typecacheof(list(/mob/living/carbon/human/monkey,/mob/living/carbon/xenomorph)))
 
 /obj/item/dna_probe/afterattack(atom/target, mob/user, proximity)
 	..()

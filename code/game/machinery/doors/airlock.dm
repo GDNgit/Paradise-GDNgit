@@ -332,7 +332,7 @@ GLOBAL_LIST_EMPTY(airlock_emissive_underlays)
 		polarized_image.color = "#FFFFFF"
 		animate_color = "#222222"
 		set_opacity(TRUE)
-	
+
 	overlays -= polarized_image
 
 	// Animate() does not work on overlays, so a temporary effect is used
@@ -1158,7 +1158,7 @@ GLOBAL_LIST_EMPTY(airlock_emissive_underlays)
 		var/obj/item/twohanded/fireaxe/F = I
 		if(F.wielded)
 			if(density && !prying_so_hard)
-				playsound(src, 'sound/machines/airlock_alien_prying.ogg', 100, 1) //is it aliens or just the CE being a dick?
+				playsound(src, 'sound/machines/airlock_xenomorph_prying.ogg', 100, 1) //is it xenomorphs or just the CE being a dick?
 				prying_so_hard = TRUE //so you dont pry the door when you are already trying to pry it
 				var/result = do_after(user, 5 SECONDS, target = src)
 				prying_so_hard = FALSE
@@ -1204,7 +1204,7 @@ GLOBAL_LIST_EMPTY(airlock_emissive_underlays)
 	var/time_to_open = 5
 	if(!prying_so_hard)
 		time_to_open = 50
-		playsound(src, 'sound/machines/airlock_alien_prying.ogg', 100, 1) //is it aliens or just the CE being a dick?
+		playsound(src, 'sound/machines/airlock_xenomorph_prying.ogg', 100, 1) //is it xenomorph or just the CE being a dick?
 		prying_so_hard = TRUE
 		var/result = do_after(user, time_to_open, target = src)
 		prying_so_hard = FALSE
@@ -1371,23 +1371,23 @@ GLOBAL_LIST_EMPTY(airlock_emissive_underlays)
 		if(EXPLODE_LIGHT) //Deals 150 damage to the airlock, half a standard airlock's integrity
 			take_damage(150)
 
-/obj/machinery/door/airlock/attack_alien(mob/living/carbon/alien/humanoid/user)
+/obj/machinery/door/airlock/attack_xenomorph(mob/living/carbon/xenomorph/humanoid/user)
 	add_fingerprint(user)
 	if(isElectrified())
 		shock(user, 100) //Mmm, fried xeno!
 		return
 	if(!density) //Already open
 		return
-	if(locked || welded) //Extremely generic, as aliens only understand the basics of how airlocks work.
+	if(locked || welded) //Extremely generic, as xenomorphs only understand the basics of how airlocks work.
 		to_chat(user, "<span class='warning'>[src] refuses to budge!</span>")
 		return
 	user.visible_message("<span class='warning'>[user] begins prying open [src].</span>",\
-						"<span class='noticealien'>You begin digging your claws into [src] with all your might!</span>",\
+						"<span class='noticexenomorph'>You begin digging your claws into [src] with all your might!</span>",\
 						"<span class='warning'>You hear groaning metal...</span>")
 	var/time_to_open = 5
 	if(arePowerSystemsOn())
 		time_to_open = 50 //Powered airlocks take longer to open, and are loud.
-		playsound(src, 'sound/machines/airlock_alien_prying.ogg', 100, TRUE)
+		playsound(src, 'sound/machines/airlock_xenomorph_prying.ogg', 100, TRUE)
 
 
 	if(do_after(user, time_to_open, TRUE, src))

@@ -1,9 +1,9 @@
 //This file contains xenoborg specic weapons.
 
-/obj/item/melee/energy/alien/claws
+/obj/item/melee/energy/xenomorph/claws
 	name = "energy claws"
-	desc = "A set of alien energy claws."
-	icon = 'icons/mob/alien.dmi'
+	desc = "A set of xenomorph energy claws."
+	icon = 'icons/mob/xenomorph.dmi'
 	icon_state = "borg-laser-claws"
 	icon_state_on = "borg-laser-claws"
 	force = 15
@@ -17,21 +17,21 @@
 	attack_verb = list("attacked", "slashed", "gored", "sliced", "torn", "ripped", "butchered", "cut")
 	attack_verb_on = list()
 
-//Bottles for borg liquid squirters. PSSH PSSH
-/obj/item/reagent_containers/spray/alien
+//Bottles for borg liquid squirters. PSSH PSSH //This literally does not work
+/obj/item/reagent_containers/spray/xenomorph
 	name = "liquid synthesizer"
-	desc = "squirts alien liquids."
-	icon = 'icons/mob/alien.dmi'
+	desc = "squirts xenomorph liquids."
+	icon = 'icons/mob/xenomorph.dmi'
 	icon_state = "borg-default"
 
-/obj/item/reagent_containers/spray/alien/smoke
+/obj/item/reagent_containers/spray/xenomorph/smoke
 	name = "smoke synthesizer"
 	desc = "squirts smokey liquids."
-	icon = 'icons/mob/alien.dmi'
+	icon = 'icons/mob/xenomorph.dmi'
 	icon_state = "borg-spray-smoke"
 	list_reagents = list("water" = 50)
 
-/obj/item/reagent_containers/spray/alien/smoke/afterattack(atom/A as mob|obj, mob/user as mob)
+/obj/item/reagent_containers/spray/xenomorph/smoke/afterattack(atom/A as mob|obj, mob/user as mob)
 	if(istype(A, /obj/structure/reagent_dispensers) && get_dist(src,A) <= 1)
 		if(!A.reagents.total_volume && A.reagents)
 			to_chat(user, "<span class='notice'>\The [A] is empty.</span>")
@@ -46,34 +46,35 @@
 	smoke.start()
 	playsound(user.loc, 'sound/effects/bamf.ogg', 50, 2)
 
-/obj/item/reagent_containers/spray/alien/smoke/cyborg_recharge(coeff, emagged)
+/obj/item/reagent_containers/spray/xenomorph/smoke/cyborg_recharge(coeff, emagged)
 	reagents.check_and_add("water", volume, 2 * coeff)
 
-/obj/item/reagent_containers/spray/alien/acid
+/obj/item/reagent_containers/spray/xenomorph/acid
 	name = "acid synthesizer"
 	desc = "squirts burny liquids."
-	icon = 'icons/mob/alien.dmi'
+	icon = 'icons/mob/xenomorph.dmi'
 	icon_state = "borg-spray-acid"
 	list_reagents = list("facid" = 125, "sacid" = 125)
 
-/obj/item/reagent_containers/spray/alien/acid/cyborg_recharge(coeff, emagged)
+/obj/item/reagent_containers/spray/xenomorph/acid/cyborg_recharge(coeff, emagged)
 	reagents.check_and_add("facid", volume / 2, 2 * coeff) // Volume / 2 here becuase there should be an even amount of both chems.
 	reagents.check_and_add("sacid", volume / 2, 2 * coeff)
 
-/obj/item/reagent_containers/spray/alien/stun
+//Fuck off with that, this is both unfunny, but literally does not work as ether is a injection chemical
+/obj/item/reagent_containers/spray/xenomorph/stun
 	name = "paralytic toxin synthesizer"
 	desc = "squirts viagra."
-	icon = 'icons/mob/alien.dmi'
+	icon = 'icons/mob/xenomorph.dmi'
 	icon_state = "borg-spray-stun"
 	list_reagents = list("ether" = 250)
 
-/obj/item/reagent_containers/spray/alien/stun/cyborg_recharge(coeff, emagged)
+/obj/item/reagent_containers/spray/xenomorph/stun/cyborg_recharge(coeff, emagged)
 	reagents.check_and_add("ether", volume, 2 * coeff)
 
 //SKREEEEEEEEEEEE tool
 
-/obj/item/flash/cyborg/alien
+/obj/item/flash/cyborg/xenomorph
 	name = "eye flash"
 	desc = "Useful for taking pictures, making friends and flash-frying chips."
-	icon = 'icons/mob/alien.dmi'
+	icon = 'icons/mob/xenomorph.dmi'
 	icon_state = "borg-flash"

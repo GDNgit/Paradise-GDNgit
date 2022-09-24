@@ -286,7 +286,7 @@
 	knockdown = 10 SECONDS
 
 /obj/item/projectile/bullet/neurotoxin/on_hit(atom/target, blocked = 0)
-	if(isalien(target))
+	if(isxenomorph(target))
 		knockdown = 0
 		nodamage = TRUE
 	. = ..() // Execute the rest of the code.

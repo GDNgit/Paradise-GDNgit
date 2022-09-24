@@ -405,7 +405,7 @@ GLOBAL_LIST_EMPTY(turret_icons)
 		to_chat(M, "<span class='danger'>That object is useless to you.</span>")
 	return
 
-/obj/machinery/porta_turret/attack_alien(mob/living/carbon/alien/humanoid/M)
+/obj/machinery/porta_turret/attack_xenomorph(mob/living/carbon/xenomorph/humanoid/M)
 	M.changeNext_move(CLICK_CD_MELEE)
 	M.do_attack_animation(src)
 	if(!(stat & BROKEN))
@@ -413,7 +413,7 @@ GLOBAL_LIST_EMPTY(turret_icons)
 		visible_message("<span class='danger'>[M] has slashed at [src]!</span>")
 		take_damage(15)
 	else
-		to_chat(M, "<span class='noticealien'>That object is useless to you.</span>")
+		to_chat(M, "<span class='noticexenomorph'>That object is useless to you.</span>")
 	return
 
 /obj/machinery/porta_turret/emag_act(user as mob)
@@ -588,7 +588,7 @@ GLOBAL_LIST_EMPTY(turret_icons)
 	if(isanimal(L) || issmall(L)) // Animals are not so dangerous
 		return check_anomalies ? TURRET_SECONDARY_TARGET : TURRET_NOT_TARGET
 
-	if(isalien(L)) // Xenos are dangerous
+	if(isxenomorph(L)) // Xenos are dangerous
 		return check_anomalies ? TURRET_PRIORITY_TARGET	: TURRET_NOT_TARGET
 
 	if(ishuman(L))	//if the target is a human, analyze threat level

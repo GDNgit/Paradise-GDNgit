@@ -263,22 +263,22 @@
 	linked_emote = /datum/emote/living/carbon/faint
 	name = "Faint"
 
-/datum/keybinding/emote/carbon/alien
-	category = KB_CATEGORY_EMOTE_ALIEN
+/datum/keybinding/emote/carbon/xenomorph
+	category = KB_CATEGORY_EMOTE_XENOMORPH
 
-/datum/keybinding/emote/carbon/alien/can_use(client/C, mob/M)
-	return isalien(M) && ..()
+/datum/keybinding/emote/carbon/xenomorph/can_use(client/C, mob/M)
+	return isxenomorph(M) && ..()
 
-/datum/keybinding/emote/carbon/alien/humanoid/roar
-	linked_emote = /datum/emote/living/carbon/alien/humanoid/roar
+/datum/keybinding/emote/carbon/xenomorph/humanoid/roar
+	linked_emote = /datum/emote/living/carbon/xenomorph/humanoid/roar
 	name = "Roar"
 
-/datum/keybinding/emote/carbon/alien/humanoid/hiss
-	linked_emote = /datum/emote/living/carbon/alien/humanoid/hiss
+/datum/keybinding/emote/carbon/xenomorph/humanoid/hiss
+	linked_emote = /datum/emote/living/carbon/xenomorph/humanoid/hiss
 	name = "Hiss"
 
-/datum/keybinding/emote/carbon/alien/humanoid/gnarl
-	linked_emote = /datum/emote/living/carbon/alien/humanoid/gnarl
+/datum/keybinding/emote/carbon/xenomorph/humanoid/gnarl
+	linked_emote = /datum/emote/living/carbon/xenomorph/humanoid/gnarl
 	name = "Gnarl"
 
 /datum/keybinding/emote/carbon/brain

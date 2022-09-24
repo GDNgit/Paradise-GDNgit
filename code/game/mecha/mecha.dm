@@ -532,11 +532,11 @@
 	log_message("Attack by hand/paw. Attacker - [user].")
 
 
-/obj/mecha/attack_alien(mob/living/user)
-	log_message("Attack by alien. Attacker - [user].", TRUE)
-	add_attack_logs(user, OCCUPANT_LOGGING, "Alien attacked mech [src]")
+/obj/mecha/attack_xenomorph(mob/living/user)
+	log_message("Attack by xenomorph. Attacker - [user].", TRUE)
+	add_attack_logs(user, OCCUPANT_LOGGING, "xenomorph attacked mech [src]")
 	playsound(src.loc, 'sound/weapons/slash.ogg', 100, TRUE)
-	attack_generic(user, 15, BRUTE, MELEE, 0)
+	attack_generic(user, 15, BRUTE, MELEE, 0) //I'm fucking SORRY? it doesn't actually do what it says it does????
 
 /obj/mecha/attack_animal(mob/living/simple_animal/user)
 	log_message("Attack by simple animal. Attacker - [user].")

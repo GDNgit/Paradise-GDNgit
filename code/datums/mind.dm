@@ -1825,27 +1825,27 @@
 	mind.assigned_role = "slime"
 
 //XENO
-/mob/living/carbon/alien/mind_initialize()
+/mob/living/carbon/xenomorph/mind_initialize()
 	..()
-	mind.assigned_role = "Alien"
+	mind.assigned_role = "Xenomorph"
 	//XENO HUMANOID
-/mob/living/carbon/alien/humanoid/queen/mind_initialize()
+/mob/living/carbon/xenomorph/humanoid/queen/mind_initialize()
 	..()
 	mind.special_role = SPECIAL_ROLE_XENOMORPH_QUEEN
 
-/mob/living/carbon/alien/humanoid/hunter/mind_initialize()
+/mob/living/carbon/xenomorph/humanoid/hunter/mind_initialize()
 	..()
 	mind.special_role = SPECIAL_ROLE_XENOMORPH_HUNTER
 
-/mob/living/carbon/alien/humanoid/drone/mind_initialize()
+/mob/living/carbon/xenomorph/humanoid/drone/mind_initialize()
 	..()
 	mind.special_role = SPECIAL_ROLE_XENOMORPH_DRONE
 
-/mob/living/carbon/alien/humanoid/sentinel/mind_initialize()
+/mob/living/carbon/xenomorph/humanoid/sentinel/mind_initialize()
 	..()
 	mind.special_role = SPECIAL_ROLE_XENOMORPH_SENTINEL
 	//XENO LARVA
-/mob/living/carbon/alien/larva/mind_initialize()
+/mob/living/carbon/xenomorph/larva/mind_initialize()
 	..()
 	mind.special_role = SPECIAL_ROLE_XENOMORPH_LARVA
 

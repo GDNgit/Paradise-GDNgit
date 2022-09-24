@@ -917,13 +917,13 @@
 /datum/reagent/consumable/ethanol/acid_spit
 	name = "Acid Spit"
 	id = "acidspit"
-	description = "A drink by Nanotrasen. Made from live aliens."
+	description = "A drink by Nanotrasen. Made from live xenomorphs."
 	reagent_state = LIQUID
 	color = "#365000" // rgb: 54, 80, 0
 	alcohol_perc = 0.3
 	drink_icon = "acidspitglass"
 	drink_name = "Acid Spit"
-	drink_desc = "A drink from Nanotrasen. Made from live aliens."
+	drink_desc = "A drink from Nanotrasen. Made from live xenomorphs."
 	taste_description = "PAIN"
 
 /datum/reagent/consumable/ethanol/amasec
@@ -1724,7 +1724,7 @@
 
 	if(current_cycle % 10 != 0 || !isplasmaman(M))
 		return ..()
-	
+
 	if(prob(30))
 		var/mob/living/carbon/human/H = M
 		to_chat(M, "<span class='warning'>You expell flaming substance from within your suit.</span>")
@@ -1734,7 +1734,7 @@
 		H.adjust_fire_stacks(1)
 		H.IgniteMob()
 		on_fire = TRUE
-			
+
 	return ..()
 
 /datum/reagent/consumable/ethanol/howler
@@ -1751,11 +1751,11 @@
 /datum/reagent/consumable/ethanol/howler/on_mob_life(mob/living/M)
 	if(!isvulpkanin(M))
 		return ..()
-		
+
 	var/mob/living/carbon/human/H = M
 	if(H.health > 0)
 		H.adjustToxLoss(-0.5)
-		
+
 	return ..()
 
 /datum/reagent/consumable/ethanol/diona_smash
@@ -1777,5 +1777,5 @@
 	to_chat(M, "<span class='warning'>Mmm, tasty.</span>")
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	mutated = TRUE
-		
+
 	return ..()

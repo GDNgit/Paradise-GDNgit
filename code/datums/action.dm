@@ -584,12 +584,12 @@
 	button.add_overlay(count_down_holder)
 
 /*
-/datum/action/spell_action/alien
+/datum/action/spell_action/xenomorph //why is this here it doesn't do a thing
 
-/datum/action/spell_action/alien/IsAvailable()
+/datum/action/spell_action/xenomorph/IsAvailable()
 	if(!target)
 		return 0
-	var/obj/effect/proc_holder/alien/ab = target
+	var/obj/effect/proc_holder/xenomorph/ab = target
 
 	if(owner)
 		return ab.cost_check(ab.check_turf, owner, 1)

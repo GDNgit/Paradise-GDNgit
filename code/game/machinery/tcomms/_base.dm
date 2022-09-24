@@ -200,7 +200,7 @@ GLOBAL_LIST_EMPTY(tcomms_machines)
 	var/atom/follow_target = null
 	/// Is this signal meant to be rejected
 	var/reject = FALSE
-	/// Voice name if the person doesnt have a name (diona, alien, etc)
+	/// Voice name if the person doesnt have a name (diona, xenomorph, etc)
 	var/vname
 	/// List of all channels this can be sent or recieved on
 	var/list/zlevels = list()

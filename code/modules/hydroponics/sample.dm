@@ -38,7 +38,8 @@ GLOBAL_LIST_INIT(chem_t4_reagents, list(
 /obj/item/seeds/sample/get_analyzer_text()
 	return " The DNA of this sample is damaged beyond recovery, it can't support life on it's own.\n*---------*"
 
-/obj/item/seeds/sample/alienweed
-	name = "alien weed sample"
-	icon_state = "alienweed"
+//The below doesn't do a damn
+/obj/item/seeds/sample/xenomorphweed
+	name = "xenomorph weed sample"
+	icon_state = "xenomorphweed"
 	sample_color = null

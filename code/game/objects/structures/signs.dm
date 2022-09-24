@@ -164,8 +164,8 @@
 	desc = "A warning sign which reads 'RADIOACTIVE AREA'."
 
 /obj/structure/sign/xeno_warning_mining
-	name = "DANGEROUS ALIEN LIFE"
-	desc = "A sign that warns would be travellers of hostile alien life in the vicinity."
+	name = "DANGEROUS XENOMORPH LIFE"
+	desc = "A sign that warns would be travellers of hostile xenomorph life in the vicinity."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "xeno_warning"
 

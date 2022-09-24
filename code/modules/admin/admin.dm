@@ -193,7 +193,7 @@ GLOBAL_VAR_INIT(nologevent, 0)
 			else if(ishuman(M))
 				body += {"<A href='?_src_=holder;makeai=[M.UID()]'>Make AI</A> |
 					<A href='?_src_=holder;makerobot=[M.UID()]'>Make Robot</A> |
-					<A href='?_src_=holder;makealien=[M.UID()]'>Make Alien</A> |
+					<A href='?_src_=holder;makexenomorph=[M.UID()]'>Make Xenomorph</A> |
 					<A href='?_src_=holder;makeslime=[M.UID()]'>Make Slime</A> |
 					<A href='?_src_=holder;makesuper=[M.UID()]'>Make Superhero</A>
 				"}
@@ -234,7 +234,7 @@ GLOBAL_VAR_INIT(nologevent, 0)
 			body += {"<br><br>
 				<b>Rudimentary transformation:</b><font size=2><br>These transformations only create a new mob type and copy stuff over. They do not take into account MMIs and similar mob-specific things. The buttons in 'Transformations' are preferred, when possible.</font><br>
 				<A href='?_src_=holder;simplemake=observer;mob=[M.UID()]'>Observer</A> |
-				\[ Alien: <A href='?_src_=holder;simplemake=drone;mob=[M.UID()]'>Drone</A>,
+				\[ Xenomorph: <A href='?_src_=holder;simplemake=drone;mob=[M.UID()]'>Drone</A>,
 				<A href='?_src_=holder;simplemake=hunter;mob=[M.UID()]'>Hunter</A>,
 				<A href='?_src_=holder;simplemake=queen;mob=[M.UID()]'>Queen</A>,
 				<A href='?_src_=holder;simplemake=sentinel;mob=[M.UID()]'>Sentinel</A>,

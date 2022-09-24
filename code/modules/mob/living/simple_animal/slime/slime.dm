@@ -296,7 +296,7 @@
 	if(.)
 		attacked += 10
 
-/mob/living/simple_animal/slime/attack_larva(mob/living/carbon/alien/larva/L)
+/mob/living/simple_animal/slime/attack_larva(mob/living/carbon/xenomorph/larva/L)
 	if(..()) //successful larva bite.
 		attacked += 10
 
@@ -345,7 +345,7 @@
 		if(..()) //successful attack
 			attacked += 10
 
-/mob/living/simple_animal/slime/attack_alien(mob/living/carbon/alien/humanoid/M)
+/mob/living/simple_animal/slime/attack_xenomorph(mob/living/carbon/xenomorph/humanoid/M)
 	if(..()) //if harm or disarm intent.
 		attacked += 10
 		discipline_slime(M)

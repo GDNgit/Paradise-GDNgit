@@ -649,7 +649,7 @@ Difficulty: Medium
 	invocation_type = "none"
 	sparkle_path = /obj/effect/temp_visual/dir_setting/tailsweep
 	action_icon_state = "tailsweep"
-	action_background_icon_state = "bg_alien"
+	action_background_icon_state = "bg_xenomorph"
 
 /obj/effect/proc_holder/spell/aoe_turf/repulse/spacedragon/create_new_targeting()
 	var/datum/spell_targeting/aoe/turf/T = new()

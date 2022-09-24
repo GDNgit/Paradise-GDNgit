@@ -450,9 +450,9 @@
 	new /obj/effect/decal/cleanable/blood/oil(loc)
 	..()
 
-/mob/living/simple_animal/bot/secbot/attack_alien(mob/living/carbon/alien/user as mob)
+/mob/living/simple_animal/bot/secbot/attack_xenomorph(mob/living/carbon/xenomorph/user as mob)
 	..()
-	if(!isalien(target))
+	if(!isxenomorph(target))
 		target = user
 		mode = BOT_HUNT
 

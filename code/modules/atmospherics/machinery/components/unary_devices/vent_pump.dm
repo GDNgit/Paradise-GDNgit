@@ -35,7 +35,7 @@
 	var/internal_pressure_bound_default = INTERNAL_PRESSURE_BOUND
 	var/pressure_checks_default = PRESSURE_CHECKS
 
-	var/welded = FALSE // Added for aliens -- TLE
+	var/welded = FALSE // Added for xenomorphs -- TLE
 	var/weld_burst_pressure = 50 * ONE_ATMOSPHERE	//the (internal) pressure at which welded covers will burst off
 
 	frequency = ATMOS_VENTSCRUB
@@ -289,7 +289,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/can_crawl_through()
 	return !welded
 
-/obj/machinery/atmospherics/unary/vent_pump/attack_alien(mob/user)
+/obj/machinery/atmospherics/unary/vent_pump/attack_xenomorph(mob/user)
 	if(!welded || !(do_after(user, 20, target = src)))
 		return
 	user.visible_message("<span class='warning'>[user] furiously claws at [src]!</span>", "<span class='notice'>You manage to clear away the stuff blocking the vent.</span>", "<span class='italics'>You hear loud scraping noises.</span>")

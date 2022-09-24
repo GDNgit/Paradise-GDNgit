@@ -185,7 +185,7 @@
 	if(user.can_advanced_admin_interact())
 		forcetoggle(TRUE)
 
-/obj/machinery/door/firedoor/attack_alien(mob/user)
+/obj/machinery/door/firedoor/attack_xenomorph(mob/user)
 	add_fingerprint(user)
 	if(welded)
 		to_chat(user, "<span class='warning'>[src] refuses to budge!</span>")

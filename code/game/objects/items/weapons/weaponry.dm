@@ -272,15 +272,15 @@
 		return
 	if(target.mob_size > MOB_SIZE_HUMAN)
 		// No throwing things that are physically bigger than you are.
-		// Covers: blobbernaut, alien empress, ai core, juggernaut, ed209, mulebot, alien/queen/large, carp/megacarp, deathsquid, hostile/tree, megafauna, hostile/asteroid, terror_spider/queen/empress
+		// Covers: blobbernaut, xenomorph empress, ai core, juggernaut, ed209, mulebot, xenomorph/queen/large, carp/megacarp, deathsquid, hostile/tree, megafauna, hostile/asteroid, terror_spider/queen/empress
 		return
 	if(!(target.status_flags & CANPUSH))
 		// No throwing mobs specifically flagged as immune to being pushed.
-		// Covers: revenant, hostile/blob/*, most borgs, juggernauts, hivebot/tele, spaceworms, shades, bots, alien queens, hostile/syndicate/melee, hostile/asteroid
+		// Covers: revenant, hostile/blob/*, most borgs, juggernauts, hivebot/tele, spaceworms, shades, bots, xenomorph queens, hostile/syndicate/melee, hostile/asteroid
 		return
 	if(target.move_resist > MOVE_RESIST_DEFAULT)
 		// No throwing mobs that have higher than normal move_resist.
-		// Covers: revenant, bot/mulebot, hostile/statue, hostile/megafauna, goliath
+		// Covers: revenant, bot/mulebot, hostile/statue, hostile/megafauna, goliath, xenomorph queens, xenomorph empresses
 		return
 	var/atom/throw_target = get_edge_target_turf(target, user.dir)
 	target.throw_at(throw_target, rand(1, 2), 7, user)

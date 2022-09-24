@@ -219,7 +219,7 @@
 
 	This currently is just a default for all mobs, involving
 	laser eyes and telekinesis.  You could easily add exceptions
-	for things like ranged glove touches, spitting alien acid/neurotoxin,
+	for things like ranged glove touches, spitting xenomorph acid/neurotoxin,
 	animals lunging, etc.
 */
 /mob/proc/RangedAttack(atom/A, params)

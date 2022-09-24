@@ -12,7 +12,7 @@
 		/mob/living/simple_animal/mouse,
 		/mob/living/carbon/human,
 		/mob/living/simple_animal/slime,
-		/mob/living/carbon/alien/larva,
+		/mob/living/carbon/xenomorph/larva,
 		/mob/living/simple_animal/slime,
 		/mob/living/simple_animal/chick,
 		/mob/living/simple_animal/chicken,

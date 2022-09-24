@@ -69,7 +69,7 @@
 #define PROCESS_DUO 4		//Only processes reagents with "ORGANIC | SYNTHETIC"
 
 #define HUMAN_STRIP_DELAY 40 //takes 40ds = 4s to strip someone.
-#define ALIEN_SELECT_AFK_BUFFER 1 // How many minutes that a person can be AFK before not being allowed to be an alien.
+#define XENOMORPH_SELECT_AFK_BUFFER 1 // How many minutes that a person can be AFK before not being allowed to be an xenomorph.
 #define SHOES_SLOWDOWN 0			// How much shoes slow you down by default. Negative values speed you up
 
 

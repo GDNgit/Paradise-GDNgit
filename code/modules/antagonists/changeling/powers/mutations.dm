@@ -132,7 +132,7 @@
 
 	else if(istype(target, /obj/machinery/computer))
 		var/obj/machinery/computer/C = target
-		C.attack_alien(user) //muh copypasta
+		C.attack_xenomorph(user) //muh copypasta
 
 	else if(istype(target, /obj/machinery/door/airlock))
 		var/obj/machinery/door/airlock/A = target
@@ -147,7 +147,7 @@
 		if(A.arePowerSystemsOn())
 			user.visible_message("<span class='warning'>[user] jams [src] into the airlock and starts prying it open!</span>", "<span class='warning'>We start forcing the airlock open.</span>", \
 			"<span class='italics'>You hear a metal screeching sound.</span>")
-			playsound(A, 'sound/machines/airlock_alien_prying.ogg', 150, 1)
+			playsound(A, 'sound/machines/airlock_xenomorph_prying.ogg', 150, 1)
 			if(!do_after(user, 100, target = A))
 				return
 

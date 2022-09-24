@@ -20,7 +20,7 @@
 	var/obj/screen/blobpwrdisplay
 	var/obj/screen/blobhealthdisplay
 	var/obj/screen/vampire_blood_display
-	var/obj/screen/alien_plasma_display
+	var/obj/screen/xenomorph_plasma_display
 	var/obj/screen/nightvisionicon
 	var/obj/screen/action_intent
 	var/obj/screen/zone_select
@@ -30,7 +30,7 @@
 	var/list/static_inventory = list()		//the screen objects which are static
 	var/list/toggleable_inventory = list()	//the screen objects which can be hidden
 	var/list/hotkeybuttons = list()			//the buttons that can be used via hotkeys
-	var/list/infodisplay = list()			//the screen objects that display mob info (health, alien plasma, etc...)
+	var/list/infodisplay = list()			//the screen objects that display mob info (health, xenomorph plasma, etc...)
 	var/list/inv_slots[slots_amt]			// /obj/screen/inventory objects, ordered by their slot ID.
 
 	var/obj/screen/movable/action_button/hide_toggle/hide_actions_toggle
@@ -95,7 +95,7 @@
 	lingchemdisplay = null
 	lingstingdisplay = null
 	blobpwrdisplay = null
-	alien_plasma_display = null
+	xenomorph_plasma_display = null
 	vampire_blood_display = null
 	nightvisionicon = null
 

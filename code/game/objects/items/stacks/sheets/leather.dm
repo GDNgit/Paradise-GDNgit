@@ -67,14 +67,14 @@ GLOBAL_LIST_INIT(lizard_recipes, list( \
 	max_amount = 50
 
 /obj/item/stack/sheet/animalhide/xeno
-	name = "alien hide"
+	name = "xenomorph hide"
 	desc = "The skin of a terrible creature."
-	singular_name = "alien hide piece"
+	singular_name = "xenomorph hide piece"
 	icon_state = "sheet-xeno"
 
 GLOBAL_LIST_INIT(xeno_recipes, list (
-	new/datum/stack_recipe("alien helmet", /obj/item/clothing/head/xenos, 1),
-	new/datum/stack_recipe("alien suit", /obj/item/clothing/suit/xenos, 2)))
+	new/datum/stack_recipe("xenomorph helmet", /obj/item/clothing/head/xenos, 1),
+	new/datum/stack_recipe("xenomorph suit", /obj/item/clothing/suit/xenos, 2)))
 
 /obj/item/stack/sheet/animalhide/xeno/Initialize(mapload, new_amount, merge = TRUE)
 	recipes = GLOB.xeno_recipes
@@ -82,24 +82,24 @@ GLOBAL_LIST_INIT(xeno_recipes, list (
 
 //don't see anywhere else to put these, maybe together they could be used to make the xenos suit?
 /obj/item/stack/sheet/xenochitin
-	name = "alien chitin"
+	name = "xenomorph chitin"
 	desc = "A piece of the hide of a terrible creature."
-	singular_name = "alien hide piece"
-	icon = 'icons/mob/alien.dmi'
+	singular_name = "xenomorph hide piece"
+	icon = 'icons/mob/xenomorph.dmi'
 	icon_state = "chitin"
 	origin_tech = ""
 
 /obj/item/xenos_claw
-	name = "alien claw"
+	name = "xenomorph claw"
 	desc = "The claw of a terrible creature."
-	icon = 'icons/mob/alien.dmi'
+	icon = 'icons/mob/xenomorph.dmi'
 	icon_state = "claw"
 	origin_tech = ""
 
 /obj/item/weed_extract
 	name = "weed extract"
 	desc = "A piece of slimy, purplish weed."
-	icon = 'icons/mob/alien.dmi'
+	icon = 'icons/mob/xenomorph.dmi'
 	icon_state = "weed_extract"
 	origin_tech = ""
 

@@ -332,7 +332,7 @@
 	add_attack_logs(M, src, "Animal attacked")
 	return TRUE
 
-/mob/living/attack_larva(mob/living/carbon/alien/larva/L)
+/mob/living/attack_larva(mob/living/carbon/xenomorph/larva/L)
 	switch(L.a_intent)
 		if(INTENT_HELP)
 			visible_message("<span class='notice'>[L.name] rubs its head against [src].</span>")
@@ -355,7 +355,7 @@
 					"<span class='userdanger'>[L.name] has attempted to bite [src]!</span>")
 	return 0
 
-/mob/living/attack_alien(mob/living/carbon/alien/humanoid/M)
+/mob/living/attack_xenomorph(mob/living/carbon/xenomorph/humanoid/M)
 	switch(M.a_intent)
 		if(INTENT_HELP)
 			visible_message("<span class='notice'>[M] caresses [src] with its scythe like arm.</span>")

@@ -62,7 +62,7 @@
 		update_icon(UPDATE_ICON_STATE)
 
 /obj/structure/extinguisher_cabinet/attackby(obj/item/O, mob/user, params)
-	if(isrobot(user) || isalien(user))
+	if(isrobot(user) || isxenomorph(user))
 		return
 	if(istype(O, /obj/item/extinguisher))
 		if(!has_extinguisher && opened)
@@ -101,7 +101,7 @@
 		deconstruct(TRUE)
 
 /obj/structure/extinguisher_cabinet/attack_hand(mob/user)
-	if(isrobot(user) || isalien(user))
+	if(isrobot(user) || isxenomorph(user))
 		to_chat(user, "<span class='notice'>You don't have the dexterity to do this!</span>")
 		return
 	if(ishuman(user))

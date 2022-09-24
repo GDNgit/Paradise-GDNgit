@@ -71,9 +71,9 @@
 	desc = "A shooting target that looks like a syndicate scum."
 	hp = 2600 // i guess syndie targets are sturdier?
 
-/obj/item/target/alien
+/obj/item/target/xenomorph
 	icon_state = "target_q"
-	desc = "A shooting target that looks like a xenomorphic alien."
+	desc = "A shooting target that kinda looks like a xenomorph."
 	hp = 2350 // alium onest too kinda
 
 #define DECALTYPE_SCORCH 1

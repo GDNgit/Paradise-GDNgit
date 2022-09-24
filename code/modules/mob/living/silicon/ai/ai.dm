@@ -421,7 +421,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 		"Glitchman",
 		"House",
 		"Database",
-		"Alien",
+		"Xenomorph",
 		"Tiger",
 		"Fox",
 		"Vox",
@@ -514,8 +514,8 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 			icon_state = "ai-house"
 		if("Database")
 			icon_state = "ai-database"
-		if("Alien")
-			icon_state = "ai-alien"
+		if("Xenomorph")
+			icon_state = "ai-Xenomorph"
 		if("Tiger")
 			icon_state = "ai-tiger"
 		if("Fox")

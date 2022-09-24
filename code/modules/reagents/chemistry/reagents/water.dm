@@ -175,7 +175,7 @@
 			blood_prop = new(T)
 			blood_prop.blood_DNA[data["blood_DNA"]] = data["blood_type"]
 
-	else if(istype(data["donor"], /mob/living/carbon/alien))
+	else if(istype(data["donor"], /mob/living/carbon/xenomorph))
 		var/obj/effect/decal/cleanable/blood/xeno/blood_prop = locate() in T
 		if(!blood_prop)
 			blood_prop = new(T)

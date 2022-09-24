@@ -158,7 +158,7 @@
 		temp_img = icon('icons/obj/butts.dmi', "drone")
 	else if(istype(copymob,/mob/living/simple_animal/diona))
 		temp_img = icon('icons/obj/butts.dmi', "nymph")
-	else if(isalien(copymob) || istype(copymob,/mob/living/simple_animal/hostile/alien)) //Xenos have their own asses, thanks to Pybro.
+	else if(isxenomorph(copymob) || istype(copymob,/mob/living/simple_animal/hostile/xenomorph)) //Xenos have their own asses, thanks to Pybro.
 		temp_img = icon('icons/obj/butts.dmi', "xeno")
 	else
 		return

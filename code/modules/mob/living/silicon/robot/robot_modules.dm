@@ -708,26 +708,26 @@
 	)
 
 // Xenomorph cyborg module.
-/obj/item/robot_module/alien/hunter
-	name = "alien hunter module"
+/obj/item/robot_module/xenomorph/hunter
+	name = "xenomorph hunter module"
 	module_type = "Standard"
-	module_actions = list(/datum/action/innate/robot_sight/thermal/alien)
+	module_actions = list(/datum/action/innate/robot_sight/thermal/xenomorph)
 	basic_modules = list(
-		/obj/item/melee/energy/alien/claws,
-		/obj/item/flash/cyborg/alien,
-		/obj/item/reagent_containers/spray/alien/stun,
-		/obj/item/reagent_containers/spray/alien/smoke,
+		/obj/item/melee/energy/xenomorph/claws,
+		/obj/item/flash/cyborg/xenomorph,
+		/obj/item/reagent_containers/spray/xenomorph/stun,
+		/obj/item/reagent_containers/spray/xenomorph/smoke,
 	)
-	emag_modules = list(/obj/item/reagent_containers/spray/alien/acid)
+	emag_modules = list(/obj/item/reagent_containers/spray/xenomorph/acid)
 	special_rechargables = list(
-		/obj/item/reagent_containers/spray/alien/acid,
-		/obj/item/reagent_containers/spray/alien/stun,
-		/obj/item/reagent_containers/spray/alien/smoke
+		/obj/item/reagent_containers/spray/xenomorph/acid,
+		/obj/item/reagent_containers/spray/xenomorph/stun,
+		/obj/item/reagent_containers/spray/xenomorph/smoke
 	)
 
-/obj/item/robot_module/alien/hunter/add_languages(mob/living/silicon/robot/R)
+/obj/item/robot_module/xenomorph/hunter/add_languages(mob/living/silicon/robot/R)
 	. = ..()
-	R.add_language("xenocommon", 1)
+	R.add_language("xenomorphcommon", 1)
 
 // Maintenance drone module.
 /obj/item/robot_module/drone

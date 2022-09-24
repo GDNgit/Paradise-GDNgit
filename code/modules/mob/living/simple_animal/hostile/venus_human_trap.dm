@@ -1,6 +1,5 @@
-
-
-/obj/structure/alien/resin/flower_bud_enemy //inheriting basic attack/damage stuff from alien structures
+//Todo: NOOOO
+/obj/structure/xenomorph/resin/flower_bud_enemy //inheriting basic attack/damage stuff from xenomorph structures // Fuck this so much -GDN
 	name = "flower bud"
 	desc = "A large pulsating plant..."
 	icon = 'icons/effects/spacevines.dmi'
@@ -11,7 +10,7 @@
 	smoothing_flags = NONE
 	var/growth_time = 120 SECONDS
 
-/obj/structure/alien/resin/flower_bud_enemy/New()
+/obj/structure/xenomorph/resin/flower_bud_enemy/New()
 	..()
 	var/list/anchors = list()
 	anchors += locate(x-2,y+2,z)
@@ -24,7 +23,7 @@
 		B.sleep_time = 10 //these shouldn't move, so let's slow down updates to 1 second (any slower and the deletion of the vines would be too slow)
 	addtimer(CALLBACK(src, .proc/bear_fruit), growth_time)
 
-/obj/structure/alien/resin/flower_bud_enemy/proc/bear_fruit()
+/obj/structure/xenomorph/resin/flower_bud_enemy/proc/bear_fruit()
 	visible_message("<span class='danger'>the plant has borne fruit!</span>")
 	new /mob/living/simple_animal/hostile/venus_human_trap(get_turf(src))
 	qdel(src)

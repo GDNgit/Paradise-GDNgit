@@ -349,9 +349,9 @@ GLOBAL_PROTECT(AdminProcCallSpamPrevention)
 			GLOB.paiController.pai_candidates.Remove(candidate)
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Make pAI") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
-/client/proc/cmd_admin_alienize(mob/M in GLOB.mob_list)
+/client/proc/cmd_admin_xenomorphize(mob/M in GLOB.mob_list)
 	set category = "Event"
-	set name = "Make Alien"
+	set name = "Make Xenomorph"
 
 	if(!check_rights(R_SPAWN))
 		return
@@ -360,12 +360,12 @@ GLOBAL_PROTECT(AdminProcCallSpamPrevention)
 		alert("Wait until the game starts")
 		return
 	if(ishuman(M))
-		log_admin("[key_name(src)] has alienized [M.key].")
+		log_admin("[key_name(src)] has xenomorphized [M.key].")
 		spawn(10)
-			M:Alienize()
-			SSblackbox.record_feedback("tally", "admin_verb", 1, "Make Alien") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-		log_admin("[key_name(usr)] made [key_name(M)] into an alien.")
-		message_admins("<span class='notice'>[key_name_admin(usr)] made [key_name(M)] into an alien.</span>", 1)
+			M:Xenomorphize()
+			SSblackbox.record_feedback("tally", "admin_verb", 1, "Make Xenomorph") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+		log_admin("[key_name(usr)] made [key_name(M)] into an xenomorph.")
+		message_admins("<span class='notice'>[key_name_admin(usr)] made [key_name(M)] into an xenomorph.</span>", 1)
 	else
 		alert("Invalid mob")
 

@@ -69,20 +69,20 @@
 	return
 
 /*
-	Aliens
+	Xenomorphs
 	Defaults to same as monkey in most places
 */
-/mob/living/carbon/alien/UnarmedAttack(atom/A)
-	A.attack_alien(src)
+/mob/living/carbon/xenomorph/UnarmedAttack(atom/A)
+	A.attack_xenomorph(src)
 
-/atom/proc/attack_alien(mob/living/carbon/alien/user)
+/atom/proc/attack_xenomorph(mob/living/carbon/xenomorph/user)
 	attack_hand(user)
 
-/mob/living/carbon/alien/RestrainedClickOn(atom/A)
+/mob/living/carbon/xenomorph/RestrainedClickOn(atom/A)
 	return
 
-// Babby aliens
-/mob/living/carbon/alien/larva/UnarmedAttack(atom/A)
+// Babby xenomorphs
+/mob/living/carbon/xenomorph/larva/UnarmedAttack(atom/A)
 	A.attack_larva(src)
 
 /atom/proc/attack_larva(mob/user)

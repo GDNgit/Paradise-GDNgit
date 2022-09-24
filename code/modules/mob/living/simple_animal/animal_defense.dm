@@ -1,3 +1,4 @@
+//TODO: Change this to be less shit
 /mob/living/simple_animal/attackby(obj/item/O, mob/living/user)
 	if(can_collar && istype(O, /obj/item/clothing/accessory/petcollar) && !pcollar)
 		add_collar(O, user)
@@ -40,22 +41,22 @@
 		adjustBruteLoss(15)
 		return TRUE
 
-/mob/living/simple_animal/attack_alien(mob/living/carbon/alien/humanoid/M)
+/mob/living/simple_animal/attack_xenomorph(mob/living/carbon/xenomorph/humanoid/M)
 	if(..()) //if harm or disarm intent.
 		if(M.a_intent == INTENT_DISARM)
 			playsound(loc, 'sound/weapons/pierce.ogg', 25, TRUE, -1)
 			visible_message("<span class='danger'>[M] [response_disarm] [name]!</span>", "<span class='userdanger'>[M] [response_disarm] you!</span>")
-			add_attack_logs(M, src, "Alien disarmed")
+			add_attack_logs(M, src, "Xenomorph disarmed")
 		else
 			var/damage = rand(15, 30)
 			visible_message("<span class='danger'>[M] has slashed at [src]!</span>", \
 					"<span class='userdanger'>[M] has slashed at [src]!</span>")
 			playsound(loc, 'sound/weapons/slice.ogg', 25, 1, -1)
-			add_attack_logs(M, src, "Alien attacked")
+			add_attack_logs(M, src, "Xenomorph attacked")
 			attack_threshold_check(damage)
 		return TRUE
 
-/mob/living/simple_animal/attack_larva(mob/living/carbon/alien/larva/L)
+/mob/living/simple_animal/attack_larva(mob/living/carbon/xenomorph/larva/L)
 	if(..()) //successful larva bite
 		if(stat != DEAD)
 			var/damage = rand(5, 10)

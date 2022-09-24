@@ -180,7 +180,7 @@
 
 /datum/reagent/mutagen/reaction_mob(mob/living/M, method=REAGENT_TOUCH, volume)
 	if(!M || !M.dna || HAS_TRAIT(M, TRAIT_BADDNA) || HAS_TRAIT(M, TRAIT_GENELESS))
-		return //No robots, AIs, aliens, Ians or other mobs should be affected by this.
+		return //No robots, AIs, xenomorphs, Ians or other mobs should be affected by this.
 	if((method==REAGENT_TOUCH && prob(33)) || method==REAGENT_INGEST)
 		randmutb(M)
 		domutcheck(M)
@@ -188,7 +188,7 @@
 
 /datum/reagent/mutagen/on_mob_life(mob/living/M)
 	if(!M.dna)
-		return //No robots, AIs, aliens, Ians or other mobs should be affected by this.
+		return //No robots, AIs, xenomorphs, Ians or other mobs should be affected by this.
 	M.apply_effect(2 * REAGENTS_EFFECT_MULTIPLIER, IRRADIATE)
 	if(prob(4))
 		randmutb(M)
@@ -1042,9 +1042,9 @@
 		W.visible_message("<span class='warning'>The fungi are completely dissolved by the solution!</span>")
 
 /datum/reagent/glyphosate/reaction_obj(obj/O, volume)
-	if(istype(O,/obj/structure/alien/weeds))
-		var/obj/structure/alien/weeds/alien_weeds = O
-		alien_weeds.take_damage(rand(15, 35), BRUTE, 0) // Kills alien weeds pretty fast
+	if(istype(O,/obj/structure/xenomorph/weeds))
+		var/obj/structure/xenomorph/weeds/xenomorph_weeds = O
+		xenomorph_weeds.take_damage(rand(15, 35), BRUTE, 0) // Kills xenomorph weeds pretty fast
 	else if(istype(O, /obj/structure/glowshroom)) //even a small amount is enough to kill it
 		qdel(O)
 	else if(istype(O, /obj/structure/spacevine))
@@ -1185,7 +1185,7 @@
 
 /datum/reagent/glowing_slurry/reaction_mob(mob/living/M, method=REAGENT_TOUCH, volume) //same as mutagen
 	if(!M || !M.dna)
-		return //No robots, AIs, aliens, Ians or other mobs should be affected by this.
+		return //No robots, AIs, xenomorphs, Ians or other mobs should be affected by this.
 	if((method==REAGENT_TOUCH && prob(50)) || method==REAGENT_INGEST)
 		randmutb(M)
 		domutcheck(M)

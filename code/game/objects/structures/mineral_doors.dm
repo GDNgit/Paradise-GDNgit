@@ -219,5 +219,5 @@
 	sheetType = null
 
 /obj/structure/mineral_door/resin/try_to_operate(atom/user)
-	if(isalien(user))
+	if(isxenomorph(user))
 		return ..()

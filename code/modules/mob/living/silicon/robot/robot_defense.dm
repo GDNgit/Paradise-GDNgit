@@ -1,4 +1,5 @@
-/mob/living/silicon/robot/attack_alien(mob/living/carbon/alien/humanoid/M)
+//Todo: needs to be moved to a less shit proc so that I can change it
+/mob/living/silicon/robot/attack_Xenomorph(mob/living/carbon/Xenomorph/humanoid/M)
 	if(M.a_intent == INTENT_DISARM)
 		if(mobility_flags & MOBILITY_MOVE)
 			M.do_attack_animation(src, ATTACK_EFFECT_DISARM)
@@ -6,11 +7,11 @@
 			if(I)
 				uneq_active()
 				visible_message("<span class='danger'>[M] disarmed [src]!</span>", "<span class='userdanger'>[M] has disabled [src]'s active module!</span>")
-				add_attack_logs(M, src, "alien disarmed")
+				add_attack_logs(M, src, "Xenomorph disarmed")
 			else
 				Stun(4 SECONDS)
 				step(src, get_dir(M,src))
-				add_attack_logs(M, src, "Alien pushed over")
+				add_attack_logs(M, src, "Xenomorph pushed over")
 				visible_message("<span class='danger'>[M] forces back [src]!</span>", "<span class='userdanger'>[M] forces back [src]!</span>")
 			playsound(loc, 'sound/weapons/pierce.ogg', 50, TRUE, -1)
 	else

@@ -116,7 +116,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 /mob/living/silicon/robot/get_cell()
 	return cell
 
-/mob/living/silicon/robot/New(loc, syndie = FALSE, unfinished = FALSE, alien = FALSE, connect_to_AI = TRUE, mob/living/silicon/ai/ai_to_sync_to = null)
+/mob/living/silicon/robot/New(loc, syndie = FALSE, unfinished = FALSE, xenomorph = FALSE, connect_to_AI = TRUE, mob/living/silicon/ai/ai_to_sync_to = null)
 	spark_system = new /datum/effect_system/spark_spread()
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
@@ -168,7 +168,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 	var/obj/item/stock_parts/cell/C = cell || new default_cell_type(src)
 	cell_component.install(C)
 
-	init(alien, connect_to_AI, ai_to_sync_to)
+	init(xenomorph, connect_to_AI, ai_to_sync_to)
 
 	diag_hud_set_borgcell()
 	scanner = new(src)
@@ -184,7 +184,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 		if(!has_gravity(T))
 			new /obj/effect/particle_effect/ion_trails(T, _dir)
 
-/mob/living/silicon/robot/proc/init(alien, connect_to_AI = TRUE, mob/living/silicon/ai/ai_to_sync_to = null)
+/mob/living/silicon/robot/proc/init(xenomorph, connect_to_AI = TRUE, mob/living/silicon/ai/ai_to_sync_to = null)
 	aiCamera = new/obj/item/camera/siliconcam/robot_camera(src)
 	make_laws()
 	additional_law_channels["Binary"] = ":b "
@@ -309,7 +309,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 	var/list/modules = list("Engineering", "Medical", "Miner", "Janitor", "Service")
 	if(islist(force_modules) && force_modules.len)
 		modules = force_modules.Copy()
-	if(mmi != null && mmi.alien)
+	if(mmi != null && mmi.xenomorph)
 		modules = list("Hunter")
 	modtype = input("Please, select a module!", "Robot", null, null) as null|anything in modules
 	if(!modtype)
@@ -409,7 +409,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 			status_flags &= ~CANPUSH
 
 		if("Hunter")
-			module = new /obj/item/robot_module/alien/hunter(src)
+			module = new /obj/item/robot_module/xenomorph/hunter(src)
 			icon_state = "xenoborg-state-a"
 			modtype = "Xeno-Hu"
 
@@ -1327,7 +1327,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 	default_cell_type = /obj/item/stock_parts/cell/bluespace
 	see_reagents = TRUE
 
-/mob/living/silicon/robot/deathsquad/init(alien = FALSE, connect_to_AI = TRUE, mob/living/silicon/ai/ai_to_sync_to = null)
+/mob/living/silicon/robot/deathsquad/init(xenomorph = FALSE, connect_to_AI = TRUE, mob/living/silicon/ai/ai_to_sync_to = null)
 	laws = new /datum/ai_laws/deathsquad
 	module = new /obj/item/robot_module/deathsquad(src)
 	aiCamera = new/obj/item/camera/siliconcam/robot_camera(src)
@@ -1359,7 +1359,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 	see_reagents = TRUE
 
 
-/mob/living/silicon/robot/ert/init(alien = FALSE, connect_to_AI = TRUE, mob/living/silicon/ai/ai_to_sync_to = null)
+/mob/living/silicon/robot/ert/init(xenomorph = FALSE, connect_to_AI = TRUE, mob/living/silicon/ai/ai_to_sync_to = null)
 	laws = new /datum/ai_laws/ert_override
 	radio = new /obj/item/radio/borg/ert(src)
 	radio.recalculateChannels()
@@ -1415,7 +1415,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 	default_cell_type = /obj/item/stock_parts/cell/bluespace
 	see_reagents = TRUE
 
-/mob/living/silicon/robot/destroyer/init(alien = FALSE, connect_to_AI = TRUE, mob/living/silicon/ai/ai_to_sync_to = null)
+/mob/living/silicon/robot/destroyer/init(xenomorph = FALSE, connect_to_AI = TRUE, mob/living/silicon/ai/ai_to_sync_to = null)
 	aiCamera = new/obj/item/camera/siliconcam/robot_camera(src)
 	additional_law_channels["Binary"] = ":b "
 	laws = new /datum/ai_laws/deathsquad

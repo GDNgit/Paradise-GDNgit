@@ -342,26 +342,26 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 	desc = "Your body is crumbling from the holy energies. Get out."
 	icon_state = "fire"
 
-//ALIENS
+//XENOMORPHS
 
-/obj/screen/alert/alien_tox
+/obj/screen/alert/xenomorph_tox
 	name = "Plasma"
 	desc = "There's flammable plasma in the air. If it lights up, you'll be toast."
-	icon_state = "alien_tox"
-	alerttooltipstyle = "alien"
+	icon_state = "xenomorph_tox"
+	alerttooltipstyle = "xenomorph"
 
-/obj/screen/alert/alien_fire
+/obj/screen/alert/xenomorph_fire
 // This alert is temporarily gonna be thrown for all hot air but one day it will be used for literally being on fire
 	name = "Too Hot"
 	desc = "It's too hot! Flee to space or at least away from the flames. Standing on weeds will heal you."
-	icon_state = "alien_fire"
-	alerttooltipstyle = "alien"
+	icon_state = "xenomorph_fire"
+	alerttooltipstyle = "xenomorph"
 
-/obj/screen/alert/alien_vulnerable
+/obj/screen/alert/xenomorph_vulnerable
 	name = "Severed Matriarchy"
 	desc = "Your queen has been killed, you will suffer movement penalties and loss of hivemind. A new queen cannot be made until you recover."
-	icon_state = "alien_noqueen"
-	alerttooltipstyle = "alien"
+	icon_state = "xenomorph_noqueen"
+	alerttooltipstyle = "xenomorph"
 
 //BLOBS
 

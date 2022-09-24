@@ -309,7 +309,7 @@
 	if(!(NO_BLOOD in dna.species.species_traits))
 		..()
 
-/mob/living/carbon/alien/add_splatter_floor(turf/T, small_drip, shift_x, shift_y)
+/mob/living/carbon/xenomorph/add_splatter_floor(turf/T, small_drip, shift_x, shift_y)
 	if(!T)
 		T = get_turf(src)
 

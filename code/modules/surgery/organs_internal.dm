@@ -48,10 +48,10 @@
 	)
 	requires_organic_bodypart = TRUE
 
-/datum/surgery/organ_manipulation/alien
-	name = "Alien Organ Manipulation"
+/datum/surgery/organ_manipulation/xenomorph
+	name = "Xenomorph Organ Manipulation"
 	possible_locs = list(BODY_ZONE_CHEST, BODY_ZONE_HEAD, BODY_ZONE_PRECISE_GROIN, BODY_ZONE_PRECISE_EYES, BODY_ZONE_PRECISE_MOUTH)
-	target_mobtypes = list(/mob/living/carbon/alien/humanoid)
+	target_mobtypes = list(/mob/living/carbon/xenomorph/humanoid)
 	steps = list(/datum/surgery_step/saw_carapace,/datum/surgery_step/cut_carapace, /datum/surgery_step/retract_carapace,/datum/surgery_step/proxy/manipulate_organs,)
 
 

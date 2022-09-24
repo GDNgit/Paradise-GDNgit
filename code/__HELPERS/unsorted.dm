@@ -400,7 +400,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 		moblist.Add(M)
 	for(var/mob/living/carbon/brain/M in sortmob)
 		moblist.Add(M)
-	for(var/mob/living/carbon/alien/M in sortmob)
+	for(var/mob/living/carbon/xenomorph/M in sortmob)
 		moblist.Add(M)
 	for(var/mob/dead/observer/M in sortmob)
 		moblist.Add(M)
@@ -1754,7 +1754,7 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 			/turf/simulated/floor = "SIM_FLOOR",
 			/turf/simulated/wall = "SIM_WALL",
 			/turf = "T",
-			/mob/living/carbon/alien = "XENO",
+			/mob/living/carbon/xenomorph = "XENO",
 			/mob/living/carbon/human = "HUMAN",
 			/mob/living/carbon = "CARBON",
 			/mob/living/silicon/robot = "CYBORG",

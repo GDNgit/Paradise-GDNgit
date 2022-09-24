@@ -20,9 +20,9 @@
 	var/message = ""
 	/// Message displayed if the user is a mime.
 	var/message_mime = ""
-	/// Message displayed if the user is a grown alien.
-	var/message_alien = ""
-	/// Message displayed if the user is an alien larva.
+	/// Message displayed if the user is a grown xenomorph.
+	var/message_xenomorph = ""
+	/// Message displayed if the user is an xenomorph larva.
 	var/message_larva = ""
 	/// Message displayed if the user is a robot.
 	var/message_robot = ""
@@ -379,8 +379,8 @@
 	. = msg
 	if(user.mind && user.mind.miming && message_mime)
 		. = message_mime
-	if(isalienadult(user) && message_alien)
-		. = message_alien
+	if(isxenomorphadult(user) && message_xenomorph)
+		. = message_xenomorph
 	else if(islarva(user) && message_larva)
 		. = message_larva
 	else if(issilicon(user) && message_robot)

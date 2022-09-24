@@ -391,11 +391,11 @@
 
 		switch(href_list["simplemake"])
 			if("observer")			M.change_mob_type( /mob/dead/observer , null, null, delmob, 1 )
-			if("drone")				M.change_mob_type( /mob/living/carbon/alien/humanoid/drone , null, null, delmob, 1 )
-			if("hunter")			M.change_mob_type( /mob/living/carbon/alien/humanoid/hunter , null, null, delmob, 1 )
-			if("queen")				M.change_mob_type( /mob/living/carbon/alien/humanoid/queen/large , null, null, delmob, 1 )
-			if("sentinel")			M.change_mob_type( /mob/living/carbon/alien/humanoid/sentinel , null, null, delmob, 1 )
-			if("larva")				M.change_mob_type( /mob/living/carbon/alien/larva , null, null, delmob, 1 )
+			if("drone")				M.change_mob_type( /mob/living/carbon/xenomorph/humanoid/drone , null, null, delmob, 1 )
+			if("hunter")			M.change_mob_type( /mob/living/carbon/xenomorph/humanoid/hunter , null, null, delmob, 1 )
+			if("queen")				M.change_mob_type( /mob/living/carbon/xenomorph/humanoid/queen/large , null, null, delmob, 1 )
+			if("sentinel")			M.change_mob_type( /mob/living/carbon/xenomorph/humanoid/sentinel , null, null, delmob, 1 )
+			if("larva")				M.change_mob_type( /mob/living/carbon/xenomorph/larva , null, null, delmob, 1 )
 			if("human")
 				var/posttransformoutfit = usr.client.robust_dress_shop()
 				var/mob/living/carbon/human/newmob = M.change_mob_type(/mob/living/carbon/human, null, null, delmob, 1)
@@ -1485,17 +1485,17 @@
 		var/mob/living/silicon/ai/ai_character = H.AIize()
 		ai_character.moveToAILandmark()
 
-	else if(href_list["makealien"])
+	else if(href_list["makexenomorph"])
 		if(!check_rights(R_SPAWN))	return
 
-		var/mob/living/carbon/human/H = locateUID(href_list["makealien"])
+		var/mob/living/carbon/human/H = locateUID(href_list["makexenomorph"])
 		if(!istype(H))
 			to_chat(usr, "<span class='warning'>This can only be used on instances of type /mob/living/carbon/human</span>")
 			return
-		if(alert(usr, "Confirm make alien?",, "Yes", "No") != "Yes")
+		if(alert(usr, "Confirm make xenomorph?",, "Yes", "No") != "Yes")
 			return
 
-		usr.client.cmd_admin_alienize(H)
+		usr.client.cmd_admin_xenomorphize(H)
 
 	else if(href_list["makeslime"])
 		if(!check_rights(R_SPAWN))	return

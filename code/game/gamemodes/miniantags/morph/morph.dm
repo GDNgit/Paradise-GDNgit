@@ -230,10 +230,10 @@
 /mob/living/simple_animal/hostile/morph/attack_hulk(mob/living/carbon/human/user, does_attack_animation) // Me SMASH
 	MORPH_ATTACKED
 
-/mob/living/simple_animal/hostile/morph/attack_larva(mob/living/carbon/alien/larva/L)
+/mob/living/simple_animal/hostile/morph/attack_larva(mob/living/carbon/xenomorph/larva/L)
 	MORPH_ATTACKED
 
-/mob/living/simple_animal/hostile/morph/attack_alien(mob/living/carbon/alien/humanoid/M)
+/mob/living/simple_animal/hostile/morph/attack_xenomorph(mob/living/carbon/xenomorph/humanoid/M)
 	MORPH_ATTACKED
 
 /mob/living/simple_animal/hostile/morph/attack_tk(mob/user)

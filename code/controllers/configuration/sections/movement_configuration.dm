@@ -11,7 +11,7 @@
 	/// Move delay for cyborgs
 	var/robot_delay = 2.5
 	/// Move delay for xenomorphs
-	var/alien_delay = 1.5
+	var/xenomorph_delay = 1.5
 	/// Move delay for slimes (xenobio, not slimepeople)
 	var/slime_delay = 1.5
 	/// Move delay for other simple animals
@@ -24,6 +24,6 @@
 	CONFIG_LOAD_NUM(crawling_speed_reduction, data["crawling_speed_reduction"])
 	CONFIG_LOAD_NUM(human_delay, data["human_delay"])
 	CONFIG_LOAD_NUM(robot_delay, data["robot_delay"])
-	CONFIG_LOAD_NUM(alien_delay, data["alien_delay"])
+	CONFIG_LOAD_NUM(xenomorph_delay, data["xenomorph_delay"])
 	CONFIG_LOAD_NUM(slime_delay, data["slime_delay"])
 	CONFIG_LOAD_NUM(animal_delay, data["animal_delay"])

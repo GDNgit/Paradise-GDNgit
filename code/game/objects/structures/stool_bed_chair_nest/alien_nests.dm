@@ -1,9 +1,9 @@
 //Alium nests. Essentially beds with an unbuckle delay that only aliums can buckle mobs to.
 
 /obj/structure/bed/nest
-	name = "alien nest"
+	name = "xenomorph nest"
 	desc = "It's a gruesome pile of thick, sticky resin shaped like a nest."
-	icon = 'icons/mob/alien.dmi'
+	icon = 'icons/mob/xenomorph.dmi'
 	icon_state = "nest"
 	max_integrity = 120
 	var/image/nest_overlay
@@ -12,7 +12,7 @@
 
 /obj/structure/bed/nest/Initialize(mapload)
 	. = ..()
-	nest_overlay = image('icons/mob/alien.dmi', "nestoverlay", layer=MOB_LAYER - 0.2)
+	nest_overlay = image('icons/mob/xenomorph.dmi', "nestoverlay", layer=MOB_LAYER - 0.2)
 
 /obj/structure/bed/nest/user_unbuckle_mob(mob/living/user)
 	if(has_buckled_mobs())
@@ -84,7 +84,7 @@
 		if(BURN)
 			playsound(loc, 'sound/items/welder.ogg', 100, TRUE)
 
-/obj/structure/bed/nest/attack_alien(mob/living/carbon/alien/user)
+/obj/structure/bed/nest/attack_xenomorph(mob/living/carbon/xenomorph/user)
 	if(user.a_intent != INTENT_HARM)
 		return attack_hand(user)
 	else

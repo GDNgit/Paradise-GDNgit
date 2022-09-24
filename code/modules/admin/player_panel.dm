@@ -241,11 +241,11 @@
 					else if(isslime(M))
 						M_job = "slime"
 
-					else if(isalien(M)) //aliens
+					else if(isxenomorph(M)) //xenomorph
 						if(islarva(M))
-							M_job = "Alien larva"
+							M_job = "Xenomorph larva"
 						else
-							M_job = "Alien"
+							M_job = "Xenomorph"
 					else
 						M_job = "Carbon-based"
 

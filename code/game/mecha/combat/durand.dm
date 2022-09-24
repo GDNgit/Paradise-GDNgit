@@ -29,7 +29,7 @@
 	ME.attach(src)
 
 /obj/mecha/combat/durand/old
-	desc = "A retired, third-generation combat exosuit utilized by the Nanotrasen corporation. Originally developed to combat hostile alien lifeforms."
+	desc = "A retired, third-generation combat exosuit utilized by the Nanotrasen corporation. Originally developed to combat hostile Xenomorph lifeforms."
 	name = "Durand"
 	icon_state = "old_durand"
 	initial_icon = "old_durand"

@@ -3,89 +3,89 @@
 /turf/template_noop,
 /area/template_noop)
 "b" = (
-/obj/structure/alien/weeds,
-/obj/structure/alien/resin/wall,
+/obj/structure/xenomorph/weeds,
+/obj/structure/xenomorph/resin/wall,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "c" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/baseturf_helper/lava_land/surface,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "d" = (
-/obj/structure/alien/resin/wall,
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/resin/wall,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "e" = (
-/obj/structure/alien/weeds,
-/obj/structure/alien/egg/burst,
+/obj/structure/xenomorph/weeds,
+/obj/structure/xenomorph/egg/burst,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "f" = (
-/obj/structure/alien/weeds,
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "g" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "i" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/structure/bed/nest,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "j" = (
-/obj/structure/alien/weeds,
-/mob/living/simple_animal/hostile/alien,
+/obj/structure/xenomorph/weeds,
+/mob/living/simple_animal/hostile/xenomorph,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "l" = (
-/obj/structure/alien/weeds/node,
+/obj/structure/xenomorph/weeds/node,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "o" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/structure/bed/nest,
 /obj/effect/decal/cleanable/blood/gibs,
 /obj/item/gun/projectile/automatic/pistol,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "r" = (
-/obj/structure/alien/weeds,
-/obj/structure/alien/resin/wall,
-/obj/structure/alien/resin/wall,
+/obj/structure/xenomorph/weeds,
+/obj/structure/xenomorph/resin/wall,
+/obj/structure/xenomorph/resin/wall,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "t" = (
-/obj/structure/alien/weeds,
-/mob/living/simple_animal/hostile/alien/sentinel,
+/obj/structure/xenomorph/weeds,
+/mob/living/simple_animal/hostile/xenomorph/sentinel,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "u" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorphxenomorph/weeds,
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "v" = (
-/obj/structure/alien/weeds/node,
+/obj/structure/xenomorph/weeds/node,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "w" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/structure/bed/nest,
-/obj/structure/alien/resin/wall,
+/obj/structure/xenomorph/resin/wall,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "y" = (
-/obj/structure/alien/weeds/node,
-/obj/structure/alien/resin/wall,
+/obj/structure/xenomorph/weeds/node,
+/obj/structure/xenomorph/resin/wall,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "z" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/structure/bed/nest,
 /obj/effect/decal/cleanable/blood/gibs,
 /obj/item/clothing/under/rank/security,
@@ -95,29 +95,29 @@
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "B" = (
-/obj/structure/alien/weeds,
-/obj/structure/alien/egg/burst,
+/obj/structure/xenomorph/weeds,
+/obj/structure/xenomorph/egg/burst,
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "C" = (
-/obj/structure/alien/weeds,
-/obj/structure/alien/egg/burst,
+/obj/structure/xenomorph/weeds,
+/obj/structure/xenomorph/egg/burst,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "E" = (
-/obj/structure/alien/weeds,
-/mob/living/simple_animal/hostile/alien/drone{
+/obj/structure/xenomorph/weeds,
+/mob/living/simple_animal/hostile/xenomorph/drone{
 	plants_off = 1
 	},
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "F" = (
-/obj/structure/alien/weeds,
-/mob/living/simple_animal/hostile/alien/queen/large{
-	desc = "A gigantic alien who is in charge of the hive and all of its loyal servants.";
-	name = "alien queen";
+/obj/structure/xenomorph/weeds,
+/mob/living/simple_animal/hostile/xenomorph/queen/large{
+	desc = "A gigantic xenomorph who is in charge of the hive and all of its loyal servants.";
+	name = "xenomorph queen";
 	pixel_x = -16;
 	plants_off = 1
 	},
@@ -127,12 +127,12 @@
 /turf/simulated/floor/plating/lava/smooth/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "H" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "I" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/structure/bed/nest,
 /obj/effect/decal/cleanable/blood/gibs,
 /obj/effect/decal/cleanable/blood,
@@ -141,19 +141,19 @@
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "K" = (
-/obj/structure/alien/weeds/node,
-/mob/living/simple_animal/hostile/alien,
+/obj/structure/xenomorph/weeds/node,
+/mob/living/simple_animal/hostile/xenomorph,
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "L" = (
-/obj/structure/alien/weeds/node,
-/mob/living/simple_animal/hostile/alien/drone{
+/obj/structure/xenomorph/weeds/node,
+/mob/living/simple_animal/hostile/xenomorph/drone{
 	plants_off = 1
 	},
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "M" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/structure/bed/nest,
 /obj/effect/decal/cleanable/blood/gibs,
 /obj/item/tank/internals/emergency_oxygen,
@@ -163,19 +163,19 @@
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "O" = (
-/obj/structure/alien/weeds/node,
+/obj/structure/xenomorph/weeds/node,
 /turf/template_noop,
 /area/ruin/unpowered/xenonest)
 "Q" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/cleanable/blood,
-/mob/living/simple_animal/hostile/alien/drone{
+/mob/living/simple_animal/hostile/xenomorph/drone{
 	plants_off = 1
 	},
 /turf/simulated/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/xenonest)
 "R" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/template_noop,
 /area/ruin/unpowered/xenonest)
 

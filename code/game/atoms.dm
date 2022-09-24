@@ -768,7 +768,7 @@ GLOBAL_LIST_EMPTY(blood_splatter_icons)
 		blood_dna["UNKNOWN DNA"] = "X*"
 	return blood_dna
 
-/mob/living/carbon/alien/get_blood_dna_list()
+/mob/living/carbon/xenomorph/get_blood_dna_list()
 	return list("UNKNOWN DNA" = "X*")
 
 //to add a mob's dna info into an object's blood_DNA list.

@@ -57,7 +57,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/portable/canister,
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/plasteel,
 /area/ruin/space/unpowered)
 "an" = (
@@ -79,7 +79,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 10
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
@@ -91,7 +91,7 @@
 	icon_state = "4-8";
 	tag = ""
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/warning_stripes/west,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
@@ -113,7 +113,7 @@
 /turf/simulated/floor/plating,
 /area/ruin/space/unpowered)
 "ar" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/structure/bed/nest,
 /obj/effect/decal/cleanable/blood/tracks{
 	color = "red";
@@ -125,7 +125,7 @@
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "as" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/cleanable/blood/tracks{
 	color = "red";
 	desc = "Your instincts say you shouldn't be following these.";
@@ -136,7 +136,7 @@
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "at" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "au" = (
@@ -146,8 +146,8 @@
 	icon_state = "tube-broken";
 	status = 2
 	},
-/obj/structure/alien/weeds,
-/obj/structure/alien/egg/burst,
+/obj/structure/xenomorph/weeds,
+/obj/structure/xenomorph/egg/burst,
 /obj/machinery/camera{
 	c_tag = "Xenobiology Containment North";
 	network = list("MO19X")
@@ -161,17 +161,17 @@
 	name = "Acid-Proof mounted igniter";
 	pixel_y = 25
 	},
-/obj/structure/alien/weeds,
-/obj/structure/alien/resin/wall,
+/obj/structure/xenomorph/weeds,
+/obj/structure/xenomorph/resin/wall,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "aw" = (
-/obj/structure/alien/weeds,
-/obj/structure/alien/resin/wall,
+/obj/structure/xenomorph/weeds,
+/obj/structure/xenomorph/resin/wall,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "ax" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/structure/bed/nest,
 /obj/item/clothing/mask/facehugger{
 	icon_state = "facehugger_impregnated";
@@ -181,7 +181,7 @@
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "ay" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/structure/bed/nest,
 /obj/effect/decal/cleanable/blood/tracks{
 	color = "red";
@@ -228,7 +228,7 @@
 /area/ruin/space/unpowered)
 "aD" = (
 /obj/structure/table/reinforced,
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/machinery/computer/security/telescreen{
 	desc = "Used for watching the contents of the xenobiology containment pen.";
 	dir = 8;
@@ -264,7 +264,7 @@
 /turf/simulated/wall/r_wall,
 /area/ruin/space/unpowered)
 "aG" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/structure/bed/nest,
 /obj/item/clothing/mask/facehugger{
 	icon_state = "facehugger_impregnated";
@@ -278,17 +278,17 @@
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "aH" = (
-/obj/structure/alien/weeds/node,
-/mob/living/simple_animal/hostile/alien,
+/obj/structure/xenomorph/weeds/node,
+/mob/living/simple_animal/hostile/xenomorph,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "aI" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/structure/bed/nest,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "aJ" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/cleanable/blood/tracks{
 	color = "red";
 	desc = "Your instincts say you shouldn't be following these.";
@@ -298,8 +298,8 @@
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "aK" = (
-/obj/structure/alien/weeds,
-/obj/structure/alien/egg/burst,
+/obj/structure/xenomorph/weeds,
+/obj/structure/xenomorph/egg/burst,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "aL" = (
@@ -318,7 +318,7 @@
 	},
 /area/ruin/space/unpowered)
 "aO" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
@@ -372,26 +372,26 @@
 	pixel_x = 4;
 	pixel_y = 8
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/warning_stripes/west,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/ruin/space/unpowered)
 "aS" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/cleanable/blood{
 	color = "red"
 	},
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "aT" = (
-/obj/structure/alien/weeds,
-/mob/living/simple_animal/hostile/alien,
+/obj/structure/xenomorph/weeds,
+/mob/living/simple_animal/hostile/xenomorph,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "aU" = (
-/obj/structure/alien/weeds/node,
+/obj/structure/xenomorph/weeds/node,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "aV" = (
@@ -545,7 +545,7 @@
 	icon_state = "2-8";
 	tag = ""
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plasteel{
 	icon_state = "whitepurplecorner"
@@ -554,7 +554,7 @@
 "bi" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder,
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plasteel,
 /area/ruin/space/unpowered)
@@ -574,7 +574,7 @@
 	locked = 0;
 	pixel_y = 23
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/plasteel,
 /area/ruin/space/unpowered)
 "bk" = (
@@ -587,12 +587,12 @@
 	pixel_y = 2
 	},
 /obj/item/storage/box/syringes,
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/plasteel,
 /area/ruin/space/unpowered)
 "bl" = (
 /obj/structure/closet/crate/freezer,
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/item/clothing/mask/facehugger{
 	icon_state = "facehugger_impregnated";
 	item_state = "facehugger_impregnated";
@@ -628,7 +628,7 @@
 "bp" = (
 /obj/structure/closet/l3closet/scientist,
 /obj/structure/window/reinforced,
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/warning_stripes/west,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
@@ -650,10 +650,10 @@
 /turf/simulated/floor/plating,
 /area/ruin/space/unpowered)
 "br" = (
-/obj/structure/alien/weeds{
+/obj/structure/xenomorph/weeds{
 	icon_state = "weeds2"
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "bs" = (
@@ -719,7 +719,7 @@
 	desc = "Your instincts say you shouldn't be following these.";
 	icon_state = "ltrails_2"
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/plasteel{
 	dir = 8;
 	icon_state = "whitepurplecorner"
@@ -738,7 +738,7 @@
 	icon_state = "1-4";
 	tag = ""
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plasteel{
 	icon_state = "whitepurplecorner"
@@ -799,7 +799,7 @@
 	icon_state = "4-8";
 	tag = ""
 	},
-/obj/structure/alien/weeds/node,
+/obj/structure/xenomorph/weeds/node,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
@@ -868,7 +868,7 @@
 	dir = 4;
 	name = "Acid-Proof Pipe"
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "bI" = (
@@ -877,7 +877,7 @@
 	dir = 4;
 	name = "Acid-Proof Pipe"
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/cleanable/blood{
 	color = "red"
 	},
@@ -889,12 +889,12 @@
 	dir = 4;
 	name = "Acid-Proof Pipe"
 	},
-/obj/structure/alien/weeds,
-/obj/structure/alien/resin/wall,
+/obj/structure/xenomorph/weeds,
+/obj/structure/xenomorph/resin/wall,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "bK" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/machinery/atmospherics/unary/outlet_injector/on{
 	dir = 8;
 	frequency = 1441;
@@ -909,7 +909,7 @@
 	icon_state = "tube-broken";
 	status = 2
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/machinery/camera{
 	c_tag = "Xenobiology Containment East";
 	dir = 8;
@@ -931,7 +931,7 @@
 /turf/simulated/floor/plating,
 /area/ruin/space/unpowered)
 "bQ" = (
-/mob/living/simple_animal/hostile/alien,
+/mob/living/simple_animal/hostile/xenomorph,
 /turf/simulated/floor/plating,
 /area/ruin/space/unpowered)
 "bR" = (
@@ -980,7 +980,7 @@
 "bU" = (
 /obj/structure/filingcabinet,
 /obj/item/paper{
-	info = "Entry One &mdash; 27/05/2554:<br>I just arrived, and already I hate my job. I'm stuck on this shithole of an outpost, trying to avoid these damn eggheads running all over the place preparing for god knows what. There's no crimes to stop, no syndies to kill, and I'm not even allowed to beat the fuckin' assistant senseless! They said I was transferred from Space Station 13 for 'good behavior', but this feels more like a punishment than a reward. All I know is that if I don't get some action soon, I'm going to go insane.<br><br>Entry Two &mdash; 03/06/2554:<br>Okay, so get this: we got a fuckin' deathsquad coming in today! I thought the day I saw one of them would be the day my employment was 'terminated', if you get my drift. They're escorting some sort of weird alien creature for the eggheads to study. I heard one of the docs telling the chef that this thing killed a whole security force before it was captured. I sure as hell hope that I don't have to fight it.<br><br>Entry Three &mdash; 08/06/2554:<br>My first real bit of 'action' today, if you could call it that. Crazy Ivan got in a fight with Kuester today about his Booze-O-Mat. Apparently one of the crewmembers had stolen a couple bottles of booze from the machine after Ivan disabled the ID lock. Tell you the truth, I don't blame the thief. Everyone is going a little stir-crazy in here, and the bartender is being damn stingy with the alcohol. Either way, once they started to pick a fight, I had to take them down. It's a damn shame that we don't have a brig, though. I had to lock Ivan in a fuckin' freezer, for god's sake. Let's hope that we can keep our sanity together, at least for a while.<br><br>Entry Four &mdash; 10/06/2554:<br>Jesus fucking Christ riding on a motorbike. These things the scientists are studying are terrifying! Fucking great huge purple bug things as tall as the ceiling, with blades for arms and drooling at the mouth. I don't think my taser will do jack shit against these damn things, but the eggheads say that they're safely contained. If they do, I have a feeling that it's only a matter of time before we're all screwed. These bastards look like walking death.<br><br>Entry Five &mdash; 18/06/2554:<br>Finally caught who stole the booze from Kuester. It was that fuckin' loser assistant Steve! He was in the dorms, chugging his worries away. I took one of the bottles back to the barkeep, but no one has to know about this second one. I think I'm gonna enjoy this while watching tomorrow's Thunderdome match.<br><br>Entry Six &mdash; 19/06/2554:<br>Oh, great. The chef is still sleeping, so we get Ivan's gruel for breakfast today. I overheard Sano and Douglas saying something about the aliens being restless, so we might get some action today. As long as it happens after the big game, I'm fine with it. I still got one beer to drink before I'm ready to die.";
+	info = "Entry One &mdash; 27/05/2554:<br>I just arrived, and already I hate my job. I'm stuck on this shithole of an outpost, trying to avoid these damn eggheads running all over the place preparing for god knows what. There's no crimes to stop, no syndies to kill, and I'm not even allowed to beat the fuckin' assistant senseless! They said I was transferred from Space Station 13 for 'good behavior', but this feels more like a punishment than a reward. All I know is that if I don't get some action soon, I'm going to go insane.<br><br>Entry Two &mdash; 03/06/2554:<br>Okay, so get this: we got a fuckin' deathsquad coming in today! I thought the day I saw one of them would be the day my employment was 'terminated', if you get my drift. They're escorting some sort of weird xenomorph creature for the eggheads to study. I heard one of the docs telling the chef that this thing killed a whole security force before it was captured. I sure as hell hope that I don't have to fight it.<br><br>Entry Three &mdash; 08/06/2554:<br>My first real bit of 'action' today, if you could call it that. Crazy Ivan got in a fight with Kuester today about his Booze-O-Mat. Apparently one of the crewmembers had stolen a couple bottles of booze from the machine after Ivan disabled the ID lock. Tell you the truth, I don't blame the thief. Everyone is going a little stir-crazy in here, and the bartender is being damn stingy with the alcohol. Either way, once they started to pick a fight, I had to take them down. It's a damn shame that we don't have a brig, though. I had to lock Ivan in a fuckin' freezer, for god's sake. Let's hope that we can keep our sanity together, at least for a while.<br><br>Entry Four &mdash; 10/06/2554:<br>Jesus fucking Christ riding on a motorbike. These things the scientists are studying are terrifying! Fucking great huge purple bug things as tall as the ceiling, with blades for arms and drooling at the mouth. I don't think my taser will do jack shit against these damn things, but the eggheads say that they're safely contained. If they do, I have a feeling that it's only a matter of time before we're all screwed. These bastards look like walking death.<br><br>Entry Five &mdash; 18/06/2554:<br>Finally caught who stole the booze from Kuester. It was that fuckin' loser assistant Steve! He was in the dorms, chugging his worries away. I took one of the bottles back to the barkeep, but no one has to know about this second one. I think I'm gonna enjoy this while watching tomorrow's Thunderdome match.<br><br>Entry Six &mdash; 19/06/2554:<br>Oh, great. The chef is still sleeping, so we get Ivan's gruel for breakfast today. I overheard Sano and Douglas saying something about the xenomorphs being restless, so we might get some action today. As long as it happens after the big game, I'm fine with it. I still got one beer to drink before I'm ready to die.";
 	name = "Personal Log &mdash; Kenneth Cunningham"
 	},
 /turf/simulated/floor/plasteel{
@@ -1026,7 +1026,7 @@
 /turf/simulated/floor/plating,
 /area/ruin/space/unpowered)
 "bY" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/plasteel{
 	dir = 8;
 	icon_state = "whitepurplecorner"
@@ -1042,7 +1042,7 @@
 	icon_state = "1-2";
 	tag = ""
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8;
 	initialize_directions = 11
@@ -1111,7 +1111,7 @@
 	dir = 1
 	},
 /obj/structure/closet/l3closet/scientist,
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/warning_stripes/west,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
@@ -1136,7 +1136,7 @@
 /turf/simulated/floor/plating,
 /area/ruin/space/unpowered)
 "cj" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/cleanable/blood{
 	color = "red"
 	},
@@ -1147,7 +1147,7 @@
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "ck" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/cleanable/blood/tracks{
 	color = "red";
 	desc = "Your instincts say you shouldn't be following these.";
@@ -1155,11 +1155,11 @@
 	icon = 'icons/effects/blood.dmi';
 	icon_state = "tracks"
 	},
-/mob/living/simple_animal/hostile/alien,
+/mob/living/simple_animal/hostile/xenomorph,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "cl" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/structure/bed/nest,
 /obj/item/clothing/mask/facehugger{
 	icon_state = "facehugger_impregnated";
@@ -1181,7 +1181,7 @@
 /area/ruin/space/unpowered)
 "co" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/alien,
+/mob/living/simple_animal/hostile/xenomorph,
 /turf/simulated/floor/plating,
 /area/ruin/space/unpowered)
 "cp" = (
@@ -1257,7 +1257,7 @@
 	dir = 4;
 	pixel_x = 28
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plasteel{
 	icon_state = "whitepurplecorner"
@@ -1272,14 +1272,14 @@
 /obj/item/razor{
 	pixel_y = 5
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/warning_stripes/north,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/ruin/space/unpowered)
 "cx" = (
-/obj/structure/alien/weeds/node,
+/obj/structure/xenomorph/weeds/node,
 /obj/effect/decal/warning_stripes/north,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
@@ -1296,7 +1296,7 @@
 /obj/item/mmi,
 /obj/item/mmi,
 /obj/item/mmi,
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/warning_stripes/north,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
@@ -1319,7 +1319,7 @@
 	dir = 4;
 	name = "Acid-Proof disposal pipe"
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/warning_stripes/west,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
@@ -1351,8 +1351,8 @@
 	dir = 4;
 	name = "Acid-Proof disposal pipe"
 	},
-/obj/structure/alien/weeds,
-/obj/structure/alien/resin/wall,
+/obj/structure/xenomorph/weeds,
+/obj/structure/xenomorph/resin/wall,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "cE" = (
@@ -1362,7 +1362,7 @@
 	icon_state = "pipe-c";
 	name = "Acid-Proof disposal pipe"
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "cF" = (
@@ -1459,7 +1459,7 @@
 /obj/structure/table,
 /obj/item/retractor,
 /obj/item/hemostat,
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/item/stack/cable_coil,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
@@ -1473,7 +1473,7 @@
 	icon_state = "bulb-broken";
 	status = 2
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
@@ -1491,11 +1491,11 @@
 	name = "Larva Xenomorph Social Interactions & Capturing Procedure"
 	},
 /obj/item/paper{
-	info = "Researcher: <u>Dr. Sakuma Sano    </u><br>Date: <u>04/06/2554</u><br><br>Report:<br>I have studied many interesting and diverse life-forms as a xenobiologist, ranging from creatures as large as cows, to specimens too small see with the naked eye. This is by far the largest alien I have ever seen. The alien we were previously studying has molted and has become an absolutely enormous creature. Standing at over 15 feet tall, and weighing in at likely two tons or more, the xenomorph queen is an absolutely breathtakingly large and cruel monster. Its behavior has changed drastically from when it was a drone, having become far more comfortable with sitting and staring at us, rather than smashing at the windows.<br><br>The queen, physiologically speaking, is fairly similar to the other xenomorphs, with a few key differences. Its enormous size demands large legs, while the back seems to be always hunched forward. The dorsal tubes on the back have changed to several large spikes, and we observed that the alien now sports a second pair of smaller arms on its chest.  The purpose of these secondary arms is still unknown. Finally, the queen's crown has become incredibly large, with what seems to be a retractable slot to hide its head in. The dome appears to be extremely thick near the front, and will likely be able to resist a lot of trauma. Despite the enormous size it has grown to, it is not much slower than it used to be.<br><br>After two hours of doing relatively nothing but staring, the queen began to produce an unusually large amount of resin and weeds, quickly shaping up a large nest, that it then hid behind. It then proceeded to smash out all the lights, leaving us with very little to see with our cameras. When we looked through the back cameras, we had discovered that it had grown a large ovipositor, and was releasing large eggs onto the ground. This had us all in agreement that this stage of the life cycle was the queen.<br><br>Over the next few hours, the eggs grew to their full sizes, and we provided the subject with new monkey hosts. When they approached the eggs, they opened to release more facehuggers. It seems that we have observed the full cycle of reproduction for this species. We can expect more larvae in the next few hours.";
+	info = "Researcher: <u>Dr. Sakuma Sano    </u><br>Date: <u>04/06/2554</u><br><br>Report:<br>I have studied many interesting and diverse life-forms as a xenobiologist, ranging from creatures as large as cows, to specimens too small see with the naked eye. This is by far the largest xenomorph I have ever seen. The xenomorph we were previously studying has molted and has become an absolutely enormous creature. Standing at over 15 feet tall, and weighing in at likely two tons or more, the xenomorph queen is an absolutely breathtakingly large and cruel monster. Its behavior has changed drastically from when it was a drone, having become far more comfortable with sitting and staring at us, rather than smashing at the windows.<br><br>The queen, physiologically speaking, is fairly similar to the other xenomorphs, with a few key differences. Its enormous size demands large legs, while the back seems to be always hunched forward. The dorsal tubes on the back have changed to several large spikes, and we observed that the xenomorph now sports a second pair of smaller arms on its chest.  The purpose of these secondary arms is still unknown. Finally, the queen's crown has become incredibly large, with what seems to be a retractable slot to hide its head in. The dome appears to be extremely thick near the front, and will likely be able to resist a lot of trauma. Despite the enormous size it has grown to, it is not much slower than it used to be.<br><br>After two hours of doing relatively nothing but staring, the queen began to produce an unusually large amount of resin and weeds, quickly shaping up a large nest, that it then hid behind. It then proceeded to smash out all the lights, leaving us with very little to see with our cameras. When we looked through the back cameras, we had discovered that it had grown a large ovipositor, and was releasing large eggs onto the ground. This had us all in agreement that this stage of the life cycle was the queen.<br><br>Over the next few hours, the eggs grew to their full sizes, and we provided the subject with new monkey hosts. When they approached the eggs, they opened to release more facehuggers. It seems that we have observed the full cycle of reproduction for this species. We can expect more larvae in the next few hours.";
 	name = "Queen Xenomorph Physiology & Behavior Observation"
 	},
 /obj/item/paper{
-	info = "Researcher: <u>Dr. Sakuma Sano    </u><br>Date: <u>03/06/2554</u><br><br>Report:<br>The other scientists and I can hardly believe our eyes. The snake-like larva has molted into a 7 foot tall insectoid nightmare in just a few hours. It's obvious now as to why such heavy duty containment was needed. It immediately tried to escape, however, by flinging itself at the window in a flurry of swipes and stabs. It seems its behavior has returned to a state that is very similar to the facehugger, though I doubt with the same intent! Thankfully, our glass and shields have shown to be more than sturdy enough for such a violent creature, and so far, any attempts at the creature escaping have been in vain.<br><br>As for its physiology, the creature has an elongated head, with what appears to be have an exoskeleton resembling an external rib-cage on the torso. The alien is also fairly skinny with a lean body. The little amount of meat on the alien appears to be entirely muscle.  We assume this makes it deceptively strong, while remaining agile at the same time.  One of the most interesting things we have seen is its pharyngeal jaw.  It has somewhat of an inner mouth, capable of being fired externally at extremely high speeds. It has already caused many dents in the walls and a few small cracks in the window with it. The alien also has a couple of dorsal tubes on its back, their purpose unknown. Finally, this monster sports a long ridged tail, complete with a large and extremely sharp blade at the tip.<br><br>Normally I would be absolutely terrified of something like this, but I'm putting my trust in Nanotrasen with the containment. After all, they wouldn't build a cell that could fail to contain its subject &ndash; would they?";
+	info = "Researcher: <u>Dr. Sakuma Sano    </u><br>Date: <u>03/06/2554</u><br><br>Report:<br>The other scientists and I can hardly believe our eyes. The snake-like larva has molted into a 7 foot tall insectoid nightmare in just a few hours. It's obvious now as to why such heavy duty containment was needed. It immediately tried to escape, however, by flinging itself at the window in a flurry of swipes and stabs. It seems its behavior has returned to a state that is very similar to the facehugger, though I doubt with the same intent! Thankfully, our glass and shields have shown to be more than sturdy enough for such a violent creature, and so far, any attempts at the creature escaping have been in vain.<br><br>As for its physiology, the creature has an elongated head, with what appears to be have an exoskeleton resembling an external rib-cage on the torso. The xenomorph is also fairly skinny with a lean body. The little amount of meat on the xenomorph appears to be entirely muscle.  We assume this makes it deceptively strong, while remaining agile at the same time.  One of the most interesting things we have seen is its pharyngeal jaw.  It has somewhat of an inner mouth, capable of being fired externally at extremely high speeds. It has already caused many dents in the walls and a few small cracks in the window with it. The xenomorph also has a couple of dorsal tubes on its back, their purpose unknown. Finally, this monster sports a long ridged tail, complete with a large and extremely sharp blade at the tip.<br><br>Normally I would be absolutely terrified of something like this, but I'm putting my trust in Nanotrasen with the containment. After all, they wouldn't build a cell that could fail to contain its subject &ndash; would they?";
 	name = "Adult Xenomorph Physiology & Behavior Observation"
 	},
 /obj/item/paper{
@@ -1503,17 +1503,17 @@
 	name = "Larva Xenomorph Physiology & Behavior Observation"
 	},
 /obj/item/paper{
-	info = "Researcher: <u>Dr. Sakuma Sano    </u><br>Date: <u>03/06/2554</u><br><br>Report:<br>The test subject we were provided with truly is alien. It is a small spider-like creature with bony legs, leading to a smooth body. It has a long tail connected to it, and it has shown extremely aggressive behavior by flinging its entire body at the glass and shields to no avail. While doing so, we noticed there was a small pink hole in the middle of the body.<br><br>When we sent in a monkey through the crude but effective disposal tube, the alien immediately jumped at its face and latched on. The monkey was quickly suffocated by its constricting tail, unable to pry off the fingers. The monkey at first seemed to be dead, but was observed to be breathing. The recently named alien 'facehugger' fell off, dead, and curled its legs up like a spider moments after it had finished with the monkey's body.<br><br>While the monkey appeared to be unharmed, we kept it in the cell for a couple more hours, until we were horrified to discover it screaming out in pain, as a snake-like creature erupted from the monkey's chest! It appears that the 'facehugger' is only the start of this life cycle. The impregnation cycle involving the creatures growing inside the chests of their hosts seems to only be the beginning.";
+	info = "Researcher: <u>Dr. Sakuma Sano    </u><br>Date: <u>03/06/2554</u><br><br>Report:<br>The test subject we were provided with truly is xenomorph. It is a small spider-like creature with bony legs, leading to a smooth body. It has a long tail connected to it, and it has shown extremely aggressive behavior by flinging its entire body at the glass and shields to no avail. While doing so, we noticed there was a small pink hole in the middle of the body.<br><br>When we sent in a monkey through the crude but effective disposal tube, the xenomorph immediately jumped at its face and latched on. The monkey was quickly suffocated by its constricting tail, unable to pry off the fingers. The monkey at first seemed to be dead, but was observed to be breathing. The recently named xenomorph 'facehugger' fell off, dead, and curled its legs up like a spider moments after it had finished with the monkey's body.<br><br>While the monkey appeared to be unharmed, we kept it in the cell for a couple more hours, until we were horrified to discover it screaming out in pain, as a snake-like creature erupted from the monkey's chest! It appears that the 'facehugger' is only the start of this life cycle. The impregnation cycle involving the creatures growing inside the chests of their hosts seems to only be the beginning.";
 	name = "'Facehugger' Xenomorph Physiology & Behavior Observation"
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/ruin/space/unpowered)
 "cS" = (
 /obj/structure/table/reinforced,
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/item/paper_bin{
 	pixel_x = 1;
 	pixel_y = 9
@@ -1545,7 +1545,7 @@
 	desc = "An underfloor disposal pipe. This one has been applied with an acid-proof coating.";
 	name = "Acid-Proof disposal pipe"
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "cV" = (
@@ -1581,7 +1581,7 @@
 /area/ruin/space/unpowered)
 "cX" = (
 /obj/structure/chair/office/dark,
-/mob/living/simple_animal/hostile/alien,
+/mob/living/simple_animal/hostile/xenomorph,
 /turf/simulated/floor/plasteel,
 /area/ruin/space/unpowered)
 "cY" = (
@@ -1619,7 +1619,7 @@
 /area/ruin/space/unpowered)
 "db" = (
 /obj/machinery/optable,
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "whitehall"
@@ -1629,7 +1629,7 @@
 /obj/machinery/computer/operating{
 	dir = 1
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "whitehall"
@@ -1639,7 +1639,7 @@
 /obj/structure/table,
 /obj/item/clothing/gloves/color/latex,
 /obj/item/clothing/mask/surgical,
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/plasteel{
 	dir = 1;
 	icon_state = "whitehall"
@@ -1648,35 +1648,35 @@
 "de" = (
 /obj/structure/filingcabinet/filingcabinet,
 /obj/item/paper{
-	info = "Researcher: <u>Dr. Mark Douglas    </u><br>Date: <u>17/06/2554</u><br><br>Report:<br>Earlier today we have observed a new phenomenon with our subjects. While feeding them our last monkey subject and throwing out the box, the aliens merely looked at us, instead of infecting the monkey right away. They looked to be collectively distressed as they would no longer be given hosts, where instead we would move to the next phase of the experiment. When I glanced at the gas tanks and piping leading to their cell, I looked back to see all of them were up against the glass, even the queen! It was as if they all understood what was going to happen, even though we knew only the queen had the cognitive capability to do so.<br><br>The only explanation for this is a form of communication between the aliens, but we have seen no such action take place anywhere in the cell until now. We also know that regular drone and hunter xenomorphs have no personality or instinct to survive by themselves. Perhaps the queen has a direct link to them? A form of a commander or overseer that controls their every move? A hivemind?";
+	info = "Researcher: <u>Dr. Mark Douglas    </u><br>Date: <u>17/06/2554</u><br><br>Report:<br>Earlier today we have observed a new phenomenon with our subjects. While feeding them our last monkey subject and throwing out the box, the xenomorphs merely looked at us, instead of infecting the monkey right away. They looked to be collectively distressed as they would no longer be given hosts, where instead we would move to the next phase of the experiment. When I glanced at the gas tanks and piping leading to their cell, I looked back to see all of them were up against the glass, even the queen! It was as if they all understood what was going to happen, even though we knew only the queen had the cognitive capability to do so.<br><br>The only explanation for this is a form of communication between the xenomorphs, but we have seen no such action take place anywhere in the cell until now. We also know that regular drone and hunter xenomorphs have no personality or instinct to survive by themselves. Perhaps the queen has a direct link to them? A form of a commander or overseer that controls their every move? A hivemind?";
 	name = "The Hivemind Hypothesis"
 	},
 /obj/item/paper{
 	info = "Researcher: <u>Dr. Sakuma Sano    </u><br>Date: <u>08/06/2554</u><br><br>Report:<br>The xenomorphs we have come to study here are a remarkable species. They are almost universally aggressive across all castes, showing no remorse or guilt or pause before or after acts of violence. They appear to be a species entirely designed to kill. Oddly enough, even their method of reproduction is a brutal two-for-one method of birthing a new xenomorph and killing its host.<br><br>The lone xenomorph we studied only five days ago showed little sign of intelligence. Only a simple drone that flung itself at the safety glass and shields repeatedly and thankfully without success. Once the drone molted into a queen, it became much more calm and calculating, merely looking at us and waiting while building its nest. As the hive grew in size and in numbers, so too did the intelligence of the common hunter and drone. We are still researching how they can communicate with one another and the relationship between the different castes and the queen. We will continue to update our research as we learn more about the species.";
-	name = "A Preliminary Study of Alien Behavior"
+	name = "A Preliminary Study of Xenomorph Behavior"
 	},
 /obj/item/paper{
-	info = "Researcher: <u>Dr. Mark Douglas    </u><br>Date: <u>06/06/2554</u><br><br>Report:<br>While observing the growing number of aliens in the containment cell, we began to notice subtle differences that were consistently repeating. Like ants, these creatures clearly have different specialized variations that determine their roles in the hive. We have dubbed the three currently observed castes as Hunters, Drones, and Sentinels.<br><br>Hunters have been observed to be by far the most aggressive and agile of the three, constantly running on every surface and frequently swiping at the windows. They are also remarkably good at camouflaging themselves in darkness and on their resin structures, appearing almost invisible to the unwary observer. They are always the first to reach the monkeys we send in leading us to believe that this caste is primarily used for finding and retrieving hosts.<br><br>Drones on the other hand are much more docile and seem more shy by comparison, though not any less aggressive than the other castes. They have been observed to have a much wider head and lack dorsal tubes. They have shown to be less agile and visibly more fragile than any other caste. The drone however has never been observed to interact with the monkeys directly and instead preferring maintenance of the hive by building walls of resin and moving eggs around the nest. As far as we know, we have only ever observed a drone become a queen, and we have no way of knowing if the other castes have that capability.<br><br>Lastly, we have the Sentinels, which appear at first glance to be the guards of the hive.  They have so far been only observed to remain near the queen and the eggs, frequently curled up against the walls. We have only observed one instance where they have interacted with a monkey who strayed too closely to the queen, and was pounced and held down immediately until it was applied with a facehugger. Their lack of movement makes it difficult to determine their exact purpose as guards, sentries, or other role.";
+	info = "Researcher: <u>Dr. Mark Douglas    </u><br>Date: <u>06/06/2554</u><br><br>Report:<br>While observing the growing number of xenomorphs in the containment cell, we began to notice subtle differences that were consistently repeating. Like ants, these creatures clearly have different specialized variations that determine their roles in the hive. We have dubbed the three currently observed castes as Hunters, Drones, and Sentinels.<br><br>Hunters have been observed to be by far the most aggressive and agile of the three, constantly running on every surface and frequently swiping at the windows. They are also remarkably good at camouflaging themselves in darkness and on their resin structures, appearing almost invisible to the unwary observer. They are always the first to reach the monkeys we send in leading us to believe that this caste is primarily used for finding and retrieving hosts.<br><br>Drones on the other hand are much more docile and seem more shy by comparison, though not any less aggressive than the other castes. They have been observed to have a much wider head and lack dorsal tubes. They have shown to be less agile and visibly more fragile than any other caste. The drone however has never been observed to interact with the monkeys directly and instead preferring maintenance of the hive by building walls of resin and moving eggs around the nest. As far as we know, we have only ever observed a drone become a queen, and we have no way of knowing if the other castes have that capability.<br><br>Lastly, we have the Sentinels, which appear at first glance to be the guards of the hive.  They have so far been only observed to remain near the queen and the eggs, frequently curled up against the walls. We have only observed one instance where they have interacted with a monkey who strayed too closely to the queen, and was pounced and held down immediately until it was applied with a facehugger. Their lack of movement makes it difficult to determine their exact purpose as guards, sentries, or other role.";
 	name = "The Xenomorph 'Castes'"
 	},
 /obj/item/paper{
 	info = "Researcher: <u>Dr. Mark Douglas    </u><br>Date: <u>04/06/2554</u><br><br>Report:<br>After an extremely dangerous, time consuming and costly dissection, we have managed to record and identify several of the organs inside of the first stage of the xenomorph cycle: the larva. This procedure took an extensive amount of time because these creatures have incredibly, almost-comically acidic blood that can melt through almost anything in a few moments. We had to use over a dozen scalpels and retractors to complete the autopsy.<br><br>The larva seems to possess far fewer and quite different organs than that of a human. There is a stomach, with no digestive tract, a heart, which seems to lack any blood-oxygen circulation purpose, and an elongated brain, even though its as dumb as any large cat. It also lacks any liver, kidneys, or other basic organs.<br><br>We can't determine the exact nature of how these creatures grow, nor if they gain organs as they become adults. The larger breeds of xenomorph are too dangerous to kill and capture to give us an accurate answer to these questions. All that we can conclude is that being able to function with so little and yet be so deadly means that these creatures are highly evolved and likely to be extremely durable to various hazards that would otherwise be lethal to humans.";
 	name = "Larva Xenomorph Autopsy Report"
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/ruin/space/unpowered)
 "df" = (
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
 /area/ruin/space/unpowered)
 "dg" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/effect/decal/warning_stripes/west,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
@@ -1701,7 +1701,7 @@
 	dir = 1;
 	name = "Acid-Proof disposal pipe"
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "dj" = (
@@ -1710,7 +1710,7 @@
 	icon_state = "tube-broken";
 	status = 2
 	},
-/obj/structure/alien/weeds,
+/obj/structure/xenomorph/weeds,
 /obj/machinery/camera{
 	c_tag = "Xenobiology Containment South";
 	dir = 1;
@@ -1725,8 +1725,8 @@
 	name = "Acid-Proof mounted igniter";
 	pixel_y = -25
 	},
-/obj/structure/alien/weeds,
-/obj/structure/alien/resin/wall,
+/obj/structure/xenomorph/weeds,
+/obj/structure/xenomorph/resin/wall,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "dl" = (
@@ -2071,7 +2071,7 @@
 	},
 /area/ruin/space/unpowered)
 "dS" = (
-/mob/living/simple_animal/hostile/alien,
+/mob/living/simple_animal/hostile/xenomorph,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
@@ -2770,7 +2770,7 @@
 /obj/structure/toilet{
 	dir = 1
 	},
-/mob/living/simple_animal/hostile/alien,
+/mob/living/simple_animal/hostile/xenomorph,
 /turf/simulated/floor/plasteel{
 	icon_state = "freezerfloor"
 	},
@@ -3654,7 +3654,7 @@
 /area/ruin/space/unpowered)
 "hc" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/alien,
+/mob/living/simple_animal/hostile/xenomorph,
 /turf/simulated/floor/plasteel{
 	dir = 5;
 	icon_state = "cafeteria"
@@ -4377,7 +4377,7 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
-/mob/living/simple_animal/hostile/alien,
+/mob/living/simple_animal/hostile/xenomorph,
 /turf/simulated/floor/mineral/titanium/blue,
 /area/ruin/space/powered)
 "iS" = (
@@ -4387,7 +4387,7 @@
 /turf/simulated/floor/mineral/titanium/yellow,
 /area/ruin/space/powered)
 "iT" = (
-/mob/living/simple_animal/hostile/alien,
+/mob/living/simple_animal/hostile/xenomorph,
 /turf/simulated/floor/mineral/titanium/yellow,
 /area/ruin/space/powered)
 "iU" = (
@@ -4673,7 +4673,7 @@
 /area/ruin/space/unpowered)
 "jC" = (
 /obj/effect/landmark/damageturf,
-/mob/living/simple_animal/hostile/alien,
+/mob/living/simple_animal/hostile/xenomorph,
 /turf/simulated/floor/plating,
 /area/ruin/space/unpowered)
 "jD" = (
@@ -4839,7 +4839,7 @@
 "jT" = (
 /obj/effect/decal/cleanable/cobweb2,
 /obj/effect/landmark/damageturf,
-/mob/living/simple_animal/hostile/alien,
+/mob/living/simple_animal/hostile/xenomorph,
 /turf/simulated/floor/plating,
 /area/ruin/space/unpowered)
 "jU" = (
@@ -5002,8 +5002,8 @@
 /turf/simulated/floor/plating/asteroid/airless,
 /area/ruin/space/unpowered)
 "Ic" = (
-/obj/structure/alien/weeds,
-/mob/living/simple_animal/hostile/alien/queen/large,
+/obj/structure/xenomorph/weeds,
+/mob/living/simple_animal/hostile/xenomorph/queen/large,
 /turf/simulated/floor/engine,
 /area/ruin/space/unpowered)
 "Of" = (

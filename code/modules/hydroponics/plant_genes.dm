@@ -426,5 +426,6 @@
 /datum/plant_gene/trait/plant_type/fungal_metabolism
 	name = "Fungal Vitality"
 
+//The below doesn't do a damn
 /datum/plant_gene/trait/plant_type/alien_properties
 	name ="?????"

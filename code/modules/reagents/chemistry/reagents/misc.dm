@@ -700,5 +700,5 @@
 	if(H.dna.species.bodyflags & HAS_SKIN_TONE)
 		H.change_skin_tone(max(H.s_tone - 10, -195))
 
-	if(H.dna.species.bodyflags & HAS_SKIN_COLOR) //take current alien color and darken it slightly
+	if(H.dna.species.bodyflags & HAS_SKIN_COLOR) //take current xenomorph color and darken it slightly
 		H.change_skin_color("#9B7653")

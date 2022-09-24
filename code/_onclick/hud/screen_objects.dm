@@ -88,8 +88,8 @@
 	else
 		usr.a_intent_change("right")
 
-/obj/screen/act_intent/alien
-	icon = 'icons/mob/screen_alien.dmi'
+/obj/screen/act_intent/xenomorph
+	icon = 'icons/mob/screen_xenomorph.dmi'
 	screen_loc = ui_acti
 
 /obj/screen/act_intent/robot
@@ -341,9 +341,9 @@
 	. += sel
 	hud.mymob.zone_selected = selecting
 
-/obj/screen/zone_sel/alien
-	icon = 'icons/mob/screen_alien.dmi'
-	overlay_file = 'icons/mob/screen_alien.dmi'
+/obj/screen/zone_sel/xenomorph
+	icon = 'icons/mob/screen_xenomorph.dmi'
+	overlay_file = 'icons/mob/screen_xenomorph.dmi'
 
 /obj/screen/zone_sel/robot
 	icon = 'icons/mob/screen_robot.dmi'
@@ -487,9 +487,9 @@
 	icon_state = "health0"
 	screen_loc = ui_health
 
-/obj/screen/healths/alien
-	icon = 'icons/mob/screen_alien.dmi'
-	screen_loc = ui_alien_health
+/obj/screen/healths/xenomorph
+	icon = 'icons/mob/screen_xenomorph.dmi'
+	screen_loc = ui_xenomorph_health
 
 /obj/screen/healths/bot
 	icon = 'icons/mob/screen_bot.dmi'

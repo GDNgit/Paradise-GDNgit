@@ -736,9 +736,9 @@
 	desc = "A canvas jacket styled after classical American military garb. Feels sturdy, yet comfortable. This one comes in snow white."
 	icon_state = "white_jacket"
 
-/obj/item/clothing/suit/xenos
-	name = "xeno suit"
-	desc = "A suit made out of chitinous alien hide."
+/obj/item/clothing/suit/xenomorph
+	name = "xenomorph suit"
+	desc = "A suit made out of chitinous xenomorph hide."
 	icon_state = "xenos"
 	item_state = "xenos_helm"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS|HANDS

@@ -32,7 +32,7 @@
 /datum/reagent/xenomicrobes
 	name = "Xenomicrobes"
 	id = "xenomicrobes"
-	description = "Microbes with an entirely alien cellular structure."
+	description = "Microbes with an entirely xenomorphic cellular structure."
 	color = "#535E66" // rgb: 83, 94, 102
 	can_synth = FALSE
 	taste_mult = 0

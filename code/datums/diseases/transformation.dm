@@ -5,7 +5,7 @@
 	spread_flags = SPECIAL
 	cure_text = "A coder's love (theoretical)."
 	agent = "Shenanigans"
-	viable_mobtypes = list(/mob/living/carbon/human, /mob/living/carbon/alien)
+	viable_mobtypes = list(/mob/living/carbon/human, /mob/living/carbon/xenomorph)
 	severity = HARMFUL
 	stage_prob = 10
 	visibility_flags = HIDDEN_SCANNER|HIDDEN_PANDEMIC
@@ -156,8 +156,8 @@
 	cure_text = "Spaceacillin & Glycerol"
 	cures = list("spaceacillin", "glycerol")
 	cure_chance = 5
-	agent = "Rip-LEY Alien Microbes"
-	desc = "This disease changes the victim into a xenomorph."
+	agent = "Rip-LEY Xenomorph Microbes"
+	desc = "This disease changes the victim into a Xenomorph."
 	severity = BIOHAZARD
 	visibility_flags = 0
 	stage1	= null
@@ -165,8 +165,8 @@
 	stage3	= list("<span class='danger'>Your throat feels very scratchy.</span>", "Your skin feels tight.", "<span class='danger'>You can feel something move...inside.</span>")
 	stage4	= list("<span class='danger'>Your skin feels very tight.</span>", "<span class='danger'>Your blood boils!</span>", "<span class='danger'>You can feel... something...inside you.</span>")
 	stage5	= list("<span class='danger'>Your skin feels as if it's about to burst off!</span>")
-	new_form = /mob/living/carbon/alien/humanoid/hunter
-	job_role = ROLE_ALIEN
+	new_form = /mob/living/carbon/xenomorph/humanoid/hunter
+	job_role = ROLE_XENOMORPH
 
 /datum/disease/transformation/xeno/stage_act()
 	..()

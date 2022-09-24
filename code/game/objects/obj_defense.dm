@@ -94,12 +94,12 @@
 			return
 	take_damage(400, BRUTE, MELEE, 0, get_dir(src, B))
 
-/obj/proc/attack_generic(mob/user, damage_amount = 0, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, armour_penetration_flat = 0, armour_penetration_percentage = 0) //used by attack_alien, attack_animal, and attack_slime
+/obj/proc/attack_generic(mob/user, damage_amount = 0, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, armour_penetration_flat = 0, armour_penetration_percentage = 0) //used by attack_xenomorph, attack_animal, and attack_slime
 	user.do_attack_animation(src)
 	user.changeNext_move(CLICK_CD_MELEE)
 	return take_damage(damage_amount, damage_type, damage_flag, sound_effect, get_dir(src, user), armour_penetration_flat, armour_penetration_percentage)
 
-/obj/attack_alien(mob/living/carbon/alien/humanoid/user)
+/obj/attack_xenomorph(mob/living/carbon/xenomorph/humanoid/user)
 	if(attack_generic(user, 60, BRUTE, MELEE, 0))
 		playsound(loc, 'sound/weapons/slash.ogg', 100, TRUE)
 

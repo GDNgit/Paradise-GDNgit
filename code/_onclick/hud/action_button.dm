@@ -102,9 +102,9 @@
 	to_chat(user, "<span class='notice'>Action button positions have been reset.</span>")
 
 /obj/screen/movable/action_button/hide_toggle/proc/InitialiseIcon(mob/living/user)
-	if(isalien(user))
+	if(isxenomorph(user))
 		icon = 'icons/mob/actions/actions.dmi'
-		icon_state = "bg_alien"
+		icon_state = "bg_xenomorph"
 	else
 		icon = initial(icon)
 		icon_state = "bg_default"

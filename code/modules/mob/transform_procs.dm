@@ -112,8 +112,8 @@
 	INVOKE_ASYNC(GLOBAL_PROC, .proc/qdel, src) // To prevent the proc from returning null.
 	return O
 
-//human -> alien
-/mob/living/carbon/human/proc/Alienize()
+//human -> xenomorph
+/mob/living/carbon/human/proc/Xenomorphize()
 	if(notransform)
 		return
 	for(var/obj/item/W in src)
@@ -125,20 +125,20 @@
 	for(var/t in bodyparts)
 		qdel(t)
 
-	var/alien_caste = pick("Hunter","Sentinel","Drone")
-	var/mob/living/carbon/alien/humanoid/new_xeno
-	switch(alien_caste)
+	var/xenomorph_caste = pick("Hunter","Sentinel","Drone")
+	var/mob/living/carbon/xenomorph/humanoid/new_xeno
+	switch(xenomorph_caste)
 		if("Hunter")
-			new_xeno = new /mob/living/carbon/alien/humanoid/hunter(loc)
+			new_xeno = new /mob/living/carbon/xenomorph/humanoid/hunter(loc)
 		if("Sentinel")
-			new_xeno = new /mob/living/carbon/alien/humanoid/sentinel(loc)
+			new_xeno = new /mob/living/carbon/xenomorph/humanoid/sentinel(loc)
 		if("Drone")
-			new_xeno = new /mob/living/carbon/alien/humanoid/drone(loc)
+			new_xeno = new /mob/living/carbon/xenomorph/humanoid/drone(loc)
 
 	new_xeno.a_intent = INTENT_HARM
 	new_xeno.key = key
 
-	to_chat(new_xeno, "<B>You are now an alien.</B>")
+	to_chat(new_xeno, "<B>You are now an xenomorph.</B>")
 	new_xeno.update_pipe_vision()
 	qdel(src)
 

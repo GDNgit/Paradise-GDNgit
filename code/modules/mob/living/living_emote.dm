@@ -72,10 +72,10 @@
 	volume = 40
 	unintentional_stat_allowed = DEAD
 	message = "seizes up and falls limp, their eyes dead and lifeless..."
-	message_alien = "seizes up and falls limp, their eyes dead and lifeless..."
+	message_xenomorph = "seizes up and falls limp, their eyes dead and lifeless..."
 	message_robot = "shudders violently for a moment before falling still, its eyes slowly darkening."
 	message_AI = "screeches, its screen flickering as its systems slowly halt."
-	message_alien = "lets out a waning guttural screech, green blood bubbling from its maw..."
+	message_xenomorph = "lets out a waning guttural screech, green blood bubbling from its maw..."
 	message_larva = "lets out a sickly hiss of air and falls limply to the floor..."
 	message_monkey = "lets out a faint chimper as it collapses and stops moving..."
 	message_simple = "stops moving..."
@@ -99,9 +99,9 @@
 			message = H.dna.species.death_message
 			return pick(H.dna.species.death_sounds)
 
-	if(isalien(user))
-		var/mob/living/carbon/alien/A = user
-		message_alien = A.death_message
+	if(isxenomorph(user))
+		var/mob/living/carbon/xenomorph/A = user
+		message_xenomorph = A.death_message
 		return A.death_sound
 
 	if(issilicon(user))
@@ -216,7 +216,7 @@
 	message = "screams!"
 	message_mime = "acts out a scream!"
 	message_simple = "whimpers."
-	message_alien = "roars!"
+	message_xenomorph = "roars!"
 	emote_type = EMOTE_SOUND | EMOTE_MOUTH
 	mob_type_blacklist_typecache = list(
 		// Humans and silicons get specialized scream.
@@ -227,7 +227,7 @@
 
 /datum/emote/living/scream/get_sound(mob/living/user)
 	. = ..()
-	if(isalien(user))
+	if(isxenomorph(user))
 		return "sound/voice/hiss5.ogg"
 
 /datum/emote/living/shake

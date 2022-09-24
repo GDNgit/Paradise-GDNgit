@@ -346,7 +346,7 @@
 					else
 						for(var/mob/living/carbon/C in targets)
 							if(!Discipline && prob(5))
-								if(ishuman(C) || isalienadult(C))
+								if(ishuman(C) || isxenomorphadult(C))
 									Target = C
 									break
 

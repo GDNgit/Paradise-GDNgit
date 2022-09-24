@@ -882,7 +882,7 @@
 
 		if(A.arePowerSystemsOn())
 			user.visible_message("<span class='warning'>[user] jams [user.p_their()] [name] into the airlock and starts prying it open!</span>", "<span class='warning'>You start forcing the airlock open.</span>", "<span class='warning'>You hear a metal screeching sound.</span>")
-			playsound(A, 'sound/machines/airlock_alien_prying.ogg', 150, 1)
+			playsound(A, 'sound/machines/airlock_xenomorph_prying.ogg', 150, 1)
 			if(!do_after(user, 25, target = A))
 				return
 

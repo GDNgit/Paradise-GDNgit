@@ -70,7 +70,7 @@
 			user.visible_message("<span class='notice'>[user] directs [src] to [M]'s eyes.</span>", \
 								 "<span class='notice'>You direct [src] to [M]'s eyes.</span>")
 
-			if(istype(H)) //robots and aliens are unaffected
+			if(istype(H)) //robots and xenomorphs are unaffected
 				var/obj/item/organ/internal/eyes/eyes = H.get_int_organ(/obj/item/organ/internal/eyes)
 				if(M.stat == DEAD || !eyes || HAS_TRAIT(M, TRAIT_BLIND))	//mob is dead or fully blind
 					to_chat(user, "<span class='notice'>[M]'s pupils are unresponsive to the light!</span>")

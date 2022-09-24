@@ -1,27 +1,27 @@
-/datum/event/alien_infestation
+/datum/event/xenomorph_infestation
 	announceWhen	= 400
 	var/highpop_trigger = 80
 	var/spawncount = 2
 	var/list/playercount
 	var/successSpawn = FALSE	//So we don't make a command report if nothing gets spawned.
 
-/datum/event/alien_infestation/setup()
+/datum/event/xenomorph_infestation/setup()
 	announceWhen = rand(announceWhen, announceWhen + 50)
 
-/datum/event/alien_infestation/announce()
+/datum/event/xenomorph_infestation/announce()
 	if(successSpawn)
-		GLOB.event_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = 'sound/AI/aliens.ogg')
+		GLOB.event_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = 'sound/AI/xenomorphs.ogg')
 	else
-		log_and_message_admins("Warning: Could not spawn any mobs for event Alien Infestation")
+		log_and_message_admins("Warning: Could not spawn any mobs for event Xenomorph Infestation")
 
-/datum/event/alien_infestation/start()
+/datum/event/xenomorph_infestation/start()
 	playercount = length(GLOB.clients)//grab playercount when event starts not when game starts
 	if(playercount >= highpop_trigger) //spawn with 4 if highpop
 		spawncount = 4
 	INVOKE_ASYNC(src, .proc/spawn_xenos)
 
-/datum/event/alien_infestation/proc/spawn_xenos()
-	var/list/candidates = SSghost_spawns.poll_candidates("Do you want to play as an alien?", ROLE_ALIEN, TRUE, source = /mob/living/carbon/alien/larva)
+/datum/event/xenomorph_infestation/proc/spawn_xenos()
+	var/list/candidates = SSghost_spawns.poll_candidates("Do you want to play as an xenomorph?", ROLE_XENOMORPH, TRUE, source = /mob/living/carbon/xenomorph/larva)
 	var/list/vents = get_valid_vent_spawns(exclude_mobs_nearby = TRUE)
 	if(!length(vents))
 		message_admins("Warning: No suitable vents detected for spawning xenomorphs. Force picking from station vents regardless of state!")
@@ -31,7 +31,7 @@
 		var/mob/C = pick_n_take(candidates)
 		if(C)
 			C.remove_from_respawnable_list()
-			var/mob/living/carbon/alien/larva/new_xeno = new(vent.loc)
+			var/mob/living/carbon/xenomorph/larva/new_xeno = new(vent.loc)
 			new_xeno.amount_grown += (0.75 * new_xeno.max_grown)	//event spawned larva start off almost ready to evolve.
 			new_xeno.key = C.key
 			if(SSticker && SSticker.mode)

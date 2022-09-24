@@ -64,11 +64,11 @@
 				to_chat(L, "<span class='userdanger'>[src] burns you!</span>")
 
 //xenomorph corrosive acid
-/obj/effect/acid/alien
+/obj/effect/acid/xenomorph
 	var/target_strength = 30
 
 
-/obj/effect/acid/alien/process()
+/obj/effect/acid/xenomorph/process()
 	. = ..()
 	if(.)
 		if(prob(45))

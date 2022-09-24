@@ -335,8 +335,8 @@
 	severity = 10
 
 /datum/spacevine_mutation/flowering/on_grow(obj/structure/spacevine/holder)
-	if(holder.energy == 2 && prob(severity) && !locate(/obj/structure/alien/resin/flower_bud_enemy) in range(5,holder))
-		new /obj/structure/alien/resin/flower_bud_enemy(get_turf(holder))
+	if(holder.energy == 2 && prob(severity) && !locate(/obj/structure/xenomorph/resin/flower_bud_enemy) in range(5,holder))
+		new /obj/structure/xenomorph/resin/flower_bud_enemy(get_turf(holder))
 
 /datum/spacevine_mutation/flowering/on_cross(obj/structure/spacevine/holder, mob/living/crosser)
 	if(prob(25))
@@ -523,7 +523,7 @@
 		SM.on_hit(src, user)
 	user_unbuckle_mob(user, user)
 
-/obj/structure/spacevine/attack_alien(mob/living/user)
+/obj/structure/spacevine/attack_xenomorph(mob/living/user)
 	eat(user)
 
 /obj/structure/spacevine_controller
@@ -701,6 +701,6 @@
 		var/mob/living/M = A
 		if(("vines" in M.faction) || ("plants" in M.faction))
 			return TRUE
-	else if(istype(A, /obj/structure/spacevine) || istype(A, /obj/structure/alien/resin/flower_bud_enemy))
+	else if(istype(A, /obj/structure/spacevine) || istype(A, /obj/structure/xenomorph/resin/flower_bud_enemy))
 		return TRUE
 	return FALSE

@@ -8,7 +8,7 @@
 	origin_tech = "biotech=2;programming=3;engineering=2"
 
 	//Revised. Brainmob is now contained directly within object of transfer. MMI in this case.
-	var/alien = 0
+	var/xenomorph = FALSE
 	var/syndiemmi = FALSE //Whether or not this is a Syndicate MMI
 	var/mmi_item_name = "Man-Machine Interface" //Used to name the item when installing a brain
 	var/mob/living/carbon/brain/brainmob = null//The current occupant.
@@ -60,15 +60,15 @@
 
 			held_brain = B
 			if(istype(O,/obj/item/organ/internal/brain/xeno)) // kept the type check, as it still does other weird stuff
-				name = "\improper [mmi_item_name]: Alien - [brainmob.real_name]"
-				icon = 'icons/mob/alien.dmi'
-				become_occupied("AlienMMI")
-				alien = 1
+				name = "\improper [mmi_item_name]: Xenomorph - [brainmob.real_name]"
+				icon = 'icons/mob/xenomorph.dmi'
+				become_occupied("XenomorphMMI")
+				xenomorph = TRUE
 			else
 				name = "\improper [mmi_item_name]: [brainmob.real_name]"
 				icon = B.mmi_icon
 				become_occupied("[B.mmi_icon_state]")
-				alien = 0
+				xenomorph = FALSE
 
 			if(radio_action)
 				radio_action.UpdateButtonIcon()
@@ -153,7 +153,7 @@
 	become_occupied("mmi_full")
 
 //I made this proc as a way to have a brainmob be transferred to any created brain, and to solve the
-//problem i was having with alien/nonalien brain drops.
+//problem i was having with xenomorph/nonxenomorph brain drops.
 /obj/item/mmi/proc/dropbrain(turf/dropspot)
 	if(isnull(held_brain))
 		stack_trace("[src] at [loc] attempted to drop brain without a contained brain in [get_area(src)].")
