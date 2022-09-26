@@ -150,6 +150,7 @@
 			H.emote("scream")
 		else
 			copymob.apply_damage(30, BURN)
+			sleep(PHOTOCOPIER_DELAY)
 		to_chat(copymob, "<span class='notice'>Something smells toasty...</span>")
 	if(ishuman(copymob)) //Suit checks are in check_mob
 		var/mob/living/carbon/human/H = copymob
@@ -317,6 +318,7 @@
 		for(var/i in copies to 1 step -1)
 			if(!copyass())
 				break
+			sleep(PHOTOCOPIER_DELAY)
 			toner -= 5
 	else
 		to_chat(usr, "<span class='warning'>\The [copyitem] can't be copied by \the [src], ejecting.</span>")

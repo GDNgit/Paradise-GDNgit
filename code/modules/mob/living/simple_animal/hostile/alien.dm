@@ -36,27 +36,17 @@
 	deathmessage = "lets out a waning guttural screech, green blood bubbling from its maw..."
 	footstep_type = FOOTSTEP_MOB_CLAW
 
-/mob/living/simple_animal/hostile/xenomorph/xenobio
-	maxHealth = 60
-	health = 60
-	gold_core_spawnable = HOSTILE_SPAWN
-
-/mob/living/simple_animal/hostile/xenomorph/drone
-	name = "xenomorph drone"
-	icon_state = "xenomorphd_running"
-	icon_living = "xenomorphd_running"
-	icon_dead = "xenomorphd_dead"
+/mob/living/simple_animal/hostile/alien/drone
+	name = "alien drone"
+	icon_state = "aliend_running"
+	icon_living = "aliend_running"
+	icon_dead = "aliend_dead"
 	melee_damage_lower = 15
 	melee_damage_upper = 15
 	var/plant_cooldown = 30
 	var/plants_off = 0
 
-/mob/living/simple_animal/hostile/xenomorph/drone/xenobio
-	maxHealth = 60
-	health = 60
-	gold_core_spawnable = HOSTILE_SPAWN
-
-/mob/living/simple_animal/hostile/xenomorph/drone/handle_automated_action()
+/mob/living/simple_animal/hostile/alien/drone/handle_automated_action()
 	if(!..()) //AIStatus is off
 		return
 	plant_cooldown--
@@ -80,17 +70,11 @@
 	projectiletype = /obj/item/projectile/neurotox
 	projectilesound = 'sound/weapons/pierce.ogg'
 
-
-/mob/living/simple_animal/hostile/xenomorph/sentinel/xenobio
-	health = 75
-	maxHealth = 75
-	gold_core_spawnable = HOSTILE_SPAWN
-
-/mob/living/simple_animal/hostile/xenomorph/queen
-	name = "xenomorph queen"
-	icon_state = "xenomorphq_running"
-	icon_living = "xenomorphq_running"
-	icon_dead = "xenomorphq_dead"
+/mob/living/simple_animal/hostile/alien/queen
+	name = "alien queen"
+	icon_state = "alienq_running"
+	icon_living = "alienq_running"
+	icon_dead = "alienq_dead"
 	health = 250
 	maxHealth = 250
 	melee_damage_lower = 15
@@ -108,12 +92,7 @@
 	var/egg_cooldown = 30
 	var/plant_cooldown = 30
 
-/mob/living/simple_animal/hostile/xenomorph/queen/xenobio
-	health = 100
-	maxHealth = 100
-	gold_core_spawnable = HOSTILE_SPAWN
-
-/mob/living/simple_animal/hostile/xenomorph/queen/handle_automated_action()
+/mob/living/simple_animal/hostile/alien/queen/handle_automated_action()
 	if(!..())
 		return
 	egg_cooldown--
