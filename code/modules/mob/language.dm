@@ -477,9 +477,9 @@
 					 "tizan","chka","tagan","dobry","okt","boda","veta","idi","cyk","blyt","hui","na",
 					 "udi","litchki","casa","linka","toly","anatov","vich","vech","vuch","toi","ka","vod")
 
-/datum/language/xenocommon
+/datum/language/xenomorphcommon
 	name = "Xenomorph"
-	colour = "xenomorph"
+	colour = "alien"
 	desc = "The common tongue of the xenomorphs."
 	speech_verb = "hisses"
 	ask_verb = "hisses"
