@@ -372,7 +372,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		if(G_found.mind.assigned_role=="Xenomorph")
 			if(alert("This character appears to have been an xenomorph. Would you like to respawn them as such?",,"Yes","No")=="Yes")
 				var/turf/T
-				if(GLOB.xeno_spawn.len)	T = pick(GLOB.xeno_spawn)
+				if(GLOB.xenomorph_spawn.len)	T = pick(GLOB.xenomorph_spawn)
 				else				T = pick(GLOB.latejoin)
 
 				var/mob/living/carbon/xenomorph/new_xeno
@@ -528,7 +528,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(!istext(ckey))	return 0
 
 	var/xenomorph_caste = input(usr, "Please choose which caste to spawn.","Pick a caste",null) as null|anything in list("Queen","Hunter","Sentinel","Drone","Larva")
-	var/obj/effect/landmark/spawn_here = GLOB.xeno_spawn.len ? pick(GLOB.xeno_spawn) : pick(GLOB.latejoin)
+	var/obj/effect/landmark/spawn_here = GLOB.xenomorph_spawn.len ? pick(GLOB.xenomorph_spawn) : pick(GLOB.latejoin)
 	var/mob/living/carbon/xenomorph/new_xeno
 	switch(xenomorph_caste)
 		if("Queen")		new_xeno = new /mob/living/carbon/xenomorph/humanoid/queen/large(spawn_here)

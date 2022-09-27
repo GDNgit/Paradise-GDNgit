@@ -3,7 +3,7 @@
 	panel = "Xenomorph"
 	school = "Xenomorph"
 	action_background_icon_state = "bg_xenomorph"
-	//Xenomorphs are carbons, not humans
+	///Xenomorphs are carbons, not humans
 	human_req = FALSE
 	clothes_req = FALSE
 	/// Plasma my beloved. Tracks how much plasma is required to cast, and if that plasma is deducted
@@ -18,3 +18,20 @@
 
 /obj/effect/proc_holder/spell/xenomorph/self/create_new_targeting()
 	return new /datum/spell_targeting/self
+
+///Required for darksight/other passives
+/datum/xenomorph_passive
+	var/gain_desc
+	var/mob/living/owner = null
+
+/datum/xenomorph_passive/New()
+	..()
+	if(!gain_desc)
+		gain_desc = "You can now use [src]."
+
+/datum/xenomorph_passive/Destroy(force, ...)
+	owner = null
+	return ..()
+
+/datum/xenomorph_passive/proc/on_apply(datum/antagonist/xenomorph/V)
+	return

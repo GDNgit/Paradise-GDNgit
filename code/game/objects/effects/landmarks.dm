@@ -70,12 +70,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/awaystart) //Without this away mission
 	spawner_list = GLOB.wizardstart
 	return ..()
 
-/obj/effect/landmark/spawner/xeno
-	name = "xeno_spawn"
+/obj/effect/landmark/spawner/xenomorph
+	name = "xenomorph_spawn"
 	icon_state = "Xeno"
 
 /obj/effect/landmark/spawner/xeno/Initialize(mapload)
-	spawner_list = GLOB.xeno_spawn
+	spawner_list = GLOB.xenomorph_spawn
 	return ..()
 
 /obj/effect/landmark/spawner/nukedisc_respawn
