@@ -939,16 +939,13 @@
 	for(var/mob/living/target in targets)
 		log_say("(TPATH to [key_name(target)]) [say]", user)
 		user.create_log(SAY_LOG, "Telepathically said '[say]' using [src]", target)
-		if(user.stat != DEAD)
-			if(target.dna?.GetSEState(GLOB.remotetalkblock))
-				target.show_message("<span class='abductor'>You hear [user.real_name]'s voice: [say]</span>")
-			else
-				target.show_message("<span class='abductor'>You hear a voice that seems to echo around the room: [say]</span>")
-			user.show_message("<span class='abductor'>You project your mind into [(target in user.get_visible_mobs()) ? target.name : "the unknown entity"]: [say]</span>")
-			for(var/mob/dead/observer/G in GLOB.player_list)
-				G.show_message("<i>Telepathic message from <b>[user]</b> ([ghost_follow_link(user, ghost=G)]) to <b>[target]</b> ([ghost_follow_link(target, ghost=G)]): [say]</i>")
+		if(target.dna?.GetSEState(GLOB.remotetalkblock))
+			target.show_message("<span class='abductor'>You hear [user.real_name]'s voice: [say]</span>")
 		else
-			message_admins("\[EXPLOIT] [key_name_admin(user)] attempted to send a remotetalk message while dead.")
+			target.show_message("<span class='abductor'>You hear a voice that seems to echo around the room: [say]</span>")
+		user.show_message("<span class='abductor'>You project your mind into [(target in user.get_visible_mobs()) ? target.name : "the unknown entity"]: [say]</span>")
+		for(var/mob/dead/observer/G in GLOB.player_list)
+			G.show_message("<i>Telepathic message from <b>[user]</b> ([ghost_follow_link(user, ghost=G)]) to <b>[target]</b> ([ghost_follow_link(target, ghost=G)]): [say]</i>")
 
 /obj/effect/proc_holder/spell/mindscan
 	name = "Scan Mind"
@@ -999,16 +996,13 @@
 		say = pencode_to_html(say, target, format = 0, fields = 0)
 		user.create_log(SAY_LOG, "Telepathically responded '[say]' using [src]", target)
 		log_say("(TPATH to [key_name(target)]) [say]", user)
-		if(target.stat != DEAD)
-			if(target.dna?.GetSEState(GLOB.remotetalkblock))
-				target.show_message("<span class='abductor'>You project your mind into [user.name]: [say]</span>")
-			else
-				target.show_message("<span class='abductor'>You fill the space in your thoughts: [say]</span>")
-				user.show_message("<span class='abductor'>You hear [target.name]'s voice: [say]</span>")
-			for(var/mob/dead/observer/G in GLOB.player_list)
-				G.show_message("<i>Telepathic response from <b>[target]</b> ([ghost_follow_link(target, ghost=G)]) to <b>[user]</b> ([ghost_follow_link(user, ghost=G)]): [say]</i>")
+		if(target.dna?.GetSEState(GLOB.remotetalkblock))
+			target.show_message("<span class='abductor'>You project your mind into [user.name]: [say]</span>")
 		else
-			message_admins("\[EXPLOIT] [key_name_admin(target)] attempted to send a mindscan message while dead.")
+			target.show_message("<span class='abductor'>You fill the space in your thoughts: [say]</span>")
+		user.show_message("<span class='abductor'>You hear [target.name]'s voice: [say]</span>")
+		for(var/mob/dead/observer/G in GLOB.player_list)
+			G.show_message("<i>Telepathic response from <b>[target]</b> ([ghost_follow_link(target, ghost=G)]) to <b>[user]</b> ([ghost_follow_link(user, ghost=G)]): [say]</i>")
 
 /obj/effect/proc_holder/spell/mindscan/Destroy()
 	available_targets.Cut()
