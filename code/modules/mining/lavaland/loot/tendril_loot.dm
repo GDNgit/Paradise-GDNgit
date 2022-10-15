@@ -62,7 +62,7 @@
 		if(!over_object)
 			return
 
-		if(istype(M.loc, /obj/mecha))
+		if(ismecha(M.loc))
 			return
 
 		if(!M.restrained() && !M.stat)
@@ -321,14 +321,14 @@
 		return
 
 	var/datum/effect_system/smoke_spread/smoke = new
-	smoke.set_up(1, 0, user.loc)
+	smoke.set_up(1, FALSE, user)
 	smoke.start()
 
 	user.forceMove(get_turf(linked))
 	SSblackbox.record_feedback("tally", "warp_cube", 1, type)
 
 	var/datum/effect_system/smoke_spread/smoke2 = new
-	smoke2.set_up(1, 0, user.loc)
+	smoke2.set_up(1, FALSE, user)
 	smoke2.start()
 	cooldown = TRUE
 	linked.cooldown = TRUE
