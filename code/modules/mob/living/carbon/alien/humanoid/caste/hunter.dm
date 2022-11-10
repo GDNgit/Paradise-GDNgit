@@ -41,7 +41,7 @@
 	else
 		..()
 
-#define MAX_ALIEN_LEAP_DIST 7
+#define MAX_ALIEN_LEAP_DIST 7 ///test
 
 /mob/living/carbon/alien/humanoid/hunter/proc/leap_at(atom/A)
 	if(pounce_cooldown > world.time)
