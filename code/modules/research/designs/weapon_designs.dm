@@ -257,12 +257,12 @@
 	id = "drop_wall"
 	req_tech = list("combat" = 5, "materials" = 5, "engineering" = 5, "magnets" = 5)
 	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 8000, MAT_GLASS = 5000, MAT_SILVER = 500, MAT_TITANIUM = 500, MAT_PLASMA = 500)
+	materials = list(MAT_METAL = 2000, MAT_GLASS = 1200, MAT_SILVER = 100, MAT_TITANIUM = 100, MAT_PLASMA = 100)
 	build_path = /obj/item/grenade/barrier/dropwall
 	category = list("Weapons")
 
 /datum/design/pyroclaw
-	name = "Fusion gauntlets"
+	name = "Fusion Gauntlets"
 	desc = "A pair of gloves designed to make superheated claws capable of cutting through almost anything. Needs a pyro anomaly core"
 	id = "pyro_gloves"
 	req_tech = list("combat" = 7, "materials" = 7, "engineering" = 7, "plasmatech" = 7)
@@ -279,4 +279,15 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_GOLD = 5000, MAT_URANIUM = 4000, MAT_METAL = 5000, MAT_TITANIUM = 2000, MAT_BLUESPACE = 2000)
 	build_path = /obj/item/weaponcrafting/gunkit/u_ionsilencer
+	category = list("Weapons")
+
+/datum/design/v1_arm
+	name = "Vortex arm implant shell"
+	desc = "A shell to make an arm able to parry, reflect, and boost the power of incoming projectiles."
+	id = "v1_arm"
+	req_tech = list("combat" = 7, "magnets" = 6, "engineering" = 6, "biotech" = 7)
+	build_type = PROTOLATHE
+	materials = list(MAT_GOLD = 5000, MAT_URANIUM = 4000, MAT_METAL = 10000, MAT_TITANIUM = 2000, MAT_BLUESPACE = 2000)
+	reagents_list = list("blood" = 50)
+	build_path = /obj/item/v1_arm_shell
 	category = list("Weapons")

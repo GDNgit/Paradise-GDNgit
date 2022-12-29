@@ -171,7 +171,7 @@
 	life -= 10
 	if(ismob(A))
 		var/mob/M = A
-		if(istype(firer, /mob))
+		if(ismob(firer))
 			add_attack_logs(firer, M, "Mecha-shot with <b>[src]</b>")
 		else
 			add_attack_logs(src, M, "Mecha-shot with <b>[src]</b> (no firer)")
@@ -289,7 +289,7 @@
 	fire_sound = 'sound/weapons/gunshots/gunshot_silenced.ogg'
 	icon_state = "mecha_mime"
 	equip_cooldown = 15
-	projectile = /obj/item/projectile/bullet/mime
+	projectile = /obj/item/projectile/bullet/mime/nonlethal
 	projectiles = 20
 	projectile_energy_cost = 50
 

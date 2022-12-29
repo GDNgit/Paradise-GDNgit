@@ -65,7 +65,7 @@
 	whisper_action.Grant(src)
 	if(istype(loc, /obj/effect/dummy/slaughter))
 		bloodspell.phased = TRUE
-	addtimer(CALLBACK(src, .proc/attempt_objectives), 5 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(attempt_objectives)), 5 SECONDS)
 
 
 /mob/living/simple_animal/slaughter/Life(seconds, times_fired)
@@ -256,13 +256,13 @@
 
 /obj/item/organ/internal/heart/demon/attack_self(mob/living/user)
 	user.visible_message("<span class='warning'>[user] raises [src] to [user.p_their()] mouth and tears into it with [user.p_their()] teeth!</span>", \
-						 "<span class='danger'>An unnatural hunger consumes you. You raise [src] to your mouth and devour it!</span>")
+						"<span class='danger'>An unnatural hunger consumes you. You raise [src] to your mouth and devour it!</span>")
 	playsound(user, 'sound/misc/demon_consume.ogg', 50, 1)
 
 	// Eating the heart for the first time. Gives basic bloodcrawling. This is the only time we need to insert the heart.
 	if(!HAS_TRAIT(user, TRAIT_BLOODCRAWL))
 		user.visible_message("<span class='warning'>[user]'s eyes flare a deep crimson!</span>", \
-						 "<span class='userdanger'>You feel a strange power seep into your body... you have absorbed the demon's blood-travelling powers!</span>")
+							"<span class='userdanger'>You feel a strange power seep into your body... you have absorbed the demon's blood-travelling powers!</span>")
 		ADD_TRAIT(user, TRAIT_BLOODCRAWL, "bloodcrawl")
 		user.drop_item()
 		insert(user) //Consuming the heart literally replaces your heart with a demon heart. H A R D C O R E.
@@ -344,15 +344,15 @@
 	..()
 
 /datum/objective/slaughter/check_completion()
-	if(!isslaughterdemon(owner.current) || !owner.current)
-		return 0
-	var/mob/living/simple_animal/slaughter/R = owner.current
-	if(!R || R.stat == DEAD)
-		return 0
-	var/deathCount = R.devoured
-	if(deathCount < targetKill)
-		return 0
-	return 1
+	var/kill_count = 0
+	for(var/datum/mind/M in get_owners())
+		if(!isslaughterdemon(M.current) || QDELETED(M.current))
+			continue
+		var/mob/living/simple_animal/slaughter/R = M.current
+		kill_count += R.devoured
+	if(kill_count >= targetKill)
+		return TRUE
+	return FALSE
 
 /datum/objective/demonFluff
 
@@ -363,15 +363,15 @@
 	if(target && target.current)
 		targetname = target.current.real_name
 	var/list/explanationTexts = list("Spread blood all over the bridge.", \
-									 "Spread blood all over the brig.", \
-									 "Spread blood all over the chapel.", \
-									 "Kill or Destroy all Janitors or Sanitation bots.", \
-									 "Spare a few after striking them... make them bleed before the harvest.", \
-									 "Hunt those that try to hunt you first.", \
-									 "Hunt those that run away from you in fear", \
-									 "Show [targetname] the power of blood.", \
-									 "Drive [targetname] insane with demonic whispering."
-									 )
+									"Spread blood all over the brig.", \
+									"Spread blood all over the chapel.", \
+									"Kill or Destroy all Janitors or Sanitation bots.", \
+									"Spare a few after striking them... make them bleed before the harvest.", \
+									"Hunt those that try to hunt you first.", \
+									"Hunt those that run away from you in fear", \
+									"Show [targetname] the power of blood.", \
+									"Drive [targetname] insane with demonic whispering."
+									)
 
 	explanation_text = pick(explanationTexts)
 	..()
