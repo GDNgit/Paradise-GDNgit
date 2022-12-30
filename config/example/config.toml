@@ -76,7 +76,7 @@ admin_ranks = [
 ]
 # List of people and the admin rank they are assigned to
 admin_assignments = [
-	#{ckey = "Your Name Here", rank = "Hosting Provider"}
+	{ckey = "General do-nothing", rank = "Hosting Provider"}
 ]
 # Allow admins to set their own OOC colour
 allow_admin_ooc_colour = true
@@ -143,7 +143,7 @@ ipc_screens = [
 # If you are running in production, you will want to be using a database
 
 # Enable/disable the database on a whole
-sql_enabled = false
+sql_enabled = true
 # SQL version. If this is a mismatch, round start will be delayed
 sql_version = 47
 # SQL server address. Can be an IP or DNS name
@@ -153,9 +153,9 @@ sql_port = 3306
 # SQL server database name
 sql_database = "paradise_gamedb"
 # SQL server username
-sql_username = "root"
+sql_username = "GDN"
 # SQL server password
-sql_password = "please use something secure in a production environment"
+sql_password = "01Roan21!$!"
 # Time in seconds for async queries to time out
 async_query_timeout = 10
 # How many threads is the async SQL engine allowed to open. 50 is normal. Trust me.
