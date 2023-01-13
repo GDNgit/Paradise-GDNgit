@@ -105,7 +105,7 @@
 	if(stat == CONSCIOUS && isturf(loc))
 		SEND_SIGNAL(usr, COMSIG_MOB_WILLINGLY_DROP)
 		return drop_item()
-	return 0
+	return FALSE
 
 //Drops the item in our left hand
 /mob/proc/drop_l_hand(force = FALSE)
