@@ -344,6 +344,8 @@
 #define COMSIG_MOB_ATTACK_RANGED "mob_attack_ranged"
 ///from base of /mob/throw_item(): (atom/target)
 #define COMSIG_MOB_THROW "mob_throw"
+///called when a user willingly drops something (i.e. keybind, or UI action)
+#define COMSIG_MOB_WILLINGLY_DROP "mob_willingly_drop"
 ///from base of /mob/verb/examinate(): (atom/target)
 #define COMSIG_MOB_EXAMINATE "mob_examinate"
 ///from base of /mob/update_sight(): ()
@@ -469,6 +471,8 @@
 #define COMSIG_CARBON_SWAP_HANDS "carbon_swap_hands"
 /// From /mob/living/carbon/toggle_throw_mode()
 #define COMSIG_CARBON_TOGGLE_THROW "carbon_toggle_throw"
+/// From /mob/living/carbon/human/hitby()
+#define COMSIG_CARBON_THROWN_ITEM_CAUGHT "carbon_thrown_item_caught"
 
 
 // /mob/living/simple_animal/hostile signals
@@ -829,3 +833,7 @@
 // /datum/objective signals
 ///from datum/objective/proc/find_target()
 #define COMSIG_OBJECTIVE_TARGET_FOUND "objective_target_found"
+///from datum/objective/is_invalid_target()
+#define COMSIG_OBJECTIVE_CHECK_VALID_TARGET "objective_check_valid_target"
+	#define OBJECTIVE_VALID_TARGET		(1<<0)
+	#define OBJECTIVE_INVALID_TARGET	(1<<1)

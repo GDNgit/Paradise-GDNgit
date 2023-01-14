@@ -115,7 +115,7 @@
 	if(old_stat != stat)
 		update_icon(UPDATE_OVERLAYS)
 
-/obj/machinery/smartfridge/extinguish_light()
+/obj/machinery/smartfridge/extinguish_light(force = FALSE)
 	set_light(0)
 	underlays.Cut()
 
@@ -159,7 +159,7 @@
 	update_icon(UPDATE_OVERLAYS)
 
 /obj/machinery/smartfridge/wrench_act(mob/living/user, obj/item/I)
-	. = default_unfasten_wrench(user, I)
+	. = default_unfasten_wrench(user, I, time = 4 SECONDS)
 	if(.)
 		power_change()
 
