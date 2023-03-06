@@ -23,16 +23,11 @@
 	update_transform()
 
 /mob/living/carbon/human/monkey/infect_with_monkey_virus(mob/user)
-	var/datum/disease/transformation/monkey/monkey_disease
 	if(!mind && !client)
 		INVOKE_ASYNC(src, PROC_REF(spawn_new_monkey))
-	if(!HasDisease(monkey_disease))
-		ForceContractDisease(monkey_disease)
-		monkey_disease.stage = 5
-	else
-		for(monkey_disease in viruses)
-			monkey_disease.stage = 5
-
+	if(!HAS_TRAIT(src, TRAIT_HAS_MONKEY_VIRUS))
+		ADD_TRAIT(src, TRAIT_HAS_MONKEY_VIRUS, "Monkey virus")
+		to_chat(src, "<span class='userdanger'>You are an infected monkey! The touch of your hairy hands can infect anyone, and using your harm intent bite on people will cause them to turn to your side quicker.</span>")
 
 /mob/living/carbon/human/monkey/proc/spawn_new_monkey()
 	var/list/candidates = SSghost_spawns.poll_candidates("Do you want to play as a monkey?", source = /mob/living/carbon/human/monkey)
@@ -46,5 +41,4 @@
 	mind.assigned_role = ROLE_MONKEY
 	mind.special_role = ROLE_MONKEY
 	ADD_TRAIT(src, TRAIT_HAS_MONKEY_VIRUS, "Monkey virus")
-	SEND_SOUND(src, sound('sound/voice/hiss5.ogg'))
-	to_chat(src, "<span class='motd'>For more information, find out ic :)</span>")
+	to_chat(src, "<span class='userdanger'>You are an infected monkey! The touch of your hairy hands can infect anyone, and using your harm intent bite on people will cause them to turn to your side quicker.</span>")

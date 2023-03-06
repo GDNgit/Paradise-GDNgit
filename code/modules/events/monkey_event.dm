@@ -1,5 +1,6 @@
 /datum/event/monkey_infestation
 	announceWhen	= 400
+	endWhen			= 240
 	var/spawncount = 3
 	var/successSpawn = FALSE	//So we don't make a command report if nothing gets spawned.
 
@@ -13,6 +14,9 @@
 		log_and_message_admins("Warning: Could not spawn any mobs for event Monkey Infestation")
 
 /datum/event/monkey_infestation/start()
+	INVOKE_ASYNC(src, PROC_REF(make_monkie))
+
+/datum/event/monkey_infestation/proc/make_monkie()
 	var/list/candidates = SSghost_spawns.poll_candidates("Do you want to play as a monkey?", source = /mob/living/carbon/human/monkey)
 	var/list/vents = get_valid_vent_spawns(exclude_mobs_nearby = TRUE)
 	if(!length(vents))
@@ -21,12 +25,14 @@
 	while(spawncount && length(vents) && length(candidates))
 		var/obj/vent = pick_n_take(vents)
 		var/mob/C = pick_n_take(candidates)
+		spawncount--
 		if(C)
 			C.remove_from_respawnable_list()
 			var/mob/living/carbon/human/monkey/monkey = new(vent.loc)
 			monkey.key = C.key
 			monkey.forceMove(vent)
 			monkey.add_ventcrawl(vent)
+			ADD_TRAIT(monkey, TRAIT_HAS_MONKEY_VIRUS, "Monkey virus")
+			to_chat(monkey, "<span class='userdanger'>You are an infected monkey! The touch of your hairy hands can infect anyone, and using your harm intent bite on people will cause them to turn to your side quicker.</span>")
 
-			spawncount--
 			successSpawn = TRUE

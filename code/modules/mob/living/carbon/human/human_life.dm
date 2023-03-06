@@ -920,7 +920,7 @@
 	adjustOxyLoss(20)
 
 /mob/living/carbon/human/proc/infect_with_monkey_virus(mob/user)
-	var/datum/disease/transformation/monkey/monkey_disease
+	var/datum/disease/transformation/monkey/monkey_disease = new /datum/disease/transformation/monkey
 	if(!HasDisease(monkey_disease))
 		ForceContractDisease(monkey_disease)
 	else

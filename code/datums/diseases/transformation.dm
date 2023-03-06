@@ -272,7 +272,7 @@
 	stage3	= list("<span class='danger'>You notice some hair growing on your arm.</span>")
 	stage4	= list("<span class='danger'>You feel rather silly.</span>")
 	stage5	= list("<span class='danger'>You have an extremely strong urge to jump on the nearest bed.</span>")
-	transformation_text = "<span class='userdanger'>This transformation does NOT make you an antagonist if you were not one already. If you were not an antagonist, you should not eat any steal objectives or the contents of the armory.</span>"
+	transformation_text = "<span class='userdanger'>You are an infected monkey! The touch of your hairy hands can infect anyone, and using your harm intent bite on people will cause them to turn to your side quicker.</span>"
 	new_form = /mob/living/carbon/human/monkey
 	job_role = ROLE_MONKEY
 	trait = TRAIT_HAS_MONKEY_VIRUS
@@ -289,3 +289,7 @@
 			if(prob(1))
 				if(prob(1))
 					affected_mob.say(pick("FREE ANTAG WOOOOOOO!1!1!"))
+
+/datum/disease/transformation/monkey/do_disease_transformation(mob/living/affected_mob)
+	affected_mob.unequip_everything()
+	return ..()
