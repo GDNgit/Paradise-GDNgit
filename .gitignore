@@ -8,6 +8,7 @@
 #ignore any files in config/, except those in subdirectories.
 /config/*
 !config/**/*/
+*.toml
 
 # ignore cfg, an internal BYOND folder
 /cfg/*
