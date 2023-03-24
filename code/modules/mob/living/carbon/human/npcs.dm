@@ -36,8 +36,6 @@
 	if(!length(candidates))
 		return // no monkey :(
 	C = pick(candidates)
-	if(QDELETED(C))
-		return // monkey left :(
 	key = C.key
 	mind.name =	name
 	mind.assigned_role = ROLE_MONKEY
