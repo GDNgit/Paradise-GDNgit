@@ -30,7 +30,10 @@
 	. = ..()
 	if(cell)
 		. += "<span class='notice'>It is [round(cell.percent())]% charged.</span>"
-	. += "<span class='notice'>Energy weapons can fire through windows and other see-through surfaces. Can be recharged with a recharger</span>"
+
+
+/obj/item/gun/energy/detailed_examine()
+	return "This is an energy weapon. Most energy weapons can fire through windows harmlessly. To recharge this weapon, use a weapon recharger."
 
 /obj/item/gun/energy/emp_act(severity)
 	cell.use(round(cell.charge / severity))

@@ -325,10 +325,10 @@
 /datum/spellbook_entry/summon/GetInfo()
 	var/dat =""
 	dat += "<b>[name]</b>"
-	if(cost == 0)
-		dat += " No Cost<br>"
-	else
+	if(cost>0)
 		dat += " Cost:[cost]<br>"
+	else
+		dat += " No Cost<br>"
 	dat += "<i>[desc]</i><br>"
 	if(active)
 		dat += "<b>Already cast!</b><br>"
@@ -365,8 +365,7 @@
 
 /datum/spellbook_entry/summon/guns
 	name = "Summon Guns"
-	desc = "Nothing could possibly go wrong with arming a crew of lunatics just itching for an excuse to kill you. There is a good chance that they will shoot each other first. Hopefully. Gives you 2 extra spell points on purchase."
-	cost = -2
+	desc = "Nothing could possibly go wrong with arming a crew of lunatics just itching for an excuse to kill you. There is a good chance that they will shoot each other first."
 	log_name = "SG"
 	is_ragin_restricted = TRUE
 
@@ -380,8 +379,7 @@
 
 /datum/spellbook_entry/summon/magic
 	name = "Summon Magic"
-	desc = "Share the wonders of magic with the crew and show them why they aren't to be trusted with it at the same time. Gives you 2 extra spell points on purchase."
-	cost = -2
+	desc = "Share the wonders of magic with the crew and show them why they aren't to be trusted with it at the same time."
 	log_name = "SU"
 	is_ragin_restricted = TRUE
 

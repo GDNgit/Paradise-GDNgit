@@ -306,11 +306,9 @@
 		new /datum/data/pda/app/mob_hunter_game
 	)
 
-/obj/item/cartridge/mob_hunt_game/examine(mob/user)
-	. = ..()
+/obj/item/cartridge/mob_hunt_game/detailed_examine_antag()
 	if(emagged)
-		if(isAntag(user))
-			. += "<span class='warning'>This copy of Nano-Mob Hunter GO! has been hacked to allow the creation of trap mobs which will cause any PDA that attempts to capture it to shock anyone holding it. Hacked copies of the game will not trigger the trap. Provided you actually find someone playing nanomobs, that is.</span>"
+		return "This copy of Nano-Mob Hunter GO! has been hacked to allow the creation of trap mobs which will cause any PDA that attempts to capture it to shock anyone holding it. Hacked copies of the game will not trigger the trap."
 
 /obj/item/cartridge/mob_hunt_game/attackby(obj/item/O, mob/user, params)
 	if(istype(O, /obj/item/nanomob_card))

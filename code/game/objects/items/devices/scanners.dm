@@ -548,7 +548,8 @@ REAGENT SCANNER
 	if(!isslime(M))
 		to_chat(user, "<span class='warning'>This device can only scan slimes!</span>")
 		return
-	slime_scan(M, user)
+	var/mob/living/simple_animal/slime/T = M
+	slime_scan(T, user)
 
 /proc/slime_scan(mob/living/simple_animal/slime/T, mob/living/user)
 	to_chat(user, "========================")

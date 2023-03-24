@@ -35,14 +35,13 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 
 		// First split on the colon
 		var/list/inner_split = splittext(original_line, ": ")
-		if(length(inner_split) >= 2)
-			var/source_half = "[inner_split[1]]: "
-			var/proc_half = inner_split[2]
-			var/proc_name = splittext(proc_half, "(")[1] // Put a ) here to stop the bracket colouriser whining
+		var/source_half = "[inner_split[1]]: "
+		var/proc_half = inner_split[2]
+		var/proc_name = splittext(proc_half, "(")[1] // Put a ) here to stop the bracket colouriser whining
 
-			proc_name = replacetext(proc_name, " ", "_") // Put the underscores back because BYOND removes them for some reason
+		proc_name = replacetext(proc_name, " ", "_") // Put the underscores back because BYOND removes them for some reason
 
-			sanitize_splitlines[i] = "[source_half][proc_name]"
+		sanitize_splitlines[i] = "[source_half][proc_name]"
 
 	e.desc = sanitize_splitlines.Join("\n")
 

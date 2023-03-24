@@ -119,7 +119,7 @@
 	icon_state = "mecha_laser"
 	origin_tech = "materials=4;engineering=4;combat=6;magnets=6"
 	energy_drain = 500
-	projectile = /obj/item/projectile/energy/tesla_bolt
+	projectile = /obj/item/projectile/energy/shock_revolver
 	fire_sound = 'sound/magic/lightningbolt.ogg'
 	harmful = TRUE
 

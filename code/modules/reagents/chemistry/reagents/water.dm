@@ -55,7 +55,6 @@
 	color = "#61C2C2"
 	harmless = TRUE
 	taste_description = "floor cleaner"
-	process_flags = ORGANIC | SYNTHETIC
 
 /datum/reagent/space_cleaner/reaction_obj(obj/O, volume)
 	if(iseffect(O))

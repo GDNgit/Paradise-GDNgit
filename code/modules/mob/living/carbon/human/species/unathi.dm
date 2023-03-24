@@ -114,7 +114,6 @@
 	default_language = "Sinta'unathi"
 
 	speed_mod = -0.80
-	species_traits = list(LIPS, NOT_SELECTABLE)
 	inherent_traits = list(TRAIT_CHUNKYFINGERS)
 
 	has_organ = list( // same as unathi's organs, aside for the lungs as they need to be able to breathe on lavaland.

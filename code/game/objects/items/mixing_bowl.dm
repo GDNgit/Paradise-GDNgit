@@ -2,7 +2,7 @@
 /obj/item/mixing_bowl
 	name = "mixing bowl"
 	desc = "Mixing it up in the kitchen."
-	container_type = OPENCONTAINER
+	flags = OPENCONTAINER
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "mixing_bowl"
 	var/max_n_of_items = 25
@@ -137,12 +137,12 @@
 		return
 	if(prob(chance))
 		dirty = TRUE
-		container_type = null
+		flags = null
 		icon_state = dirty_icon
 
 /obj/item/mixing_bowl/proc/clean()
 	dirty = FALSE
-	container_type = OPENCONTAINER
+	flags = OPENCONTAINER
 	icon_state = clean_icon
 
 /obj/item/mixing_bowl/wash(mob/user, atom/source)

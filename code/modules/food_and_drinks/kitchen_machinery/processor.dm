@@ -20,13 +20,6 @@
 	component_parts += new /obj/item/stock_parts/manipulator(null)
 	RefreshParts()
 
-/obj/machinery/processor/update_icon_state()
-	. = ..()
-	if(processing)
-		icon_state = "processor_on"
-		return
-	icon_state = initial(icon_state)
-
 /obj/machinery/processor/RefreshParts()
 	for(var/obj/item/stock_parts/matter_bin/B in component_parts)
 		rating_amount = B.rating
@@ -58,7 +51,6 @@
 	var/output
 	var/time = 40
 
-/// WHO NAME A PARAMETER FOR A PROC "what" holy hell
 /datum/food_processor_process/proc/process_food(loc, what, obj/machinery/processor/processor)
 	if(output && loc && processor)
 		for(var/i = 0, i < processor.rating_amount, i++)
@@ -214,7 +206,6 @@
 		to_chat(user, "<span class='warning'>\the [src] is empty.</span>")
 		return 1
 	processing = TRUE
-	update_icon(UPDATE_ICON_STATE)
 	user.visible_message("[user] turns on [src].", \
 		"<span class='notice'>You turn on [src].</span>", \
 		"<span class='italics'>You hear a food processor.</span>")
@@ -236,7 +227,6 @@
 			continue
 		P.process_food(loc, O, src)
 	processing = FALSE
-	update_icon(UPDATE_ICON_STATE)
 
 	visible_message("<span class='notice'>\the [src] has finished processing.</span>", \
 		"<span class='notice'>\the [src] has finished processing.</span>", \

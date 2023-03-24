@@ -177,11 +177,6 @@ GLOBAL_DATUM_INIT(welding_sparks, /mutable_appearance, mutable_appearance('icons
 	master = null
 	return ..()
 
-/obj/item/proc/alert_admins_on_destroy()
-	SIGNAL_HANDLER
-	message_admins("[src] has been destroyed at [ADMIN_COORDJMP(src)].")
-	log_game("[src] has been destroyed at ([x],[y],[z]) in the location [loc].")
-
 /obj/item/proc/check_allowed_items(atom/target, not_inside, target_self)
 	if(((src in target) && !target_self) || (!isturf(target.loc) && !isturf(target) && not_inside))
 		return FALSE
@@ -251,7 +246,8 @@ GLOBAL_DATUM_INIT(welding_sparks, /mutable_appearance, mutable_appearance('icons
 /obj/item/burn()
 	if(!QDELETED(src))
 		var/turf/T = get_turf(src)
-		new /obj/effect/decal/cleanable/ash(T)
+		var/obj/effect/decal/cleanable/ash/A = new(T)
+		A.desc += "\nLooks like this used to be \an [name] some time ago."
 		..()
 
 /obj/item/acid_melt()
