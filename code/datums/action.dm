@@ -582,7 +582,7 @@
 		return FALSE
 	if(target)
 		var/obj/effect/proc_holder/spell = target
-		spell.AltClick()
+		spell.AltClick(usr)
 		return TRUE
 
 /datum/action/spell_action/IsAvailable()
