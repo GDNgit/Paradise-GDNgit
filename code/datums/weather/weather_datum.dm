@@ -111,14 +111,14 @@
 /datum/weather/proc/can_weather_act(mob/living/L) //Can this weather impact a mob?
 	var/turf/mob_turf = get_turf(L)
 	if(!istype(L))
-		return FALSE
+		return
 	if(mob_turf && !(mob_turf.z in impacted_z_levels))
-		return FALSE
+		return
 	if(immunity_type in L.weather_immunities)
-		return FALSE
+		return
 	if(!(get_area(L) in impacted_areas))
-		return FALSE
-	return TRUE
+		return
+	return 1
 
 /datum/weather/proc/weather_act(mob/living/L) //What effect does this weather have on the hapless mob?
 	return

@@ -81,22 +81,21 @@
 
 /mob/living/carbon/human/do_suicide()
 	var/obj/item/held_item = get_active_hand()
-	var/damagetype = SEND_SIGNAL(src, COMSIG_HUMAN_SUICIDE_ACT) || held_item?.suicide_act(src)
-
-	if(damagetype)
-		if(damagetype & SHAME)
-			adjustStaminaLoss(200)
-			suiciding = FALSE
+	if(held_item)
+		var/damagetype = held_item.suicide_act(src)
+		if(damagetype)
+			if(damagetype & SHAME)
+				adjustStaminaLoss(200)
+				suiciding = FALSE
+				return
+			if(damagetype & OBLITERATION) // Does it gib or something? Don't deal damage
+				return
+			human_suicide(damagetype, held_item)
 			return
-		if(damagetype & OBLITERATION) // Does it gib or something? Don't deal damage
-			return
-		human_suicide(damagetype, held_item)
-		return
-
 	for(var/obj/O in orange(1, src))
 		if(O.suicidal_hands)
 			continue
-		damagetype = O.suicide_act(src)
+		var/damagetype = O.suicide_act(src)
 		if(damagetype)
 			if(damagetype & SHAME)
 				adjustStaminaLoss(200)

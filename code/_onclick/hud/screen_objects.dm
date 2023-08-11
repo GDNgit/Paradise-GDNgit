@@ -217,7 +217,6 @@
 			S.show_to(user)
 	else // If it's not in the storage, try putting it inside
 		S.attackby(I, user)
-	return TRUE
 
 /obj/screen/zone_sel
 	name = "damage zone"
@@ -403,15 +402,6 @@
 
 		object_overlays += item_overlay
 		add_overlay(object_overlays)
-
-/obj/screen/inventory/MouseDrop(atom/over)
-	cut_overlay(object_overlays)
-	object_overlays.Cut()
-	if(could_be_click_lag())
-		Click()
-		drag_start = 0
-		return
-	return ..()
 
 /obj/screen/inventory/Click(location, control, params)
 	// At this point in client Click() code we have passed the 1/10 sec check and little else

@@ -567,7 +567,7 @@
 	..()
 	var/area/A = get_area(src)
 	for(var/turf/T in A)
-		T.color = "#7ea9ff"
+		T.color = "#2956B2"
 	A.xenobiology_compatible = TRUE
 	qdel(src)
 

@@ -99,7 +99,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 	var/lamp_intensity = 0 //Luminosity of the headlamp. 0 is off. Higher settings than the minimum require power.
 	var/lamp_recharging = FALSE //Flag for if the lamp is on cooldown after being forcibly disabled.
 
-	/// When the camera moved signal was send last. Avoid overdoing it
+ 	/// When the camera moved signal was send last. Avoid overdoing it
 	var/last_camera_update
 
 	hud_possible = list(SPECIALROLE_HUD, DIAG_STAT_HUD, DIAG_HUD, DIAG_BATT_HUD)
@@ -795,6 +795,17 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 			//This will mean that removing and replacing a power cell will repair the mount, but I don't care at this point. ~Z
 			C.brute_damage = 0
 			C.electronics_damage = 0
+
+			var/been_hijacked = FALSE
+			for(var/mob/living/simple_animal/pulse_demon/demon in cell)
+				if(!been_hijacked)
+					demon.do_hijack_robot(src)
+					been_hijacked = TRUE
+				else
+					demon.exit_to_turf()
+			if(been_hijacked)
+				cell.rigged = FALSE
+
 			module?.update_cells()
 			diag_hud_set_borgcell()
 

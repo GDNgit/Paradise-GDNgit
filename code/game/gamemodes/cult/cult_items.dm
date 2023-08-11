@@ -338,9 +338,8 @@
 	if(C.pulling)
 		var/atom/movable/pulled = C.pulling
 		var/turf/turf_behind = get_turf(get_step(T, turn(C.dir, 180)))
-		if(!pulled.anchored) //Item may have been anchored while pulling, and pulling state isn't updated until you move away, so we double check.
-			pulled.forceMove(turf_behind)
-			. = pulled
+		pulled.forceMove(turf_behind)
+		. = pulled
 
 /obj/item/cult_shift/attack_self(mob/user)
 

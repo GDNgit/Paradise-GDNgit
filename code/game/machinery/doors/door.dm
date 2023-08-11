@@ -22,7 +22,6 @@
 	// Whether the door is bolted or not.
 	var/locked = FALSE
 	var/glass = FALSE
-	var/reinforced_glass = FALSE
 	var/welded = FALSE
 	var/normalspeed = TRUE
 	var/auto_close_time = 150
@@ -453,8 +452,8 @@
 	if(!glass && GLOB.cameranet)
 		GLOB.cameranet.updateVisibility(src, 0)
 
-/obj/machinery/door/BlockSuperconductivity() // Only heatproof airlocks block heat, currently only varedited doors have this
-	if(heat_proof)
+/obj/machinery/door/BlockSuperconductivity() // All non-glass airlocks block heat, this is intended.
+	if(opacity || heat_proof)
 		return 1
 	return 0
 

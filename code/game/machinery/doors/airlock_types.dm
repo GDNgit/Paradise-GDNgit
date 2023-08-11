@@ -197,6 +197,8 @@
 	DA = new /obj/structure/door_assembly(loc)
 	if(glass)
 		DA.glass = TRUE
+	if(heat_proof)
+		DA.heat_proof_finished = TRUE
 	DA.update_icon()
 	DA.update_name()
 	qdel(src)
@@ -209,6 +211,9 @@
 		ignite(is_hot(C))
 	else
 		return ..()
+
+/obj/machinery/door/airlock/plasma/BlockSuperconductivity() //we don't stop the heat~
+	return 0
 
 /obj/machinery/door/airlock/plasma/glass
 	opacity = FALSE

@@ -42,8 +42,8 @@
 			to_chat(caster, "<span class='warning'>You're already shapeshifted!</span>")
 			return
 
-	var/mob/living/shape = new shapeshift_type(get_turf(caster))
-	caster.forceMove(shape)
+	var/mob/living/shape = new shapeshift_type(caster.loc)
+	caster.loc = shape
 	caster.status_flags |= GODMODE
 
 	current_shapes |= shape
@@ -61,7 +61,7 @@
 			break
 	if(!caster)
 		return
-	caster.forceMove(get_turf(shape))
+	caster.loc = shape.loc
 	caster.status_flags &= ~GODMODE
 
 	clothes_req = initial(clothes_req)

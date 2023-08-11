@@ -65,9 +65,6 @@
 /obj/effect/mapping_helpers/airlock/access/any/engineering/general
 	access = ACCESS_ENGINE
 
-/obj/effect/mapping_helpers/airlock/access/any/engineering/equipment
-	access = ACCESS_ENGINE_EQUIP
-
 /obj/effect/mapping_helpers/airlock/access/any/engineering/construction
 	access = ACCESS_CONSTRUCTION
 
@@ -133,6 +130,9 @@
 /obj/effect/mapping_helpers/airlock/access/any/science/tox_storage
 	access = ACCESS_TOX_STORAGE
 
+/obj/effect/mapping_helpers/airlock/access/any/science/genetics
+	access = ACCESS_GENETICS
+
 /obj/effect/mapping_helpers/airlock/access/any/science/robotics
 	access = ACCESS_ROBOTICS
 
@@ -151,9 +151,6 @@
 
 /obj/effect/mapping_helpers/airlock/access/any/security/general
 	access = ACCESS_SECURITY
-
-/obj/effect/mapping_helpers/airlock/access/any/security/forensics
-	access = ACCESS_FORENSICS_LOCKERS
 
 /obj/effect/mapping_helpers/airlock/access/any/security/doors
 	access = ACCESS_SEC_DOORS
@@ -198,7 +195,7 @@
 /obj/effect/mapping_helpers/airlock/access/any/service/library
 	access = ACCESS_LIBRARY
 
-/obj/effect/mapping_helpers/airlock/access/any/service/theatre
+/obj/effect/mapping_helpers/airlock/access/any/service/library
 	access = ACCESS_THEATRE
 
 /obj/effect/mapping_helpers/airlock/access/any/service/clown
@@ -277,9 +274,6 @@
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general
 	access = ACCESS_ENGINE
 
-/obj/effect/mapping_helpers/airlock/access/all/engineering/equipment
-	access = ACCESS_ENGINE_EQUIP
-
 /obj/effect/mapping_helpers/airlock/access/all/engineering/construction
 	access = ACCESS_CONSTRUCTION
 
@@ -345,6 +339,9 @@
 /obj/effect/mapping_helpers/airlock/access/all/science/tox_storage
 	access = ACCESS_TOX_STORAGE
 
+/obj/effect/mapping_helpers/airlock/access/all/science/genetics
+	access = ACCESS_GENETICS
+
 /obj/effect/mapping_helpers/airlock/access/all/science/robotics
 	access = ACCESS_ROBOTICS
 
@@ -363,9 +360,6 @@
 
 /obj/effect/mapping_helpers/airlock/access/all/security/general
 	access = ACCESS_SECURITY
-
-/obj/effect/mapping_helpers/airlock/access/all/security/forensics
-	access = ACCESS_FORENSICS_LOCKERS
 
 /obj/effect/mapping_helpers/airlock/access/all/security/doors
 	access = ACCESS_SEC_DOORS
@@ -413,7 +407,7 @@
 /obj/effect/mapping_helpers/airlock/access/all/service/library
 	access = ACCESS_LIBRARY
 
-/obj/effect/mapping_helpers/airlock/access/all/service/theatre
+/obj/effect/mapping_helpers/airlock/access/all/service/library
 	access = ACCESS_THEATRE
 
 /obj/effect/mapping_helpers/airlock/access/all/service/clown

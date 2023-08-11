@@ -49,12 +49,6 @@
 	else
 		return ..()
 
-/obj/structure/largecrate/Destroy()
-	var/turf/src_turf = get_turf(src)
-	for(var/obj/O in contents)
-		O.forceMove(src_turf)
-	return ..()
-
 /obj/structure/largecrate/mule
 
 /obj/structure/largecrate/lisa

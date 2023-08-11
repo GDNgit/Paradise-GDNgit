@@ -19,7 +19,6 @@
 		var/datum/action/item_action/remove_tape/RT = new(I)
 		if(I.loc == user)
 			RT.Grant(user)
-	I.add_tape()
 
 /datum/component/proc/add_tape_text(datum/source, mob/user, list/examine_list)
 	examine_list += "<span class='notice'>There's some sticky tape attached to [source].</span>"
@@ -41,7 +40,6 @@
 		qdel(RT)
 	I.cut_overlay(tape_overlay)
 	user.transfer_fingerprints_to(I)
-	I.remove_tape()
 	qdel(src)
 
 /datum/component/ducttape/proc/afterattack(obj/item/I, atom/target, mob/user, proximity, params)

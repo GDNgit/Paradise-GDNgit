@@ -222,5 +222,3 @@
 					/obj/item/judobelt = 3)
 	contraband = list(/obj/item/clothing/glasses/sunglasses = 2, /obj/item/storage/fancy/donut_box = 2, /obj/item/hailer = 5)
 	refill_canister = /obj/item/vending_refill/security
-	prices = list(/obj/item/reagent_containers/food/snacks/donut = 40,
-					/obj/item/storage/fancy/donut_box = 200) //Bulk discount

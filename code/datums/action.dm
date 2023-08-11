@@ -1,10 +1,8 @@
-#define AB_CHECK_RESTRAINED		(1<<0)
-#define AB_CHECK_STUNNED		(1<<1)
-#define AB_CHECK_LYING			(1<<2)
-#define AB_CHECK_CONSCIOUS		(1<<3)
-#define AB_CHECK_TURF			(1<<4)
-#define AB_CHECK_HANDS_BLOCKED	(1<<5)
-#define AB_CHECK_IMMOBILE		(1<<6)
+#define AB_CHECK_RESTRAINED 1
+#define AB_CHECK_STUNNED 2
+#define AB_CHECK_LYING 4
+#define AB_CHECK_CONSCIOUS 8
+#define AB_CHECK_TURF 16
 
 
 /datum/action
@@ -19,6 +17,8 @@
 	var/icon_icon = 'icons/mob/actions/actions.dmi'
 	var/button_icon_state = "default"
 	var/mob/owner
+	/// Determines the behavior of the button when alt-clicked. If this is false, the regular Trigger will fire. Overriding AltTrigger and not calling the parent will cause this to have no effect.
+	var/has_altclick = FALSE
 
 /datum/action/New(Target)
 	target = Target
@@ -65,6 +65,12 @@
 		return FALSE
 	return TRUE
 
+/datum/action/proc/AltTrigger()
+	if(!has_altclick)
+		Trigger()
+		return FALSE
+	return TRUE
+
 /datum/action/proc/Process()
 	return
 
@@ -73,10 +79,6 @@
 
 /datum/action/proc/IsAvailable()// returns 1 if all checks pass
 	if(!owner)
-		return FALSE
-	if((check_flags & AB_CHECK_HANDS_BLOCKED) && HAS_TRAIT(owner, TRAIT_HANDS_BLOCKED))
-		return FALSE
-	if((check_flags & AB_CHECK_IMMOBILE) && HAS_TRAIT(owner, TRAIT_IMMOBILIZED))
 		return FALSE
 	if(check_flags & AB_CHECK_RESTRAINED)
 		if(owner.restrained())
@@ -560,6 +562,7 @@
 	button_icon = S.action_icon
 	button_icon_state = S.action_icon_state
 	background_icon_state = S.action_background_icon_state
+	has_altclick = S.has_altclick
 	button.name = name
 
 /datum/action/spell_action/Destroy()
@@ -573,6 +576,14 @@
 	if(target)
 		var/obj/effect/proc_holder/spell = target
 		spell.Click()
+		return TRUE
+
+/datum/action/spell_action/AltTrigger()
+	if(!..())
+		return FALSE
+	if(target)
+		var/obj/effect/proc_holder/spell = target
+		spell.AltClick(usr)
 		return TRUE
 
 /datum/action/spell_action/IsAvailable()

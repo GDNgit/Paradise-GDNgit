@@ -46,10 +46,9 @@
 
 /obj/structure/MouseDrop_T(atom/movable/C, mob/user as mob)
 	if(..())
-		return TRUE
+		return
 	if(C == user)
-		INVOKE_ASYNC(src, TYPE_PROC_REF(/obj/structure, do_climb), user)
-		return TRUE
+		do_climb(user)
 
 /obj/structure/proc/density_check()
 	for(var/obj/O in orange(0, src))
