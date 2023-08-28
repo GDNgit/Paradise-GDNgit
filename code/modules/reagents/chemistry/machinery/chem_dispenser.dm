@@ -329,6 +329,7 @@
 	pixel_x = 0
 	pixel_y = 0
 	setDir(turn(dir, 90))
+	addtimer(CALLBACK(GLOBAL_PROC, .proc/to_chat, onecoughman, "<span class='warning'>[pick("Your head hurts.", "Your head pounds.")]</span>"), rand(30,150))
 
 /obj/machinery/chem_dispenser/soda
 	icon_state = "soda_dispenser"
