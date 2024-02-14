@@ -29,7 +29,6 @@
 		gripped = FALSE
 		to_chat(user, "You relax your grip on [src].")
 		flags &= ~NODROP
-		return
 
 /obj/item/melee/knuckleduster/attack(mob/living/target, mob/living/user)
 	. = ..()
@@ -52,7 +51,6 @@
 		squishy.receive_damage(trauma)
 	if(punched.is_broken())
 		squishy.receive_damage(trauma) // Probably not so good for your organs to have your already broken ribs punched hard again
-		return
 
 /obj/item/melee/knuckleduster/syndie
 	name = "syndicate knuckleduster"

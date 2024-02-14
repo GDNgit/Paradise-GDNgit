@@ -34,7 +34,6 @@
 /obj/item/projectile/energy/electrode/on_range() //to ensure the bolt sparks when it reaches the end of its range if it didn't hit a target yet
 	do_sparks(1, 1, src)
 	..()
-
 /obj/item/projectile/energy/declone
 	name = "declone"
 	icon_state = "declone"
@@ -246,7 +245,6 @@
 	if(length(chains))
 		for(var/chain in chains)
 			qdel(chain)
-
 
 /obj/effect/abstract/arc_revolver/proc/cleardeletedchains()
 	if(length(chains))

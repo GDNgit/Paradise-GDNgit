@@ -1,5 +1,8 @@
 
 /// Slime Extracts ///
+#define RED_SLIME_MUTATOR_BITFLAG (1<<0)
+#define GREEN_SLIME_MUTATOR_BITFLAG (1<<1)
+#define PINK_SLIME_MUTATOR_BITFLAG (1<<2)
 
 /obj/item/slime_extract
 	name = "slime extract"
@@ -123,7 +126,6 @@
 	icon_state = "rainbow slime extract"
 
 ////Slime-derived potions///
-
 /obj/item/slimepotion
 	name = "slime potion"
 	desc = "A hard yet gelatinous capsule excreted by a slime, containing mysterious substances."
@@ -150,7 +152,6 @@
 		return
 	if(istype(target))
 		to_chat(user, "<span class='notice'>You cannot give [src] to [target]! It must be given directly to a slime to absorb.</span>") // le fluff faec
-		return
 
 /obj/item/slimepotion/slime/docility
 	name = "docility potion"
@@ -364,53 +365,39 @@
 	M.mutation_chance = clamp(M.mutation_chance-15,0,100)
 	qdel(src)
 
-/obj/item/slimepotion/slime/mutator
-	name = "slime mutator"
-	desc = "A potent chemical mix that will increase the chance of a slime mutating."
-	icon_state = "bottle3"
-
-/obj/item/slimepotion/slime/mutator/attack(mob/living/simple_animal/slime/M, mob/user)
-	. = ..()
-	if(!.)
-		return
-
-	if(M.mutator_used)
-		to_chat(user, "<span class='warning'>This slime has already consumed a mutator, any more would be far too unstable!</span>")
-		return ..()
-	if(M.mutation_chance == 100)
-		to_chat(user, "<span class='warning'>The slime is already guaranteed to mutate!</span>")
-		return ..()
-
-	to_chat(user, "<span class='notice'>You feed the slime the mutator. It is now more likely to mutate.</span>")
-	M.mutation_chance = clamp(M.mutation_chance+12,0,100)
-	M.mutator_used = TRUE
-	qdel(src)
-
-// Potion to make the slime go fast for about 20 seconds, by heating them up
-// For the sake of its mechanics, it is a potion. Its effects cannot be stacked
-/obj/item/slimepotion/speed
-	name = "slime speed treat"
-	desc = "A monkey-shaped treat that heats up your little slime friend!"
+/obj/item/food/snacks/cookie/slime_cookie
+	name = "slime cookie"
+	desc = "A monkey-shaped treat so full of sugar that it speeds up metabolism for a short while."
+	icon = 'icons/obj/chemical.dmi'
 	icon_state = "slime_treat"
+	bitesize = 5
+	filling_color = COLOR_RED
+	w_class = WEIGHT_CLASS_SMALL
+	list_reagents = list("nutriment" = 1, "sugar" = 4) // We want this eaten in one bite, if you're gonna change it change the bitesize with it.
+	tastes = list("strawberry jelly" = 1, "too much goddamn sugar" = 1)
 
-/obj/item/slimepotion/speed/attack(mob/living/simple_animal/slime/M, mob/user)
-	. = ..()
-	if(!.)
+/obj/item/food/snacks/cookie/slime_cookie/attack(mob/living/M, mob/living/user, def_zone)
+	if(isslime(M))
+		heat_up(M)
 		return
+	return ..()
 
+/obj/item/food/snacks/cookie/slime_cookie/attack_slime(mob/living/simple_animal/slime/M)
 	heat_up(M)
 
-/obj/item/slimepotion/speed/proc/heat_up(mob/living/simple_animal/slime/M)
+/obj/item/food/snacks/cookie/slime_cookie/proc/heat_up(mob/living/simple_animal/slime/M)
 	M.visible_message("<span class='notice'>As [M] gobbles [src], it starts buzzing with joyful energy!</span>")
 	M.bodytemperature = 550
-
-	// We remain jittery even if we cool down for it was a good treat
 	M.SetJitter(15 SECONDS, TRUE)
 	qdel(src)
 
-// Slimes can eat this by themselves, no need to feed them
-/obj/item/slimepotion/speed/attack_slime(mob/living/simple_animal/slime/M)
-	heat_up(M)
+/obj/item/food/snacks/cookie/slime_cookie/Post_Consume(mob/living/M)
+	M.apply_status_effect(STATUS_EFFECT_BLOOD_RUSH, 15 SECONDS)
+	M.adjust_nutrition(-20)
+	if(M.nutrition <= 100)
+		to_chat(M, "<span class='warning'>You feel absolutely ravenous!</span>")
+	else
+		to_chat(M, "<span class='notice'>You feel a bit hungry, maybe those cookies are giving you the munchies?</span>")
 
 /obj/item/slimepotion/fireproof
 	name = "slime chill potion"
@@ -523,11 +510,10 @@
 		for(var/obj/effect/proc_holder/spell/aoe/conjure/timestop/T in M.mind.spell_list) //People who can stop time are immune to timestop
 			immune |= M
 
-
 /obj/effect/timestop/proc/timestop()
 	playsound(get_turf(src), 'sound/magic/timeparadox2.ogg', 100, 1, -1)
 	for(var/i in 1 to duration-1)
-		for(var/A in orange (freezerange, loc))
+		for(var/A in orange(freezerange, loc))
 			if(isliving(A))
 				var/mob/living/M = A
 				if(M in immune)
@@ -588,7 +574,6 @@
 	max_amount = 60
 	turf_type = /turf/simulated/floor/bluespace
 
-
 /turf/simulated/floor/bluespace
 	icon_state = "bluespace"
 	desc = "Through a series of micro-teleports, these tiles allow you to move things that would otherwise slow you down."
@@ -597,7 +582,6 @@
 /turf/simulated/floor/bluespace/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_BLUESPACE_SPEED, FLOOR_EFFECT_TRAIT)
-
 
 /obj/item/stack/tile/sepia
 	name = "sepia floor tile"
@@ -632,3 +616,44 @@
 	icon_state = "sepia"
 	desc = "Time seems to flow very slowly around these tiles."
 	floor_tile = /obj/item/stack/tile/sepia
+
+/obj/item/slimepotion/slime/mutator
+	name = "basetype slime mutator"
+	desc = "A potent chemical mix that will increase the chance of a slime mutating by 10%. Differently colored mutators can be applied to the same slime to increase a chance of mutation."
+	icon_state = "bottle3"
+	var/mutator_bitflag
+
+/obj/item/slimepotion/slime/mutator/attack(mob/living/simple_animal/slime/M, mob/user)
+	. = ..()
+	if(!.)
+		return
+
+	if(M.mutators_used & mutator_bitflag)
+		to_chat(user, "<span class='warning'>This slime has already consumed this mutator type, any more would be far too unstable!</span>")
+		return ..()
+	if(M.mutation_chance >= 100)
+		to_chat(user, "<span class='warning'>The slime is already guaranteed to mutate!</span>")
+		return ..()
+
+	to_chat(user, "<span class='notice'>You feed the slime the mutator. It is now 10% more likely to mutate.</span>")
+	M.mutation_chance = clamp(M.mutation_chance + 10, 0, 100)
+	M.mutators_used |= mutator_bitflag
+	qdel(src)
+
+/obj/item/slimepotion/slime/mutator/red
+	name = "red slime mutator"
+	mutator_bitflag = RED_SLIME_MUTATOR_BITFLAG
+
+/obj/item/slimepotion/slime/mutator/green
+	name = "green slime mutator"
+	mutator_bitflag = GREEN_SLIME_MUTATOR_BITFLAG
+	icon_state = "bottle16"
+
+/obj/item/slimepotion/slime/mutator/pink
+	name = "pink slime mutator"
+	mutator_bitflag = PINK_SLIME_MUTATOR_BITFLAG
+	icon_state = "bottle19"
+
+#undef RED_SLIME_MUTATOR_BITFLAG
+#undef GREEN_SLIME_MUTATOR_BITFLAG
+#undef PINK_SLIME_MUTATOR_BITFLAG

@@ -41,7 +41,6 @@
 		var/obj/item/trash_item = generate_trash(usr)
 		usr.put_in_hands(trash_item)
 		qdel(src)
-	return
 
 /obj/item/food/snacks/proc/Post_Consume(mob/living/M)
 	return
