@@ -749,6 +749,19 @@
 	SSblackbox.record_feedback("tally", "slime_cores_used", 1, type)
 	new /obj/item/stack/sheet/mineral/adamantine(get_turf(holder.my_atom))
 
+/datum/chemical_reaction/slimeharden
+	name = "Slime Harden"
+	id = "m_harden"
+	result = null
+	required_reagents = list("blood" = 1)
+	result_amount = 1
+	required_container = /obj/item/slime_extract/adamantine
+	required_other = TRUE
+
+/datum/chemical_reaction/slimeharden/on_reaction(datum/reagents/holder)
+	SSblackbox.record_feedback("tally", "slime_cores_used", 1, type)
+	new /obj/item/slimepotion/slime/hardener(get_turf(holder.my_atom))
+
 //Bluespace
 /datum/chemical_reaction/slimefloor2
 	name = "Bluespace Floor"
@@ -765,7 +778,6 @@
 	P.amount = 25
 	P.forceMove(get_turf(holder.my_atom))
 
-
 /datum/chemical_reaction/slimecrystal
 	name = "Slime Crystal"
 	id = "m_crystal"
@@ -780,6 +792,19 @@
 	if(holder.my_atom)
 		var/obj/item/stack/ore/bluespace_crystal/BC = new(get_turf(holder.my_atom))
 		BC.visible_message("<span class='notice'>[BC] appears out of thin air!</span>")
+
+/datum/chemical_reaction/slimegloves
+	name = "Slime Harden"
+	id = "m_harden"
+	result = null
+	required_reagents = list("water" = 1)
+	result_amount = 1
+	required_container = /obj/item/slime_extract/bluespace
+	required_other = TRUE
+
+/datum/chemical_reaction/slimegloves/on_reaction(datum/reagents/holder)
+	SSblackbox.record_feedback("tally", "slime_cores_used", 1, type)
+	new /obj/item/slimepotion/slime/hardener(get_turf(holder.my_atom))
 
 //Cerulean
 /datum/chemical_reaction/slimepsteroid2

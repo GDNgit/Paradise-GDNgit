@@ -654,6 +654,63 @@
 	mutator_bitflag = PINK_SLIME_MUTATOR_BITFLAG
 	icon_state = "bottle19"
 
+/obj/item/slimepotion/slime/hardener
+	name = "slime to stone"
+	desc = "Hardens a slime for easy storage. Apply heat to re-liquify it."
+	icon_state = "bottle18"
+
+/obj/item/slimepotion/slime/hardener/attack(mob/living/simple_animal/slime/M, mob/user)
+	. = ..()
+	if(!.)
+		return
+	if(M.mind)
+		to_chat(user, "<span class='notice'>[M] refuses [src]. Slimes with a mind of their own aren't inclined to turn into a rock.</span>")
+		return
+
+	var/obj/item/stoned_slime/slime_in_the_stone = new(get_turf(M))
+	slime_in_the_stone.stored = M
+	slime_in_the_stone.icon_state = "[M.colour] baby slime dead"
+	slime_in_the_stone.name = "solidified [M]"
+	M.forceMove(slime_in_the_stone)
+	to_chat(user, "<span class='notice'>You feed [M] [src]. Apply heat to re-liquify [M].</span>")
+	qdel(src)
+
+/obj/item/stoned_slime
+	name = "solidified slime"
+	desc = "It's a stone xenobiology, you didn't make it!"
+	icon = 'icons/mob/slimes.dmi'
+	force = 7 // It's a bigass rock
+	w_class = WEIGHT_CLASS_BULKY
+	var/mob/living/simple_animal/slime/stored
+
+/obj/item/stoned_slime/examine(mob/user)
+	. = ..()
+	. += "<span class='notice'>Applied heat will liquify the slime.</span>"
+
+/obj/item/stoned_slime/attackby(obj/item/I, mob/user, params)
+	if(I.get_heat())
+		liquify_slime()
+		return
+	return ..()
+
+/obj/item/stoned_slime/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume, global_overlay)
+	liquify_slime()
+	return ..()
+
+/obj/item/stoned_slime/proc/liquify_slime()
+	stored.forceMove(get_turf(src))
+	stored.visible_message("<span class='notice'>[stored] jumps back to life!</span>")
+	qdel(src)
+
+/obj/item/clothing/gloves/bluespace
+	name = "bluespace gloves"
+	desc = "Experimental gloves that can tear away space. Runs off bluespace crystals"
+	icon_state = "s_ninjas"
+	item_color = "s_ninjas"
+	resistance_flags = NONE
+	/// Amount of charge these gloves still have
+	var/charge
+
 #undef RED_SLIME_MUTATOR_BITFLAG
 #undef GREEN_SLIME_MUTATOR_BITFLAG
 #undef PINK_SLIME_MUTATOR_BITFLAG
