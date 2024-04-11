@@ -15,3 +15,6 @@
 	hub = "Exadv1.spacestation13"
 	hub_password = "kMZy3U5jJHSiBQjr"
 	name = "Space Station 13"
+#ifdef OPENDREAM
+	log = file("data/data/opendream_log.log")
+#endif
